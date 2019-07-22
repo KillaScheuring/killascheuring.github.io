@@ -1,0 +1,135 @@
+/** {*/
+    /*border: solid yellow;*/
+/*}*/
+
+body {
+    font-family: "Philosopher", sans-serif;
+    color: #4b5436;
+    font-weight: 700;
+    background-color: aliceblue;
+}
+
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+.header {
+    margin-top: 10px;
+}
+
+.text-thin {
+    font-weight: 400;
+}
+
+.text-muted {
+    color: #b8c3d6;
+}
+
+.title-super {
+    font-size: 44px;
+}
+
+.title-logo {
+    margin-top: 20px;
+}
+
+.text-large {
+    font-size: 45px;
+}
+
+hr {
+    height: 5px;
+    background-color: #b8c3d6;
+}
+
+a {
+    color: #676858;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.list {
+    font-size: 20px;
+    /*color: ;*/
+}
+
+h5 {
+    font-size: 20px;
+}
+
+.list {
+    font-size: 17px;
+}
+
+.other-projects {
+    opacity: 0.4;
+}
+
+.job {
+    margin-left: 3%;
+    font-size: 15px;
+}
+
+
+.years-employed {
+    font-style: italic;
+}
+
+@media screen and (max-width: 992px) {
+    .text-align-control {
+        text-align: left;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+}
+@media screen and (min-width: 992px) {
+    .text-align-control {
+        text-align: center;
+    }
+
+}
+
+.level1 {
+    list-style-type: circle;
+}
+
+.level2 {
+    list-style-type: circle;
+}
+
+.contact-info {
+    background-color: #b8c3d6;
+}
+
+.make-collapse {
+    overflow-y: hidden;
+}
+
+/*.title-nav {*/
+    /*margin-top: 10px;*/
+/*}*/
+
+.nav-fix {
+    overflow-y: hidden;
+}
+
+/*nav {*/
+    /*color: #B8C3D6;*/
+/*}*/
+
+figure img {
+    border: solid #b8c3d6 2px;
+}
+
+.img-center {
+    margin-left: auto;
+    margin-right: auto;
+}
