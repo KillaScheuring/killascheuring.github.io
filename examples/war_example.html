@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>War</title>
+    <script src="../js/war.js"></script>
+    <link rel="stylesheet" href="../css/war.css">
+</head>
+<div id="gridContainer">
+    <div id="redInfo">
+        <img height="239" width="171" id="red" alt=""
+             src=""
+             style="border: 5px solid red">
+    </div>
+    <div id="gameInfo">
+        <p id="winner"></p>
+        <p id="ante" style="display: none"></p>
+        <p id="totalCards"></p>
+    </div>
+    <div id="blueInfo">
+        <img height="239" width="171" id="blue" alt=""
+             src=""
+             style="border: 5px solid blue">
+    </div>
+    <div id="tests">
+        <!--TODO Add Tests-->
+        <button id="test1">Test 1</button>
+        <button id="test2">Test 2</button>
+        <button id="test3">Test 3</button>
+        <button id="test4">Test 4</button>
+        <button id="test5">Test 5</button>
+    </div>
+    <div id="testRedInfo">
+        <img height="239" width="171" id="testRed" alt=""
+             src=""
+             style="border: 5px solid red">
+        <p style="color: red" id="testRedNumCards"></p>
+    </div>
+    <div id="testGameInfo">
+        <p id="testWinner"></p>
+        <p class="invisible" id="testAnte"></p>
+        <p id="testTotalCards"></p>
+    </div>
+    <div id="testBlueInfo">
+        <img height="239" width="171" id="testBlue" alt=""
+             src=""
+             style="border: 5px solid blue">
+        <p style="color: blue" id="testBlueNumCards"></p>
+    </div>
+    <div id="controlButtons">
+        <button id="buildDecks">Start!</button>
+        <button id="playNexRound">Next Round!</button>
+        <button style="display: none" id="playNexWar">War!</button>
+        <!--TODO add a button to run through the game till the end and give a number of wars/round-->
+        <button id="playThrough">Play to the end</button>
+        <button id="reset">Reset!</button>
+    </div>
+</div>
+</body>
+</html>
