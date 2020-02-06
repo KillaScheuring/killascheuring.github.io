@@ -205,13 +205,13 @@ window.addEventListener("load", function () {
 
                 redDeck = data["test1"]["redDeck"];
 
-                testObj.redCardOrder = data["test1"]["redCardOrder"];
+                testObj.redCardOrder = data["test1"]["redDeckOrder"];
 
                 blueDeck = data["test1"]["blueDeck"];
 
-                testObj.blueCardOrder = data["test1"]["blueCardOrder"];
+                testObj.blueCardOrder = data["test1"]["blueDeckOrder"];
 
-                testObj.outcomes = data["test1"]["outcomes"];
+                testObj.outcomes = data["test1"]["outcome"];
             }
         });
     });
