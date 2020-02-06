@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/war.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/war_example.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/war.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/tests.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/angular_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/angular_example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/django_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/django_example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/ember_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/ember_example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/express_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/express_example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/meteor_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/meteor_example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/node_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/node_example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/react_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/react_example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/vue_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vue_example.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+            <state relative-caret-position="308">
+              <caret line="94" column="6" lean-forward="true" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -46,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/war_example.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
@@ -146,17 +134,18 @@
         <option value="$PROJECT_DIR$/examples/node_example.html" />
         <option value="$PROJECT_DIR$/examples/react_example.html" />
         <option value="$PROJECT_DIR$/examples/vue_example.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/war.js" />
         <option value="$PROJECT_DIR$/css/war.css" />
         <option value="$PROJECT_DIR$/examples/war_example.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-10" />
-    <option name="width" value="1522" />
-    <option name="height" value="1932" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1488" />
+    <option name="y" value="-12" />
+    <option name="width" value="1526" />
+    <option name="height" value="1946" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -208,11 +197,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\projects" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\projects" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -255,20 +244,36 @@
       <workItem from="1564984350041" duration="1048000" />
       <workItem from="1571002672052" duration="599000" />
       <workItem from="1574124805544" duration="20000" />
-      <workItem from="1580952334606" duration="316000" />
+      <workItem from="1580952334606" duration="556000" />
     </task>
+    <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
+      <created>1580952707878</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580952707878</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Removed example links that will not be used. Added War! example.">
+      <created>1580952811153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580952811153</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17207000" />
+    <option name="totallyTimeSpent" value="17447000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="0" width="761" height="966" extended-state="0" />
+    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3089655" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15165877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3262159" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32977462" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -306,6 +311,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Removed example links that will not be used. Added War! example." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed example links that will not be used. Added War! example." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -384,22 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#7;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/war.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
@@ -440,6 +433,22 @@
             <element signature="n#style#0;n#p#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#6;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#2;n#div#7;n#div#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="94" column="6" lean-forward="true" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#7;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
