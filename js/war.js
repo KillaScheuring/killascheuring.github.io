@@ -232,7 +232,7 @@ window.addEventListener("load", function () {
     ///////////////////////////Tests//////////////////////////////////
     let test1Button = document.getElementById("test1");
     test1Button.addEventListener("click", function () {
-        fetch("json/tests.json")
+        fetch("../json/tests.json")
             .then(response => response.json())
             .then(tests => {
                 console.log(tests);
