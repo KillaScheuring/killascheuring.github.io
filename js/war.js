@@ -8,6 +8,7 @@ window.addEventListener("load", function () {
             console.log('there was an error', error);
         } else {
             cardImages = data["cardImages"];
+            console.log("Images Loaded...");
         }
     });
 
@@ -185,17 +186,12 @@ window.addEventListener("load", function () {
     ///////////////////////////Tests//////////////////////////////////
     let test1Button = document.getElementById("test1");
     test1Button.addEventListener("click", function () {
-        fetch("https://killascheuring.github.io/json/data.json")
-            .then(response => response.json())
-            .then(tests => {
-
-            });
 
         hitApi('https://killascheuring.github.io/json/data.json', function (error, data){
             if (error) {
                 console.log('there was an error', error);
             } else {
-                console.log(data);
+                console.log("data", data);
                 buildDecksButton.style.display = "none";
                 testRedDeckImage.style.display = "block";
                 testBlueDeckImage.style.display = "block";
