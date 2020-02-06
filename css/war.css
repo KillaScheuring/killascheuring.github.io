@@ -1,0 +1,79 @@
+#redInfo {
+    grid-area: redInfo;
+}
+
+#blueInfo {
+    grid-area: blueInfo;
+}
+
+#gameInfo {
+    grid-area: gameInfo;
+}
+
+/*#playingField {*/
+/*    grid-area: playingField;*/
+/*    display: grid;*/
+/*    grid-template: 'redInfo gameInfo blueInfo'*/
+/*}*/
+
+#test1 {
+    grid-area: test1;
+}
+
+#test2 {
+    grid-area: test2;
+}
+
+#test3 {
+    grid-area: test3;
+}
+
+#test4 {
+    grid-area: test4;
+}
+
+#test5 {
+    grid-area: test5;
+}
+
+#tests {
+    padding-right: 20%;
+    grid-area: tests;
+    display: grid;
+    grid-template: 'test1' 'test2' 'test3' 'test4' 'test5'
+}
+
+#testRedInfo {
+    grid-area: testRedInfo;
+}
+
+#testBlueInfo {
+    grid-area: testBlueInfo;
+}
+
+#testGameInfo {
+    grid-area: testGameInfo;
+}
+
+/*#testingField {*/
+/*    visibility: hidden;*/
+/*    grid-area: testingField;*/
+/*    display: grid;*/
+/*    grid-template: 'testRedInfo testGameInfo testBlueInfo'*/
+/*                    '. . .'*/
+/*}*/
+
+#controlButtons{
+    grid-area: controlButtons;
+}
+
+#gridContainer {
+    border: 1px solid black;
+    display: grid;
+    grid-template:  'redInfo gameInfo . blueInfo tests testRedInfo testRedInfo testGameInfo testBlueInfo testBlueInfo'
+    'redInfo gameInfo . blueInfo tests testRedInfo testRedInfo testGameInfo testBlueInfo testBlueInfo'
+    'redInfo gameInfo . blueInfo tests testRedInfo testRedInfo testGameInfo testBlueInfo testBlueInfo'
+    'redInfo gameInfo . blueInfo tests testRedInfo testRedInfo testGameInfo testBlueInfo testBlueInfo'
+    'redInfo gameInfo . blueInfo tests testRedInfo testRedInfo testGameInfo testBlueInfo testBlueInfo'
+    'controlButtons controlButtons . . . . . . . .'
+}
