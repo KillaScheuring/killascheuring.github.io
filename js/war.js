@@ -1,62 +1,15 @@
-let cardImages = {
-    "2Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/2S.svg/171px-2S.svg.png",
-    "3Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/3S.svg/171px-3S.svg.png",
-    "4Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/4S.svg/171px-4S.svg.png",
-    "5Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/5S.svg/171px-5S.svg.png",
-    "6Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/6S.svg/171px-6S.svg.png",
-    "7Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/7S.svg/171px-7S.svg.png",
-    "8Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/8S.svg/171px-8S.svg.png",
-    "9Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/9S.svg/171px-9S.svg.png",
-    "10Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/10S.svg/171px-10S.svg.png",
-    "11Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/JS.svg/171px-JS.svg.png",
-    "12Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/QS.svg/171px-QS.svg.png",
-    "13Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/KS.svg/171px-KS.svg.png",
-    "14Spades": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/AS.svg/171px-AS.svg.png",
-    "2Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/2H.svg/171px-2H.svg.png",
-    "3Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/3H.svg/171px-3H.svg.png",
-    "4Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/4H.svg/171px-4H.svg.png",
-    "5Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/5H.svg/171px-5H.svg.png",
-    "6Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/6H.svg/171px-6H.svg.png",
-    "7Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/7H.svg/171px-7H.svg.png",
-    "8Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/8H.svg/171px-8H.svg.png",
-    "9Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/9H.svg/171px-9H.svg.png",
-    "10Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/10H.svg/171px-10H.svg.png",
-    "11Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JH.svg/171px-JH.svg.png",
-    "12Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/QH.svg/171px-QH.svg.png",
-    "13Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/KH.svg/171px-KH.svg.png",
-    "14Hearts": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/AH.svg/171px-AH.svg.png",
-    "2Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/2C.svg/171px-2C.svg.png",
-    "3Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/3C.svg/171px-3C.svg.png",
-    "4Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/4C.svg/171px-4C.svg.png",
-    "5Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/5C.svg/171px-5C.svg.png",
-    "6Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/6C.svg/171px-6C.svg.png",
-    "7Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/7C.svg/171px-7C.svg.png",
-    "8Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/8C.svg/171px-8C.svg.png",
-    "9Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/9C.svg/171px-9C.svg.png",
-    "10Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/10C.svg/171px-10C.svg.png",
-    "11Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/JC.svg/171px-JC.svg.png",
-    "12Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/QC.svg/171px-QC.svg.png",
-    "13Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/KC.svg/171px-KC.svg.png",
-    "14Clubs": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/AC.svg/171px-AC.svg.png",
-    "2Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2D.svg/171px-2D.svg.png",
-    "3Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/3D.svg/171px-3D.svg.png",
-    "4Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/4D.svg/171px-4D.svg.png",
-    "5Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/5D.svg/171px-5D.svg.png",
-    "6Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/6D.svg/171px-6D.svg.png",
-    "7Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/7D.svg/171px-7D.svg.png",
-    "8Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/8D.svg/171px-8D.svg.png",
-    "9Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/9D.svg/171px-9D.svg.png",
-    "10Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/10D.svg/171px-10D.svg.png",
-    "11Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/JD.svg/171px-JD.svg.png",
-    "12Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/QD.svg/171px-QD.svg.png",
-    "13Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/KD.svg/171px-KD.svg.png",
-    "14Diamonds": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/AD.svg/171px-AD.svg.png"
-};
-let roundCount = 0;
-
 window.addEventListener("load", function () {
     // Confirms with the console that the page has loaded
     console.log("Loaded...");
+    let roundCount = 0;
+    let cardImages = [];
+    hitApi('https://killascheuring.github.io/json/data.json', function (error, data){
+        if (error) {
+            console.log('there was an error', error);
+        } else {
+            cardImages = data["cardImages"];
+        }
+    });
 
     // Initialize the test object. Will be filled when user selects a test
     let testObj = {
@@ -232,10 +185,17 @@ window.addEventListener("load", function () {
     ///////////////////////////Tests//////////////////////////////////
     let test1Button = document.getElementById("test1");
     test1Button.addEventListener("click", function () {
-        fetch("https://killascheuring.github.io/json/tests.json")
+        fetch("https://killascheuring.github.io/json/data.json")
             .then(response => response.json())
             .then(tests => {
-                console.log(tests);
+
+            });
+
+        hitApi('https://killascheuring.github.io/json/data.json', function (error, data){
+            if (error) {
+                console.log('there was an error', error);
+            } else {
+                console.log(data);
                 buildDecksButton.style.display = "none";
                 testRedDeckImage.style.display = "block";
                 testBlueDeckImage.style.display = "block";
@@ -243,16 +203,17 @@ window.addEventListener("load", function () {
 
                 testObj.testing = true;
 
-                redDeck = tests["test1"]["redDeck"];
+                redDeck = data["test1"]["redDeck"];
 
-                testObj.redCardOrder = tests["test1"]["redCardOrder"];
+                testObj.redCardOrder = data["test1"]["redCardOrder"];
 
-                blueDeck = tests["test1"]["blueDeck"];
+                blueDeck = data["test1"]["blueDeck"];
 
-                testObj.blueCardOrder = tests["test1"]["blueCardOrder"];
+                testObj.blueCardOrder = data["test1"]["blueCardOrder"];
 
-                testObj.outcomes = tests["test1"]["outcomes"];
-            });
+                testObj.outcomes = data["test1"]["outcomes"];
+            }
+        });
     });
 
 
@@ -420,7 +381,29 @@ window.addEventListener("load", function () {
         return ante.length;
     }
 
+    function hitApi(url, callback) {
+        let req = new XMLHttpRequest();
 
+        req.addEventListener('load', onLoad);
+        req.addEventListener('error', onFail);
+        req.addEventListener('abort', onFail);
+
+        req.open('GET', url);
+        req.send();
+
+        function onLoad(event) {
+            if (req.status >= 400) {
+                onFail(event);
+            } else {
+                let data = JSON.parse(this.responseText);
+                callback(null, data);
+            }
+        }
+
+        function onFail(event) {
+            callback(new Error(event));
+        }
+    }
 });
 
 
