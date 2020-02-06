@@ -99,15 +99,14 @@ window.addEventListener("load", function () {
             winner = "Blue Wins!";
 
             // Remove current card and puts both that card and the loser's card on the bottom
-            blueDeck.push(blueDeck.shift());
             blueDeck.push(redDeck.shift());
+            blueDeck.push(blueDeck.shift());
             // Removes loser's card
         } else if (redDeck[0]["rank"] > blueDeck[0]["rank"]) {
             winner = "Red Wins!";
 
             // Remove current card and puts both that card and the loser's card on the bottom
             redDeck.push(redDeck.shift());
-
             redDeck.push(blueDeck.shift());
         } else {
             // If a winner cannot be determined above it is War! and this turns on the button to run War!
