@@ -91,6 +91,10 @@ window.addEventListener("load", function () {
             testObj.outcomes.shift();
             testObj.redCardOrder.shift();
             testObj.blueCardOrder.shift();
+            if (testObj.blueCardOrder.length === 0 || testObj.redCardOrder.length === 0){
+                testWinner.innerText = "Game Over!";
+                testWinner.style.fontWeight = "bold";
+            }
         }
 
 
@@ -118,6 +122,13 @@ window.addEventListener("load", function () {
         totalCards.innerText = String(redDeck.length + blueDeck.length);
 
         winnerText.innerText = winner;
+        if (blueDeck.length === 0 ){
+            winnerText.innerText = "Red Wins the whole game!";
+            winnerText.style.fontWeight = "bold";
+        } else if (redDeck.length === 0){
+            winnerText.innerText = "Blue Wins the whole game!";
+            winnerText.style.fontWeight = "bold";
+        }
     });
 
     // Allows user to go through the rounds of war
@@ -172,6 +183,7 @@ window.addEventListener("load", function () {
             redDeck = redDeck.concat(ante);
             nextRoundButton.style.display = "block";
             playNexWarButton.style.display = "none";
+
 
         } else {
             winnerText.innerText = "It's War!";
