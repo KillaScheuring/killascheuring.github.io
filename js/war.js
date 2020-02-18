@@ -5,9 +5,13 @@ window.addEventListener("load", function () {
     let cardImages = [];
     hitApi('https://killascheuring.github.io/json/data.json', function (error, data){
         if (error) {
-            console.log('there was an error', error);
+            console.log('Card Images did not load: ', error);
         } else {
             cardImages = data["cardImages"];
+            redDeckImage.src = cardImages["14Spades"];
+            blueDeckImage.src = cardImages["14Spades"];
+            testRedDeckImage.src = cardImages["14Spades"];
+            testBlueDeckImage.src = cardImages["14Spades"];
             console.log("Images Loaded...");
         }
     });
@@ -60,10 +64,50 @@ window.addEventListener("load", function () {
     // Grab deck building button and attach deck builder
     let buildDecksButton = document.getElementById("buildDecks");
     buildDecksButton.addEventListener("click", function () {
-        // Build decks
-        buildDecks();
+        // If decks already exist hide deck building button and do nothing
+        console.log("Checking to see if decks already exist...");
+        if (redDeck.length !== 0 || blueDeck.length !== 0){
+            console.log("Decks built already.");
+            buildDecksButton.style.display = "none";
+            return;
+        }
+
+        ///////////////////////////////////// Build decks //////////////////////////////////////////////////////////////
+
+        //Initialize card pool
+        let cardPool = [];
+
+        // Build card pool
+        for (let suit of ["Spades", "Hearts", "Clubs", "Diamonds"]) {
+            for (let rank = 2; rank < 15; rank++) {
+                cardPool.push({"rank": rank, "suit": suit});
+            }
+        }
+
+
+
+        // For each potential card in the card pool, this pulls a random one, checks if is has been selected and if not
+        // adds it to either the red deck or the blue deck (alternating between them)
+        for (let currentCardNum = 0; currentCardNum < cardPool.length; currentCardNum++) {
+            let randomCard = cardPool[Math.round(Math.random() * cardPool.length)];
+
+            // Checks if the random card exists and if its in the decks already
+            while (redDeck.includes(randomCard) || blueDeck.includes(randomCard) || typeof randomCard === "undefined") {
+                randomCard = cardPool[Math.round(Math.random() * cardPool.length)];
+            }
+            // Puts the random card into either the red or blue deck (alternating between them.
+            if (currentCardNum % 2 === 0) {
+                redDeck.push(randomCard);
+            } else {
+                blueDeck.push(randomCard);
+            }
+        }
+
         // Let the user know the decks are ready
         winnerText.innerText = "Decks are Ready";
+        console.log("Deck ready...");
+        console.log(redDeck);
+        console.log(blueDeck);
 
         // Set the deck building button to not display since the decks are done.
         buildDecksButton.style.display = "none";
@@ -94,6 +138,7 @@ window.addEventListener("load", function () {
             if (testObj.blueCardOrder.length === 0 || testObj.redCardOrder.length === 0){
                 testWinner.innerText = "Game Over!";
                 testWinner.style.fontWeight = "bold";
+                nextRoundButton.style.display = "none";
             }
         }
 
@@ -219,6 +264,34 @@ window.addEventListener("load", function () {
                 testObj.blueCardOrder = data["test1"]["blueDeckOrder"];
 
                 testObj.outcomes = data["test1"]["outcome"];
+            }
+        });
+    });
+
+    let test2Button = document.getElementById("test2");
+    test2Button.addEventListener("click", function () {
+
+        hitApi('https://killascheuring.github.io/json/data.json', function (error, data){
+            if (error) {
+                console.log('there was an error', error);
+            } else {
+                console.log("data", data);
+                buildDecksButton.style.display = "none";
+                testRedDeckImage.style.display = "block";
+                testBlueDeckImage.style.display = "block";
+                testWinner.style.display = "block";
+
+                testObj.testing = true;
+
+                redDeck = data["test2"]["redDeck"];
+
+                testObj.redCardOrder = data["test2"]["redDeckOrder"];
+
+                blueDeck = data["test2"]["blueDeck"];
+
+                testObj.blueCardOrder = data["test2"]["blueDeckOrder"];
+
+                testObj.outcomes = data["test2"]["outcome"];
             }
         });
     });
