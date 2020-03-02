@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+.quizQuestion{
+    background-color: black;
+    border: solid 10px yellow;
+    color: white;
+    height: 50%;
+}
+
+button {
+    background-color: black;
+    border: solid 4px yellow;
+    color: white;
+}

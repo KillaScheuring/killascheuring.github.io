@@ -298,47 +298,6 @@ window.addEventListener("load", function () {
 
 
     /////////////////////////Functions////////////////////////////////
-
-
-    // Generated the decks for each player to use
-    function buildDecks() {
-        //Initialize card pool
-        let cardPool = [];
-
-        // Build card pool
-        for (let suit of ["Spades", "Hearts", "Clubs", "Diamonds"]) {
-            for (let rank = 2; rank < 15; rank++) {
-                cardPool.push({"rank": rank, "suit": suit});
-            }
-        }
-
-        // For each potential card in the card pool, this pulls a random one, checks if is has been selected and if not
-        // adds it to either the red deck or the blue deck (alternating between them)
-        for (let currentCardNum = 0; currentCardNum < cardPool.length; currentCardNum++) {
-            let randomCard = cardPool[Math.round(Math.random() * cardPool.length)];
-
-            // Checks if the random card exists and if its in the decks already
-            while (redDeck.includes(randomCard) || blueDeck.includes(randomCard) || typeof randomCard === "undefined") {
-                randomCard = cardPool[Math.round(Math.random() * cardPool.length)];
-            }
-            // Puts the random card into either the red or blue deck (alternating between them.
-            if (currentCardNum % 2 === 0) {
-                redDeck.push(randomCard);
-            } else {
-                blueDeck.push(randomCard);
-            }
-        }
-
-        let redNumCards = document.getElementById("redNumCards");
-        redNumCards.innerText = String(redDeck.length);
-        let blueNumCards = document.getElementById("blueNumCards");
-        blueNumCards.innerText = String(blueDeck.length);
-        totalCards.innerText = String(redDeck.length + blueDeck.length);
-
-        console.log(redDeck);
-        console.log(blueDeck);
-    }
-
     // Resets the game to the beginning
     // TODO Finish this
     function resetBacks() {
