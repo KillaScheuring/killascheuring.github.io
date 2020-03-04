@@ -299,11 +299,12 @@ class QuizQuestion extends React.Component {
     render() {
         console.log("Rendering Question...");
         return <div className={"quizQuestion"}>
-            <p>{this.state.question}</p>
-            <div className="row">{this.renderAnswer(this.state.answers[0] ? this.state.answers[0] : "none")}</div>
-            <div className="row">{this.renderAnswer(this.state.answers[1] ? this.state.answers[1] : "none")}</div>
-            <div className="row">{this.renderAnswer(this.state.answers[2] ? this.state.answers[2] : "none")}</div>
-            <div className="row">{this.renderAnswer(this.state.answers[3] ? this.state.answers[3] : "none")}</div>
+            <h5>{this.state.question}</h5>
+            <div className="row quizAnswer">{this.renderAnswer(this.state.answers[0] ? this.state.answers[0] : "none")}</div>
+            <div className="row quizAnswer">{this.renderAnswer(this.state.answers[1] ? this.state.answers[1] : "none")}</div>
+            <div className="row quizAnswer">{this.renderAnswer(this.state.answers[2] ? this.state.answers[2] : "none")}</div>
+            <div className="row quizAnswer">{this.renderAnswer(this.state.answers[3] ? this.state.answers[3] : "none")}</div>
+            <br/>
         </div>;
     }
 }
