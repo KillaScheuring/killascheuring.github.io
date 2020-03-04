@@ -52,10 +52,13 @@ class QuizQuestion extends React.Component {
     }
 
     handleClick(i) {
-        let answersStates = this.state.answersStates.slice();
-        if (answersStates.includes(true) && !answersStates[i]) {
-            return;
+        let answersStates;
+        if (this.state.answersStates.includes(true) && !this.state.answersStates[i]) {
+            answersStates = Array(this.state.answersStates.length).fill(false);
+        } else {
+            answersStates = this.state.answersStates.slice();
         }
+
         answersStates[i] = !answersStates[i];
 
         this.setState({
@@ -210,6 +213,7 @@ class QuizQuestion extends React.Component {
                                         // Break if loops for too long
                                         if (breakLoop > 30) {
                                             console.log("Breaking Loop");
+                                            answers[answers.indexOf(null)] = "none";
                                             break;
                                         }
                                     }
@@ -217,7 +221,6 @@ class QuizQuestion extends React.Component {
                                     // set the answer and correct answer in the question
                                     let nameOrTitle = topDataType === "films" ? "title" : "name";
                                     let questionString = "What is " + correctAnswerData[nameOrTitle] + "'s " + questionType.replace(/_/g, " ") + "?";
-                                    console.log("questionString", questionString);
                                     this.setState({
                                         answers: answers,
                                         correctAnswer: correctAnswerNameData["name"],
@@ -263,6 +266,7 @@ class QuizQuestion extends React.Component {
                             // Break if loops for too long
                             if (breakLoop > 30) {
                                 console.log("Breaking Loop");
+                                answers[answers.indexOf(null)] = "none";
                                 break;
                             }
                         }
@@ -271,7 +275,6 @@ class QuizQuestion extends React.Component {
                         let nameOrTitle = topDataType === "films" ? "title" : "name";
 
                         let questionString = "What is " + correctAnswerData[nameOrTitle] + "'s " + questionType.replace(/_/g, " ") + "?";
-                        console.log("questionString", questionString);
                         this.setState({
                             answers: answers,
                             correctAnswer: correctAnswerData[questionType],
@@ -341,7 +344,6 @@ class Quiz extends React.Component {
     score() {
         console.log("Score!");
         if (this.state.quizQuestions.includes(null)) {
-            console.log("Not done!");
             this.state.percentCorrect = null;
             return;
         }

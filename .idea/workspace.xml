@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/star_wars_trivia_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/star_wars_trivia_example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/star_wars_trivia.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/star_wars_trivia.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/star_wars_trivia_example.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="312" column="34" selection-start-line="312" selection-start-column="34" selection-end-line="312" selection-end-column="34" />
+            <state relative-caret-position="330">
+              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -77,6 +77,7 @@
       <find>md-6</find>
       <find>length</find>
       <find>upda</find>
+      <find>len</find>
     </findStrings>
     <replaceStrings>
       <replace>http://placekitten.com/100/100/</replace>
@@ -111,8 +112,8 @@
         <option value="$PROJECT_DIR$/js/starwars_trivia.js" />
         <option value="$PROJECT_DIR$/examples/starwars_trivia_example.html" />
         <option value="$PROJECT_DIR$/css/starwars.css" />
-        <option value="$PROJECT_DIR$/js/star_wars_trivia.js" />
         <option value="$PROJECT_DIR$/examples/star_wars_trivia_example.html" />
+        <option value="$PROJECT_DIR$/js/star_wars_trivia.js" />
       </list>
     </option>
   </component>
@@ -239,7 +240,7 @@
       <workItem from="1582769149991" duration="98000" />
       <workItem from="1583087644271" duration="23320000" />
       <workItem from="1583186678527" duration="4432000" />
-      <workItem from="1583199956513" duration="39054000" />
+      <workItem from="1583199956513" duration="41830000" />
     </task>
     <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
       <created>1580952707878</created>
@@ -374,11 +375,25 @@
       <option name="project" value="LOCAL" />
       <updated>1583299002779</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fixed icon rel">
+      <created>1583299129443</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1583299129443</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fixed planets typo">
+      <created>1583299615903</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1583299615903</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102269000" />
+    <option name="totallyTimeSpent" value="105045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -443,7 +458,9 @@
     <MESSAGE value="Basic Scoring functionality in place." />
     <MESSAGE value="added favicon to star wars quiz" />
     <MESSAGE value="fixed stylesheet" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed stylesheet" />
+    <MESSAGE value="fixed icon rel" />
+    <MESSAGE value="fixed planets typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed planets typo" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -585,17 +602,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="312" column="34" selection-start-line="312" selection-start-column="34" selection-end-line="312" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/star_wars_trivia_example.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
         </state>
       </provider>
     </entry>
