@@ -1,5 +1,6 @@
 'use strict';
 
+// Code for answer render
 function QuizAnswer(props) {
     return (
         <button
@@ -10,9 +11,12 @@ function QuizAnswer(props) {
     );
 }
 
+// Define QuizQuestion class
 class QuizQuestion extends React.Component {
     constructor(props) {
         super(props);
+
+        // Set up question state information
         this.state = {
             error: null,
             question: "Loading Question...",
@@ -21,6 +25,8 @@ class QuizQuestion extends React.Component {
             correctAnswer: null
         };
 
+
+        // Hard code for possible question categories
         this.dataTypes = {
             people: ["homeworld", "birth_year", "species"],
             planets: ["climate", "population"],
@@ -30,6 +36,8 @@ class QuizQuestion extends React.Component {
             starships: ["manufacturer", "cost_in_credits", "hyperdrive_rating", "MGLT", "starship_class"]
         };
 
+
+        // Hard code lengths for each data set
         this.dataLengths = {
             people: 87,
             planets: 59,
@@ -40,45 +48,66 @@ class QuizQuestion extends React.Component {
         }
     }
 
+    // code to render each answer  giving it the answer text and index for that answer
     renderAnswer(text, i) {
         return <div
             className="col-4 align-self-center">
             <QuizAnswer
+                // Set text for the answer
                 value={text}
+                // Set function for handling clicks
                 onClick={() => this.handleClick(i)}
+                // change class when selected
                 className={this.state.answersStates[i] ? "clicked" : ""}
             />
         </div>
     }
 
     handleClick(i) {
+        // Initialize the variable to hold the states in the function
         let answersStates;
+
+        // Check if there is already an answer selected
         if (this.state.answersStates.includes(true) && !this.state.answersStates[i]) {
+            // If it already has an answer set all states to false
             answersStates = Array(this.state.answersStates.length).fill(false);
         } else {
+            // Otherwise set the hold variable to the current state
             answersStates = this.state.answersStates.slice();
         }
 
+        // Flip the clicked value
         answersStates[i] = !answersStates[i];
 
+        // Update the states
         this.setState({
             answersStates: answersStates
         }, () => {
+            // Update the quiz state
             if (!answersStates[i]) {
+                // If deselecting, set this question to not answered
                 this.props.update(this.props.index, null);
             } else {
+                // Otherwise let the quiz know if this question was answered correctly or not
                 let correct = this.scoreQuestion();
                 this.props.update(this.props.index, correct);
             }
         });
     }
 
+    // Score the question given the current state
     scoreQuestion() {
+        // Find the index of the correct answer
         let correctAnswerIndex = this.state.answers.indexOf(this.state.correctAnswer);
+
+        // Find the index of the selected answer
         let answerIndex = this.state.answersStates.indexOf(true);
+
+        // Return whether those indexes are the same
         return correctAnswerIndex === answerIndex;
     }
 
+    // Load data and set question and answers
     componentDidMount() {
         console.log("Loading Data...");
 
@@ -213,6 +242,7 @@ class QuizQuestion extends React.Component {
                                         // Break if loops for too long
                                         if (breakLoop > 30) {
                                             console.log("Breaking Loop");
+                                            // If not all answers filled, set remainder to "none"
                                             answers[answers.indexOf(null)] = "none";
                                             break;
                                         }
@@ -266,6 +296,7 @@ class QuizQuestion extends React.Component {
                             // Break if loops for too long
                             if (breakLoop > 30) {
                                 console.log("Breaking Loop");
+                                // If not all answers filled, set remainder to "none"
                                 answers[answers.indexOf(null)] = "none";
                                 break;
                             }
@@ -295,6 +326,8 @@ class QuizQuestion extends React.Component {
             )
     }
 
+    // Structure the question
+    // Set default value for the answers
     render() {
         console.log("Rendering Question...");
         return <div className={"quizQuestion"}>
@@ -323,48 +356,74 @@ class Quiz extends React.Component {
 
     }
 
+    // Structure the questions
     renderQuestion(index) {
         return <div>
             <QuizQuestion
+                // send the index to the question
                 index={index}
+                //  send the update function to the question
                 update={this.update}
             />
             <br/>
         </div>
     }
 
+    // Update the state of each question
     update(index, currentState) {
         console.log("Updating!");
 
+        // grab the current states
         let newQuizStatus = this.state.quizQuestions.slice();
+
+        // set the current question's state to the state it gave the quiz
         newQuizStatus[index] = currentState;
+
+        // Update the states
         this.state.quizQuestions = newQuizStatus;
     }
 
+    // Score the quiz
     score() {
         console.log("Score!");
+
+        // Check if all the questions have an answer selected
         if (this.state.quizQuestions.includes(null)) {
+            // If not leave scoring
             this.state.percentCorrect = null;
             return;
         }
 
+        // Initialize the number of correct answers
         let numCorrect = 0;
+
+        // Count the number of correctly answered questions
         for (let correct of this.state.quizQuestions) {
             if (correct) {
                 numCorrect++;
             }
         }
-        console.log(numCorrect);
+
+        // Get the percentage of correct answers
         this.state.percentCorrect = numCorrect / this.state.quizQuestions.length;
-        console.log(this.state.percentCorrect);
+
+        // Display the score
         document.getElementById('testQuiz').innerText = this.state.percentCorrect * 100 + "%";
     }
 
+    // Set structure of quiz
+    // Set score button
     render() {
+        // Initialize the array to be filled with quiz questions
         let quizQuestions = [];
-        for (let [index, value] of this.state.quizQuestions.entries()) {
-            quizQuestions.push(this.renderQuestion(index, value));
+
+        // Loop through the number of questions and add them to the array
+        for (let index = 0; index < this.state.quizQuestions.length; index++) {
+            // Give each question an index
+            quizQuestions.push(this.renderQuestion(index));
         }
+
+        // return structure with score button
         return <div>
             {quizQuestions}
             <button onClick={() => this.score()}>Score!</button>
@@ -372,6 +431,7 @@ class Quiz extends React.Component {
     }
 }
 
+// Grab the target element in the HTML and render the quiz there
 ReactDOM.render(
     <Quiz/>,
     document.getElementById('testQuiz')
