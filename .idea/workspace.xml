@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/star_wars_trivia_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/star_wars_trivia_example.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,16 +16,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/star_wars_trivia_example.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+            <state relative-caret-position="264">
+              <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -110,8 +111,8 @@
         <option value="$PROJECT_DIR$/js/starwars_trivia.js" />
         <option value="$PROJECT_DIR$/examples/starwars_trivia_example.html" />
         <option value="$PROJECT_DIR$/css/starwars.css" />
-        <option value="$PROJECT_DIR$/examples/star_wars_trivia_example.html" />
         <option value="$PROJECT_DIR$/js/star_wars_trivia.js" />
+        <option value="$PROJECT_DIR$/examples/star_wars_trivia_example.html" />
       </list>
     </option>
   </component>
@@ -238,7 +239,7 @@
       <workItem from="1582769149991" duration="98000" />
       <workItem from="1583087644271" duration="23320000" />
       <workItem from="1583186678527" duration="4432000" />
-      <workItem from="1583199956513" duration="38668000" />
+      <workItem from="1583199956513" duration="39054000" />
     </task>
     <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
       <created>1580952707878</created>
@@ -359,17 +360,31 @@
       <option name="project" value="LOCAL" />
       <updated>1583298192635</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added favicon to star wars quiz">
+      <created>1583298830929</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1583298830930</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fixed stylesheet">
+      <created>1583299002779</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1583299002779</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101883000" />
+    <option name="totallyTimeSpent" value="102269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0900474" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13067028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -426,7 +441,9 @@
     <MESSAGE value="Fixed the errors in getting the species and planets names. Changed the way wrong answers were chosen." />
     <MESSAGE value="Fixed css layout and added reference to api" />
     <MESSAGE value="Basic Scoring functionality in place." />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Scoring functionality in place." />
+    <MESSAGE value="added favicon to star wars quiz" />
+    <MESSAGE value="fixed stylesheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed stylesheet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -568,17 +585,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/star_wars_trivia_example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="312" column="34" selection-start-line="312" selection-start-column="34" selection-end-line="312" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/star_wars_trivia_example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
         </state>
       </provider>
     </entry>
