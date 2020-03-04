@@ -23,7 +23,7 @@ class QuizQuestion extends React.Component {
 
         this.dataTypes = {
             people: ["homeworld", "birth_year", "species"],
-            planet: ["climate", "population"],
+            planets: ["climate", "population"],
             films: ["opening_crawl", "release_date"],
             species: ["classification", "language", "homeworld", "average_lifespan"],
             vehicles: ["cost_in_credits", "manufacturer", "max_atmosphering_speed", "max_atmosphering_speed"],
@@ -92,7 +92,8 @@ class QuizQuestion extends React.Component {
         let possibleQuestionDataTypes = this.dataTypes[topDataType];
 
         // Randomly select the data type for the question
-        let questionTypeIndex = Math.floor(Math.random() * possibleQuestionDataTypes.length);
+        if(possibleQuestionDataTypes === undefined){console.log("possibleQuestionDataTypes");}
+            let questionTypeIndex = Math.floor(Math.random() * possibleQuestionDataTypes.length);
         let questionType = possibleQuestionDataTypes[questionTypeIndex];
 
 
@@ -193,6 +194,7 @@ class QuizQuestion extends React.Component {
                                     let breakLoop = 0;
                                     while (answers.includes(null)) {
                                         // Randomly select a name on this page
+                                        if(namesData === undefined){console.log("namesData");}
                                         let currentPick = Math.floor(Math.random() * namesData.length);
                                         // skip the correct answer
                                         if (answersIndex === correctAnswerIndex) {
@@ -242,6 +244,7 @@ class QuizQuestion extends React.Component {
                         let breakLoop = 0;
                         while (answers.includes(null)) {
                             // Randomly select a value on this page
+                            if(data === undefined){console.log("data");}
                             let currentPick = Math.floor(Math.random() * data.length);
 
                             // skip the correct answer
