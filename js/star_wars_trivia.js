@@ -1,35 +1,10 @@
 'use strict';
 
-// import React from 'react';
-// import ReactDOM from 'react';
-
-const e = React.createElement;
-
-class TestButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {liked: false};
-    }
-
-    render() {
-        if (this.state.liked) {
-            return 'You liked this.';
-        }
-
-        return (
-            <button
-                className="answer"
-            > button
-            </button>
-        );
-    }
-}
-
-
 function QuizAnswer(props) {
     return (
         <button
-            className="answer"
+            onClick={props.onClick}
+            className={props.className}
         >{props.value}
         </button>
     );
@@ -40,14 +15,11 @@ class QuizQuestion extends React.Component {
         super(props);
         this.state = {
             error: null,
-            question: "This is the filler question string",
+            question: "Loading Question...",
             answers: Array(4).fill(null),
+            answersStates: Array(4).fill(false),
             correctAnswer: null
         };
-        // this.dataTypes = {
-        //     people: ["species"],
-        //     planets: ["climate", "population"]
-        // };
 
         this.dataTypes = {
             people: ["homeworld", "birth_year", "species"],
@@ -68,11 +40,40 @@ class QuizQuestion extends React.Component {
         }
     }
 
-    renderAnswer(i) {
+    renderAnswer(text, i) {
         return <div
             className="col-4 align-self-center">
-            <QuizAnswer value={i}/>
+            <QuizAnswer
+                value={text}
+                onClick={() => this.handleClick(i)}
+                className={this.state.answersStates[i] ? "clicked" : ""}
+            />
         </div>
+    }
+
+    handleClick(i) {
+        let answersStates = this.state.answersStates.slice();
+        if (answersStates.includes(true) && !answersStates[i]) {
+            return;
+        }
+        answersStates[i] = !answersStates[i];
+
+        this.setState({
+            answersStates: answersStates
+        }, () => {
+            if (!answersStates[i]) {
+                this.props.update(this.props.index, null);
+            } else {
+                let correct = this.scoreQuestion();
+                this.props.update(this.props.index, correct);
+            }
+        });
+    }
+
+    scoreQuestion() {
+        let correctAnswerIndex = this.state.answers.indexOf(this.state.correctAnswer);
+        let answerIndex = this.state.answersStates.indexOf(true);
+        return correctAnswerIndex === answerIndex;
     }
 
     componentDidMount() {
@@ -106,7 +107,7 @@ class QuizQuestion extends React.Component {
         let answers = Array(4).fill(null);
 
         // Find the page where that data lives
-        let dataPageNum = Math.ceil(correctAnswerDataIndex % 10 ===0 ? (correctAnswerDataIndex+1) / 10 : (correctAnswerDataIndex) / 10);
+        let dataPageNum = Math.ceil(correctAnswerDataIndex % 10 === 0 ? (correctAnswerDataIndex + 1) / 10 : (correctAnswerDataIndex) / 10);
         dataPageNum = dataPageNum === 0 ? 1 : dataPageNum;
 
 
@@ -130,14 +131,12 @@ class QuizQuestion extends React.Component {
                         let correctAnswerIndexForSecondFetch = 0;
 
                         // Check if address in array or if info is blank, "1" by default
-                        if (correctAnswerData[questionType][0]===undefined) {
+                        if (correctAnswerData[questionType][0] === undefined) {
                             correctAnswerIndexForSecondFetch = "1";
-                        }
-                        else if(typeof correctAnswerData[questionType] === "string"){
+                        } else if (typeof correctAnswerData[questionType] === "string") {
                             correctAnswerIndexForSecondFetch = correctAnswerData[questionType].split("/")[5];
 
-                        }
-                        else {
+                        } else {
                             correctAnswerIndexForSecondFetch = correctAnswerData[questionType][0].split("/")[5];
                         }
 
@@ -148,34 +147,29 @@ class QuizQuestion extends React.Component {
                         let dataType = questionType === "homeworld" ? "planets" : questionType;
 
                         // Hard code exceptions to the order of elements
-                        if(dataType === "planets"){
-                            if(correctAnswerIndexForSecondFetch === "1"){
+                        if (dataType === "planets") {
+                            if (correctAnswerIndexForSecondFetch === "1") {
                                 correctAnswerIndexForSecondFetch = 59;
-                            }
-                            else {
+                            } else {
                                 correctAnswerIndexForSecondFetch = parseInt(correctAnswerIndexForSecondFetch) - offset;
                             }
                         }
-                        if(dataType === "species"){
-                            if(correctAnswerIndexForSecondFetch === "1"){
+                        if (dataType === "species") {
+                            if (correctAnswerIndexForSecondFetch === "1") {
                                 correctAnswerIndexForSecondFetch = 35;
-                            }
-                            else if (correctAnswerIndexForSecondFetch === "2"){
+                            } else if (correctAnswerIndexForSecondFetch === "2") {
                                 correctAnswerIndexForSecondFetch = 34;
-                            }
-                            else if (correctAnswerIndexForSecondFetch === "3"){
+                            } else if (correctAnswerIndexForSecondFetch === "3") {
                                 correctAnswerIndexForSecondFetch = 33;
-                            }
-                            else if (correctAnswerIndexForSecondFetch === "4"){
+                            } else if (correctAnswerIndexForSecondFetch === "4") {
                                 correctAnswerIndexForSecondFetch = 36;
-                            }
-                            else {
+                            } else {
                                 correctAnswerIndexForSecondFetch = parseInt(correctAnswerIndexForSecondFetch) - offset;
                             }
                         }
 
                         // Get page number for the second fetch
-                        let dataPageNumForSecondFetch = Math.ceil(correctAnswerIndexForSecondFetch % 10 === 0 ? (correctAnswerIndexForSecondFetch+1) / 10 : (correctAnswerIndexForSecondFetch) / 10);
+                        let dataPageNumForSecondFetch = Math.ceil(correctAnswerIndexForSecondFetch % 10 === 0 ? (correctAnswerIndexForSecondFetch + 1) / 10 : (correctAnswerIndexForSecondFetch) / 10);
 
                         // fetch the page where the correct answer data lives
                         fetch("https://swapi.co/api/" + dataType + "/?page=" + dataPageNumForSecondFetch)
@@ -212,7 +206,7 @@ class QuizQuestion extends React.Component {
                                         }
                                         breakLoop++;
                                         // Break if loops for too long
-                                        if(breakLoop > 30){
+                                        if (breakLoop > 30) {
                                             console.log("Breaking Loop");
                                             break;
                                         }
@@ -264,7 +258,7 @@ class QuizQuestion extends React.Component {
                             }
                             breakLoop++;
                             // Break if loops for too long
-                            if(breakLoop > 30){
+                            if (breakLoop > 30) {
                                 console.log("Breaking Loop");
                                 break;
                             }
@@ -283,7 +277,6 @@ class QuizQuestion extends React.Component {
                     }
 
 
-
                 },
                 (error) => {
                     console.log("There was an error. Load failed!");
@@ -300,27 +293,80 @@ class QuizQuestion extends React.Component {
         console.log("Rendering Question...");
         return <div className={"quizQuestion"}>
             <h5>{this.state.question}</h5>
-            <div className="row quizAnswer">{this.renderAnswer(this.state.answers[0] ? this.state.answers[0] : "none")}</div>
-            <div className="row quizAnswer">{this.renderAnswer(this.state.answers[1] ? this.state.answers[1] : "none")}</div>
-            <div className="row quizAnswer">{this.renderAnswer(this.state.answers[2] ? this.state.answers[2] : "none")}</div>
-            <div className="row quizAnswer">{this.renderAnswer(this.state.answers[3] ? this.state.answers[3] : "none")}</div>
+            <div
+                className="row quizAnswer">{this.renderAnswer(this.state.answers[0] ? this.state.answers[0] : "Loading...", 0)}</div>
+            <div
+                className="row quizAnswer">{this.renderAnswer(this.state.answers[1] ? this.state.answers[1] : "Loading...", 1)}</div>
+            <div
+                className="row quizAnswer">{this.renderAnswer(this.state.answers[2] ? this.state.answers[2] : "Loading...", 2)}</div>
+            <div
+                className="row quizAnswer">{this.renderAnswer(this.state.answers[3] ? this.state.answers[3] : "Loading...", 3)}</div>
             <br/>
         </div>;
     }
 }
 
 class Quiz extends React.Component {
-    render() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            quizQuestions: Array(5).fill(null),
+            percentCorrect: null
+        };
+        this.update = this.update.bind(this);
+
+    }
+
+    renderQuestion(index) {
         return <div>
-            <QuizQuestion/>
-            <br/>
-            <QuizQuestion/>
-            <br/>
-            <QuizQuestion/>
+            <QuizQuestion
+                index={index}
+                update={this.update}
+            />
             <br/>
         </div>
     }
+
+    update(index, currentState) {
+        console.log("Updating!");
+
+        let newQuizStatus = this.state.quizQuestions.slice();
+        newQuizStatus[index] = currentState;
+        this.state.quizQuestions = newQuizStatus;
+    }
+
+    score() {
+        console.log("Score!");
+        if (this.state.quizQuestions.includes(null)) {
+            console.log("Not done!");
+            this.state.percentCorrect = null;
+            return;
+        }
+
+        let numCorrect = 0;
+        for (let correct of this.state.quizQuestions) {
+            if (correct) {
+                numCorrect++;
+            }
+        }
+        console.log(numCorrect);
+        this.state.percentCorrect = numCorrect / this.state.quizQuestions.length;
+        console.log(this.state.percentCorrect);
+        document.getElementById('testQuiz').innerText = this.state.percentCorrect * 100 + "%";
+    }
+
+    render() {
+        let quizQuestions = [];
+        for (let [index, value] of this.state.quizQuestions.entries()) {
+            quizQuestions.push(this.renderQuestion(index, value));
+        }
+        return <div>
+            {quizQuestions}
+            <button onClick={() => this.score()}>Score!</button>
+        </div>
+    }
 }
+
 ReactDOM.render(
     <Quiz/>,
     document.getElementById('testQuiz')

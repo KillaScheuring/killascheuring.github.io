@@ -37,6 +37,14 @@ h1 {
 }
 
 button {
+    background-color: black;
+
+    border: solid 4px yellow;
+
+    color: white;
+}
+
+.quizAnswer button {
 
     background-color: black;
 
@@ -47,8 +55,13 @@ button {
     color: white;
 }
 
-button.clicked {
+.quizAnswer button.clicked {
+    background-color: dimgrey;
+    color: black;
+}
 
+button:active {
+    background-color: yellow;
 }
 
 .quizAnswer {
