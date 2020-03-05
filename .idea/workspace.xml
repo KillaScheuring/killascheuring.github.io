@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/squirrels/squirrel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/squirrels_game.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/squirrels_game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/squirrels.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/squirrels/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/squirrels/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/squirrels/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/squirrels/squirrel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/squirrels/squirrel.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +29,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/squirrels/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+            <state relative-caret-position="660">
+              <caret line="202" column="28" lean-forward="true" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
+              <folding>
+                <element signature="e#149#1742#0" />
+                <element signature="e#690#706#0" />
+                <element signature="n#!!block;n#f#0" />
+                <element signature="n#!!block;n#mouseClicked#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/squirrels/squirrel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2222">
-              <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+            <state relative-caret-position="132">
+              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -65,6 +69,7 @@
       <find>length</find>
       <find>upda</find>
       <find>len</find>
+      <find>offset</find>
     </findStrings>
     <replaceStrings>
       <replace>http://placekitten.com/100/100/</replace>
@@ -104,8 +109,8 @@
         <option value="$PROJECT_DIR$/js/sketch.js" />
         <option value="$PROJECT_DIR$/js/squirrels.js" />
         <option value="$PROJECT_DIR$/examples/squirrels_game.html" />
-        <option value="$PROJECT_DIR$/js/squirrels/sketch.js" />
         <option value="$PROJECT_DIR$/js/squirrels/squirrel.js" />
+        <option value="$PROJECT_DIR$/js/squirrels/sketch.js" />
       </list>
     </option>
   </component>
@@ -119,7 +124,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,6 +172,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,7 +248,8 @@
       <workItem from="1582769149991" duration="98000" />
       <workItem from="1583087644271" duration="23320000" />
       <workItem from="1583186678527" duration="4432000" />
-      <workItem from="1583199956513" duration="61421000" />
+      <workItem from="1583199956513" duration="61772000" />
+      <workItem from="1583389444283" duration="9026000" />
     </task>
     <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
       <created>1580952707878</created>
@@ -413,11 +419,18 @@
       <option name="project" value="LOCAL" />
       <updated>1583376874904</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="updated movement, spawn, and animations">
+      <created>1583389038044</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1583389038044</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124636000" />
+    <option name="totallyTimeSpent" value="134013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -487,7 +500,8 @@
     <MESSAGE value="Made the buttons more like radio buttons. Removed some console.logs." />
     <MESSAGE value="Documentation and styling changed." />
     <MESSAGE value="Started Squirrels Game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started Squirrels Game" />
+    <MESSAGE value="updated movement, spawn, and animations" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated movement, spawn, and animations" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -650,15 +664,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/squirrels/squirrel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2222">
-          <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+        <state relative-caret-position="132">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/squirrels/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+        <state relative-caret-position="660">
+          <caret line="202" column="28" lean-forward="true" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
+          <folding>
+            <element signature="e#149#1742#0" />
+            <element signature="e#690#706#0" />
+            <element signature="n#!!block;n#f#0" />
+            <element signature="n#!!block;n#mouseClicked#0" />
+          </folding>
         </state>
       </provider>
     </entry>
