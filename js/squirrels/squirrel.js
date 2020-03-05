@@ -15,10 +15,10 @@ class Squirrel {
 
         this.level = random();
         if (this.level > 0.99) {
-            this.level = 5;
+            this.level = 1;
         }
         else if (this.level > 0.95) {
-            this.level = 4;
+            this.level = 1;
         }
         else if (this.level > 0.80) {
             this.level = 3;
@@ -29,7 +29,6 @@ class Squirrel {
         else {
             this.level = 1;
         }
-            console.log("this.level", this.level);
 
         // higher level squirrels are faster
         this.speed = 0.50 * this.level;
@@ -51,9 +50,6 @@ class Squirrel {
         fill(this.color[0], this.color[1], this.color[2], this.color[3]);
         // currently a circle
         ellipse(this.x, this.y, this.r * 2, this.r * 2);
-
-        fill(255);
-        text(this.level, this.x, this.y);
     }
 
     // set velocity
@@ -113,7 +109,7 @@ class Squirrel {
         let d = dist(checkX, checkY, this.x, this.y);
 
         // if mouse within 10% of the squirrel, it's a hit
-        if (d < this.r * 1.1) {
+        if (d < this.r * .9) {
             // set stunned time 30 frames
             this.stunned = 200 / this.level;
 
