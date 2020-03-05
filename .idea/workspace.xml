@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/squirrels_game.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/squirrels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/killascheuring.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/killascheuring.github.io.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/star_wars_trivia.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/star_wars_trivia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,44 +21,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/star_wars_trivia_example.html">
+        <entry file="file://$PROJECT_DIR$/examples/squirrels_game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+            <state relative-caret-position="176">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
+        <entry file="file://$PROJECT_DIR$/js/squirrels.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/starwars.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="751">
-              <caret line="76" column="59" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="286">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -64,9 +43,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -108,12 +87,14 @@
         <option value="$PROJECT_DIR$/css/war.css" />
         <option value="$PROJECT_DIR$/json/data.json" />
         <option value="$PROJECT_DIR$/js/war.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/starwars_trivia.js" />
         <option value="$PROJECT_DIR$/examples/starwars_trivia_example.html" />
-        <option value="$PROJECT_DIR$/css/starwars.css" />
         <option value="$PROJECT_DIR$/examples/star_wars_trivia_example.html" />
         <option value="$PROJECT_DIR$/js/star_wars_trivia.js" />
+        <option value="$PROJECT_DIR$/css/starwars.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/examples/squirrels_game.html" />
+        <option value="$PROJECT_DIR$/js/squirrels.js" />
       </list>
     </option>
   </component>
@@ -202,7 +183,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.squirrels_game.html">
+    <configuration name="squirrels_game.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/squirrels_game.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="star_wars_trivia_example.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/star_wars_trivia_example.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -211,6 +195,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.squirrels_game.html" />
         <item itemvalue="JavaScript Debug.star_wars_trivia_example.html" />
         <item itemvalue="JavaScript Debug.war_example.html" />
       </list>
@@ -240,7 +225,7 @@
       <workItem from="1582769149991" duration="98000" />
       <workItem from="1583087644271" duration="23320000" />
       <workItem from="1583186678527" duration="4432000" />
-      <workItem from="1583199956513" duration="41830000" />
+      <workItem from="1583199956513" duration="52158000" />
     </task>
     <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
       <created>1580952707878</created>
@@ -389,11 +374,25 @@
       <option name="project" value="LOCAL" />
       <updated>1583299615903</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Made the buttons more like radio buttons. Removed some console.logs.">
+      <created>1583361467247</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1583361467247</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Documentation and styling changed.">
+      <created>1583364826737</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1583364826737</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105045000" />
+    <option name="totallyTimeSpent" value="115373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -460,7 +459,9 @@
     <MESSAGE value="fixed stylesheet" />
     <MESSAGE value="fixed icon rel" />
     <MESSAGE value="fixed planets typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed planets typo" />
+    <MESSAGE value="Made the buttons more like radio buttons. Removed some console.logs." />
+    <MESSAGE value="Documentation and styling changed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation and styling changed." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -581,24 +582,17 @@
     <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/starwars.css">
+    <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+        <state relative-caret-position="1155">
+          <caret line="366" column="14" lean-forward="true" selection-start-line="366" selection-start-column="14" selection-end-line="366" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/starwars.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="76" column="59" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="642">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -609,10 +603,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state relative-caret-position="1122">
+          <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/squirrels_game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/squirrels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
         </state>
       </provider>
     </entry>
