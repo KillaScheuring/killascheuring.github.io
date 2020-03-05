@@ -3,9 +3,19 @@ let game_state = "START";
 const INITIAL_SQUIRRELS = 10;
 const MAX_SQUIRRELS = 20;
 let squirrelNames = [];
-let timeOut = 60*5;
+let timeOut = 60 * 5;
 let numSquirrelsInWave = 0;
-const waveSize = 40;
+let waveSize = 40;
+let waveInfo = [
+    {
+        waveSize: 40,
+        levelRates: [0.99, 0.95, 0.80, 0.60],
+        baseSpeed: 0.5,
+        rateOfSpawn: 0.03
+    }
+];
+let waveIndex = 1;
+
 let car = {};
 
 const POSSIBLE_NAMES = [
@@ -137,8 +147,8 @@ function setup() {
     car = {
         lives: 5,
         h: 100,
-        w: width/2,
-        x: (width/2),
+        w: width / 2,
+        x: (width / 2),
         y: (height - 50),
         win: false
     };
@@ -152,8 +162,7 @@ function draw() {
         if (mouseIsPressed) {
             game_state = "RUNNING";
         }
-    }
-    else if (game_state === "RUNNING") {
+    } else if (game_state === "RUNNING") {
 
         // Color background
         background(76, 199, 70);
@@ -164,45 +173,54 @@ function draw() {
         text("number of squirrels: " + numSquirrelsInWave, 10, 70);
 
         // Occasionally generate more squirrels until max reached
-        generateWave(waveSize, 0.03);
+        generateWave(waveSize, 0.3);
 
         // Loop through the squirrels, update them, and show their location
         for (let squirrel of squirrels) {
             squirrel.update();
             squirrel.show();
-            if (dist(squirrel.x, squirrel.y, car.x, car.y) < car.h/2+squirrel.r) {
+            if (dist(squirrel.x, squirrel.y, car.x, car.y) < car.h / 2 + squirrel.r) {
                 car.lives--;
                 squirrels.splice(squirrels.indexOf(squirrel), 1);
             }
             // If squirrel finished death animation, remove from array
             if (squirrel.color[3] <= 0) {
-                squirrelNames.push(squirrel.name);
+                squirrelNames.push(squirrel.name + " lvl: " + squirrel.level);
                 squirrels.splice(squirrels.indexOf(squirrel), 1);
             }
         }
-        if(car.lives <= 0){
+        if (car.lives <= 0) {
             game_state = "GAME_OVER";
-        }
-        else if(numSquirrelsInWave === waveSize && squirrels.length === 0){
+        } else if (numSquirrelsInWave === waveSize && squirrels.length === 0) {
             game_state = "GAME_OVER";
             car.win = true;
         }
-    }
-    else if (game_state === "GAME_OVER") {
+    } else if (game_state === "GAME_OVER") {
         squirrels = [];
-        let clickString = "Click to try again in " + Math.floor(timeOut/60) + " seconds";
-        if(timeOut < 0){clickString = "Click to try again";}
+        let clickString = "Click to try again in " + Math.floor(timeOut / 60) + " seconds";
+        if (timeOut < 0) {
+            clickString = "Click to try again";
+        }
         background(171, 171, 171);
         fill(0);
         text("Game Over", 50, 40);
         text(car.win ? "You Won!" : "You lost to the squirrels!", 50, 70);
         text(clickString, 50, 100);
-        text("Squirrels Killed", 50, 130);
-        timeOut --;
+        text("Squirrels Killed", 50, 140);
+        timeOut--;
+
+        textSize(16);
+        let rows = 4;
+        let y = 0;
+        for (let index = 0; index < squirrelNames.length; index++) {
+            if((index % rows) === 0){y+=30;}
+            text(squirrelNames[index], 50 + (index % rows) * 170, 150 + y);
+        }
+        textSize(24);
 
         if (mouseIsPressed && timeOut < 0) {
             console.log(timeOut);
-            timeOut = 60*5;
+            timeOut = 60 * 5;
 
             numSquirrelsInWave = 0;
             squirrelNames = [];
