@@ -1,11 +1,19 @@
+// initialize array to hold squirrels
 let squirrels = [];
+
+// Initialize game state
 let game_state = "START";
-const INITIAL_SQUIRRELS = 10;
-const MAX_SQUIRRELS = 20;
-let squirrelNames = [];
+
+// set time out to 5 seconds (60 fps)
 let timeOut = 60 * 5;
+
+// set number of squirrels generated in this wave
 let numSquirrelsInWave = 0;
+
+// set number of squirrels to be generated this wave (will be replaced by waveInfo[i].waveSize
 let waveSize = 40;
+
+// used for player advancement (TODO implement)
 let waveInfo = [
     {
         waveSize: 40,
@@ -14,10 +22,16 @@ let waveInfo = [
         rateOfSpawn: 0.03
     }
 ];
+// used for player advancement (TODO implement)
 let waveIndex = 1;
 
+// initialize car object
 let car = {};
 
+// Initialize array for all squirrels killed names
+let squirrelNames = [];
+
+// List of possible names
 const POSSIBLE_NAMES = [
     "Joey",
     "Mickey",
@@ -155,22 +169,26 @@ function setup() {
 }
 
 function draw() {
+    // Check the game state
     if (game_state === "START") {
+        // set background color for start
         background(228, 230, 140);
         fill(0);
+        // If start prompt the user to begin the game
         text("Click to start", width / 2 - width / 12, height / 2);
+        // check if player wants to start
         if (mouseIsPressed) {
             game_state = "RUNNING";
         }
     } else if (game_state === "RUNNING") {
 
-        // Color background
+        // Background color
         background(76, 199, 70);
 
         fill(0);
+        // Show the player the score
         textSize(24);
         text("number of squirrels squished: " + squirrelNames.length, 10, 40);
-        text("number of squirrels: " + numSquirrelsInWave, 10, 70);
 
         // Occasionally generate more squirrels until max reached
         generateWave(waveSize, 0.3);
@@ -179,56 +197,95 @@ function draw() {
         for (let squirrel of squirrels) {
             squirrel.update();
             squirrel.show();
+
+            // check if squirrel made it to the car
             if (dist(squirrel.x, squirrel.y, car.x, car.y) < car.h / 2 + squirrel.r) {
+                // if so reduce lives and remove that squirrel
                 car.lives--;
                 squirrels.splice(squirrels.indexOf(squirrel), 1);
             }
             // If squirrel finished death animation, remove from array
             if (squirrel.color[3] <= 0) {
+                // push to killed squirrel's name and level to the list of names
                 squirrelNames.push(squirrel.name + " lvl: " + squirrel.level);
+                // remove that squirrel
                 squirrels.splice(squirrels.indexOf(squirrel), 1);
             }
         }
+
+        // check for end cases
         if (car.lives <= 0) {
+            // if player has no more lives go to game over
             game_state = "GAME_OVER";
         } else if (numSquirrelsInWave === waveSize && squirrels.length === 0) {
+            // if player has survived the wave go to game over
             game_state = "GAME_OVER";
+            // set car to winning
             car.win = true;
         }
     } else if (game_state === "GAME_OVER") {
+        // if game over reset the squirrels array
         squirrels = [];
+
+        // set string to prompt player to play again
         let clickString = "Click to try again in " + Math.floor(timeOut / 60) + " seconds";
+
+        // if time out elapsed just prompt the player to play again
         if (timeOut < 0) {
             clickString = "Click to try again";
         }
+
+        // set background to grey
         background(171, 171, 171);
         fill(0);
+
+        // tell the user game over
         text("Game Over", 50, 40);
+        // tell the user whether they won or not
         text(car.win ? "You Won!" : "You lost to the squirrels!", 50, 70);
+        // tell them when/if they can play again
         text(clickString, 50, 100);
+        // Title to list the names of slain squirrels
         text("Squirrels Killed", 50, 140);
+
+        // step down timeout
         timeOut--;
 
+        // set text size for names display
         textSize(16);
-        let rows = 4;
+
+        // set number of columns
+        let cols = 4;
+        // set current y offset
         let y = 0;
+        // loop through all names
         for (let index = 0; index < squirrelNames.length; index++) {
-            if((index % rows) === 0){y+=30;}
-            text(squirrelNames[index], 50 + (index % rows) * 170, 150 + y);
+            // if we are on a new row step up y offset
+            if((index % cols) === 0){y+=30;}
+            // display that name at a position with offset
+            text(squirrelNames[index], 50 + (index % cols) * 170, 150 + y);
         }
+        // reset text size
         textSize(24);
 
+        // check if player wants to play again
         if (mouseIsPressed && timeOut < 0) {
-            console.log(timeOut);
+            // if player clicks
+            // reset time out for next game over
             timeOut = 60 * 5;
 
+            // reset number of squirrels generated this wave
             numSquirrelsInWave = 0;
+
+            // reset the names array to be empty
             squirrelNames = [];
 
-            car.lives = 3;
+            // reset number of lives left
+            car.lives = 5;
+            // reset to not have won
             car.win = false;
 
-
+            // change game state to running the game
             game_state = "RUNNING";
         }
     }
@@ -237,11 +294,15 @@ function draw() {
     fill(117);
     rectMode(CENTER);
     rect(car.x, car.y, car.w, car.h);
-    fill(0, 255, 0);
-    ellipse(car.x, car.y, 5, 5);
+
+    // draw the x, y position of the car for debugging
+    // fill(0, 255, 0);
+    // ellipse(car.x, car.y, 5, 5);
 }
 
 function generateWave(totalSquirrelsInWave, rateOfSpawn) {
+    // Generate squirrels only if there is remaining space in this wave
+    // check against a random and spawn rate
     if (random() < rateOfSpawn && (squirrels.length + numSquirrelsInWave) < totalSquirrelsInWave) {
         // select the generated squirrel's spawn location
         let spawn = pickRandomSpawn();
@@ -251,19 +312,27 @@ function generateWave(totalSquirrelsInWave, rateOfSpawn) {
         squirrels.push(newSquirrel);
         // Set this squirrel in motion
         newSquirrel.moveToTarget(car.x, car.y);
+        // iterate the number of squirrels generated this wave
         numSquirrelsInWave++;
     }
+    // return not used
     return (squirrels.length + numSquirrelsInWave) === totalSquirrelsInWave;
 }
 
 // Generates a name and has a chance to add a flourish
 function pickRandomName() {
+    // get random name
     let name = random(POSSIBLE_NAMES);
     if (random() > 0.95) {
+        // add a flourish
         let newName = "That ";
-        newName += random() > 0.5 ? "bastard " : "b**** ";
+        newName += random() > 0.5 ? "lovely person " : "swell dude ";
         name = newName + name;
+    } else if (random() > 0.99){
+        name = "Oh hi Mark"
     }
+
+    // return that name
     return name;
 
 }

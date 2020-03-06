@@ -13,20 +13,27 @@ class Squirrel {
         // set size of the squirrel
         this.r = 20;
 
+        // get a random number to determine the level
+        // TODO refactor to gaussian random or something less ridiculous
         this.level = random();
         if (this.level > 0.99) {
-            this.level = 1;
+            // very low chance for level 5 squirrel
+            this.level = 5;
         }
         else if (this.level > 0.95) {
-            this.level = 1;
+            // slightly higher chance for level 4
+            this.level = 4;
         }
         else if (this.level > 0.80) {
+            // slightly higher for level 2
             this.level = 3;
         }
         else if (this.level > 0.60) {
+            // even higher for level 2
             this.level = 2;
         }
         else {
+            // most likely to get level 1
             this.level = 1;
         }
 
@@ -35,6 +42,7 @@ class Squirrel {
 
         // set color, default https://www.color-hex.com/color/a0522d
         // 160, 82, 45
+        // change color by level to have visual distinction
         this.color = [160 - 40 * this.level, 82 - 20 * this.level, 45 - 50 * this.level, 255];
 
         // set number of lives (will be determined by level later)
