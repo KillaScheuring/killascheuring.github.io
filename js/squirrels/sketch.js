@@ -263,7 +263,7 @@ function draw() {
             // if we are on a new row step up y offset
             if((index % cols) === 0){y+=30;}
             // display that name at a position with offset
-            text(squirrelNames[index], 50 + (index % cols) * 170, 150 + y);
+            text(squirrelNames[index], 50 + (index % cols) * 250, 150 + y);
         }
         // reset text size
         textSize(24);
@@ -326,7 +326,7 @@ function pickRandomName() {
     if (random() > 0.95) {
         // add a flourish
         let newName = "That ";
-        newName += random() > 0.5 ? "lovely person " : "swell dude ";
+        newName += random() > 0.5 ? '"lovely person" ' : '"swell dude" ';
         name = newName + name;
     } else if (random() > 0.99){
         name = "Oh hi Mark"
