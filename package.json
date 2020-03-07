@@ -1,0 +1,22 @@
+{
+  "name": "killascheuring.github.io",
+  "version": "1.0.0",
+  "description": "Angular CLI project with STAPI",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KillaScheuring/killascheuring.github.io.git"
+  },
+  "author": "KillaScheuring",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KillaScheuring/killascheuring.github.io/issues"
+  },
+  "homepage": "https://github.com/KillaScheuring/killascheuring.github.io#readme"
+}
