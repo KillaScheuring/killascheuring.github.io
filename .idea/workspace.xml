@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/browserslist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/e2e/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/e2e/src/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/e2e/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/app/app.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/src/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-trek-quiz/tslint.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
-              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -250,7 +219,7 @@
       <workItem from="1583552606182" duration="763000" />
       <workItem from="1583553499372" duration="810000" />
       <workItem from="1583684886024" duration="1643000" />
-      <workItem from="1583688321664" duration="71000" />
+      <workItem from="1583688321664" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
       <created>1580952707878</created>
@@ -469,11 +438,25 @@
       <option name="project" value="LOCAL" />
       <updated>1583553809749</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added basic angular project">
+      <created>1583688426986</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1583688426986</updated>
+    </task>
+    <task id="LOCAL-00033" summary="removed basic angular project">
+      <created>1583688772766</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1583688772766</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155136000" />
+    <option name="totallyTimeSpent" value="155506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -523,8 +506,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added api functionality" />
-    <MESSAGE value="fixed reference issue" />
     <MESSAGE value="trying to fix api" />
     <MESSAGE value="Fixed card taking order" />
     <MESSAGE value="changed test 1 data" />
@@ -548,7 +529,9 @@
     <MESSAGE value="documentation and changed name flourishes" />
     <MESSAGE value="changed the styling of the names display" />
     <MESSAGE value="Trying to get angular to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to get angular to work" />
+    <MESSAGE value="added basic angular project" />
+    <MESSAGE value="removed basic angular project" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed basic angular project" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -727,7 +710,7 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
-          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
