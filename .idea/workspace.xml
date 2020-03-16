@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/angular_example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="50" />
+            <state relative-caret-position="264">
+              <caret line="75" column="70" selection-start-line="75" selection-start-column="70" selection-end-line="75" selection-end-column="70" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -31,10 +31,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/starwars.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="10" selection-start-line="10" selection-end-line="11" />
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -137,6 +146,16 @@
               <item name="killascheuring.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="killascheuring.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="killascheuring.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="killascheuring.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="killascheuring.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -177,8 +196,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
     <configuration name="index2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/index2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/star-trek-quiz/src/index.html" useBuiltInWebServerPort="true">
@@ -190,16 +212,13 @@
     <configuration name="star_wars_trivia_example.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/star_wars_trivia_example.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="war_example.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/war_example.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.index2.html" />
         <item itemvalue="JavaScript Debug.squirrels_game.html" />
         <item itemvalue="JavaScript Debug.star_wars_trivia_example.html" />
-        <item itemvalue="JavaScript Debug.war_example.html" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +255,10 @@
       <workItem from="1583684886024" duration="1643000" />
       <workItem from="1583688321664" duration="441000" />
       <workItem from="1583688974084" duration="66000" />
-      <workItem from="1584036677151" duration="651000" />
+      <workItem from="1584036677151" duration="954000" />
+      <workItem from="1584042440094" duration="1267000" />
+      <workItem from="1584333903320" duration="794000" />
+      <workItem from="1584397506427" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
       <created>1580952707878</created>
@@ -476,17 +498,24 @@
       <option name="project" value="LOCAL" />
       <updated>1583688987605</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added link to stack blitz angular project">
+      <created>1584037802088</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1584037802088</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156223000" />
+    <option name="totallyTimeSpent" value="158665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13067028" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13067028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -498,7 +527,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32977462" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3262159" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3262159" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3262159" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -530,7 +559,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trying to fix api" />
     <MESSAGE value="Fixed card taking order" />
     <MESSAGE value="changed test 1 data" />
     <MESSAGE value="Response to game over added for both app and test." />
@@ -555,7 +583,8 @@
     <MESSAGE value="Trying to get angular to work" />
     <MESSAGE value="added basic angular project" />
     <MESSAGE value="removed basic angular project" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed basic angular project" />
+    <MESSAGE value="Added link to stack blitz angular project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added link to stack blitz angular project" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -655,13 +684,6 @@
     <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="366" column="14" lean-forward="true" selection-start-line="366" selection-start-column="14" selection-end-line="366" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2391">
@@ -724,17 +746,24 @@
     <entry file="file://$PROJECT_DIR$/star-trek-quiz/tsconfig.app.json" />
     <entry file="file://$PROJECT_DIR$/star-trek-quiz/tsconfig.spec.json" />
     <entry file="file://$PROJECT_DIR$/package.json" />
+    <entry file="file://$PROJECT_DIR$/js/star_wars_trivia.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/starwars.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="11" />
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="50" />
+        <state relative-caret-position="264">
+          <caret line="75" column="70" selection-start-line="75" selection-start-column="70" selection-end-line="75" selection-end-column="70" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
