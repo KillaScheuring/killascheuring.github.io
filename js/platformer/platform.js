@@ -8,9 +8,12 @@ class Platform {
     }
 
     show(){
-        fill(100);
+        fill(colors.platform[0], colors.platform[1], colors.platform[2]);
         rectMode(CENTER);
         rect(this.body.position.x, this.body.position.y, this.w, this.h,);
     }
 
+    remove(){
+        World.remove(world, this.body);
+    }
 }

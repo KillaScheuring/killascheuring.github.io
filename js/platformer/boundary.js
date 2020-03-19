@@ -5,8 +5,12 @@ class Boundary extends Platform{
     }
 
     show(){
-        fill(200);
+        fill(colors.boundary[0], colors.boundary[1], colors.boundary[2]);
         rectMode(CENTER);
         rect(this.body.position.x, this.body.position.y, this.w, this.h,);
+    }
+
+    remove(){
+        World.remove(world, this.body);
     }
 }

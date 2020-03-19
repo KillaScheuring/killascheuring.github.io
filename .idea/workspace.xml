@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/platformer.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/platformer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/boundary.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/boundary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/camera.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/platform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
     </list>
@@ -28,14 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/platformer/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-              <folding>
-                <element signature="n#!!block;n#collision#0;n#!!block;n#setup#0" />
-              </folding>
+            <state relative-caret-position="638">
+              <caret line="29" column="9" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -43,22 +42,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/platformer/intractableObject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="6" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="399">
+              <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="55" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/platformer/boundary.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/platformer/camera.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" selection-start-column="14" selection-end-column="14" />
+            <state relative-caret-position="176">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -66,17 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/platformer/platform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" selection-start-line="3" selection-end-line="4" />
+            <state relative-caret-position="220">
+              <caret line="10" column="71" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/platformer/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="572">
+              <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -101,10 +104,13 @@
       <find>upda</find>
       <find>len</find>
       <find>offset</find>
+      <find>Spike</find>
+      <find>base</find>
     </findStrings>
     <replaceStrings>
       <replace>http://placekitten.com/100/100/</replace>
       <replace>placekitten.com/200/200/</replace>
+      <replace>JumpBoost</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -153,9 +159,12 @@
         <option value="$PROJECT_DIR$/js/platformer/health.js" />
         <option value="$PROJECT_DIR$/examples/platformer.html" />
         <option value="$PROJECT_DIR$/js/platformer/interactableObject.js" />
+        <option value="$PROJECT_DIR$/js/platformer/camera.js" />
+        <option value="$PROJECT_DIR$/js/platformer/boundary.js" />
+        <option value="$PROJECT_DIR$/js/platformer/platform.js" />
         <option value="$PROJECT_DIR$/js/platformer/intractableObject.js" />
-        <option value="$PROJECT_DIR$/js/platformer/player.js" />
         <option value="$PROJECT_DIR$/js/platformer/sketch.js" />
+        <option value="$PROJECT_DIR$/js/platformer/player.js" />
       </list>
     </option>
   </component>
@@ -317,7 +326,7 @@
       <workItem from="1584470115052" duration="11000" />
       <workItem from="1584502028566" duration="13000" />
       <workItem from="1584502392843" duration="63000" />
-      <workItem from="1584567175966" duration="11295000" />
+      <workItem from="1584567175966" duration="29734000" />
     </task>
     <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
       <created>1580952707878</created>
@@ -578,11 +587,25 @@
       <option name="project" value="LOCAL" />
       <updated>1584567526685</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="got health items working">
+      <created>1584588811101</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1584588811101</updated>
+    </task>
+    <task id="LOCAL-00039" summary="got damage and game over working">
+      <created>1584594533885</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1584594533885</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173046000" />
+    <option name="totallyTimeSpent" value="191485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -634,8 +657,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Response to game over added for both app and test." />
-    <MESSAGE value="added test 2" />
     <MESSAGE value="Started React Example." />
     <MESSAGE value="Fixed the errors in getting the species and planets names. Changed the way wrong answers were chosen." />
     <MESSAGE value="Fixed css layout and added reference to api" />
@@ -659,7 +680,9 @@
     <MESSAGE value="Added link to stack blitz angular project" />
     <MESSAGE value="moved star wars react example to StackBlitz" />
     <MESSAGE value="Added beginning of platformer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added beginning of platformer" />
+    <MESSAGE value="got health items working" />
+    <MESSAGE value="got damage and game over working" />
+    <option name="LAST_COMMIT_MESSAGE" value="got damage and game over working" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -828,48 +851,10 @@
     <entry file="file://$PROJECT_DIR$/js/platformer/matter.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/platformer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/platformer/intractableObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/platformer/platform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/platformer/camera.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/platformer/boundary.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/platformer/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/squirrels/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="244" column="74" lean-forward="true" selection-start-line="244" selection-start-column="74" selection-end-line="244" selection-end-column="74" />
+        <state relative-caret-position="374">
+          <caret line="179" column="26" selection-start-line="179" selection-start-column="12" selection-end-line="179" selection-end-column="26" />
           <folding>
             <element signature="e#797#2395#0" />
             <element signature="n#!!block;n#mouseClicked#0" />
@@ -877,13 +862,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/platformer/camera.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/platformer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/platformer/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!block;n#collision#0;n#!!block;n#setup#0" />
-          </folding>
+        <state relative-caret-position="638">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/platformer/intractableObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="55" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/platformer/boundary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/platformer/platform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="71" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/platformer/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
         </state>
       </provider>
     </entry>
