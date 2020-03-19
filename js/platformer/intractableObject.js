@@ -21,7 +21,7 @@ class Health {
     }
 
     interact(player){
-        player.stats.lives += this.healAmount;
+        player.lives += this.healAmount;
     }
 }
 
@@ -84,7 +84,7 @@ class Spike {
     }
 
     interact(player){
-        player.stats.lives--;
+        player.lives--;
     }
 }
 

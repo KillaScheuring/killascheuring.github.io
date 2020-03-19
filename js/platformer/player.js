@@ -7,14 +7,11 @@ class Player {
         this.body.label = "player";
         this.numJumps = 0;
         this.bonuses = [];
+        this.lives = 3;
         this.baseStats = {
             jump: 0.03,
-            lives: 1
         };
-        this.stats = {
-            jump: 0.03,
-            lives: 1
-        };
+        this.stats = {...this.baseStats};
     }
 
     jump(){
@@ -33,12 +30,12 @@ class Player {
     }
 
     update(){
+        this.stats = {...this.baseStats};
         for(let bonusIndex = this.bonuses.length-1; bonusIndex >= 0; bonusIndex--){
             this.bonuses[bonusIndex].duration --;
             if(this.bonuses[bonusIndex].duration > 0){
-                this.stats[this.bonuses[bonusIndex].name] = this.baseStats["jump"] + this.bonuses[bonusIndex].value;
+                this.stats[this.bonuses[bonusIndex].name] += this.bonuses[bonusIndex].value;
             } else if(this.bonuses[bonusIndex].duration < 0){
-                this.stats[this.bonuses[bonusIndex].name] = this.baseStats[this.bonuses[bonusIndex].name];
                 this.bonuses.splice(bonusIndex, 1);
             }
         }
@@ -48,7 +45,7 @@ class Player {
         push();
         translate(width/2, this.body.position.y -height/2-140);
         let y = 0;
-        for(let livesIndex = 0; livesIndex < this.stats.lives; livesIndex++){
+        for(let livesIndex = 0; livesIndex < this.lives; livesIndex++){
             let x = (livesIndex%6)*30 - width+40;
             y += (livesIndex%6) === 0 ? 30: 0;
             fill(255, 75, 75);

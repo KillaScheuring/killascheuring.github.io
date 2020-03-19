@@ -27,7 +27,7 @@ let colors = {
     health: [255, 20, 20],
     spike: [150, 150, 255],
     portal: [150, 255, 150],
-    "jump": [150, 255, 150],
+    jump: [150, 255, 150],
 
 };
 
@@ -160,7 +160,7 @@ function draw() {
         player.show();
         camera.y = player.body.position.y;
 
-        if(player.stats.lives <= 0){
+        if(player.lives <= 0){
             GAME_STATE = "GAME_OVER";
 
         }
