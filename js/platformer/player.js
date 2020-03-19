@@ -27,9 +27,10 @@ class Player {
     show() {
         push();
         translate(width/2, this.body.position.y);
+        let y = -height/2-140;
         for(let livesIndex = 0; livesIndex < this.lives; livesIndex++){
-            let x = livesIndex*30 - width+40;
-            let y = -height/2-90;
+            let x = (livesIndex%6)*30 - width+40;
+            y += (livesIndex%6) === 0 ? 30: 0;
             fill(255, 75, 75);
             ellipse(x, y, 20, 20);
         }
