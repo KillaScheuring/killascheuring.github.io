@@ -112,6 +112,6 @@ class Portal {
     }
 
     interact(){
-        GAME_STATE = "GAME_OVER";
+        GAME_STATE = "WIN";
     }
 }

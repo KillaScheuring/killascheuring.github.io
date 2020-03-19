@@ -14,11 +14,11 @@ let intractableObjects = [];
 let bounds = [];
 
 let kindsOfPickUps = ["health", "spike", "portal", "jumpBoost"];
-let gameHeight = 3000;
+let gameHeight = 2000;
 let camera;
 
 let GAME_STATE = "START";
-let timeout = 60*5;
+let timeout = 60 * 5;
 
 let colors = {
     boundary: [200, 200, 200],
@@ -40,25 +40,25 @@ function setup() {
     player = new Player(0, 0);
     camera = new Camera();
     camera.y = player.body.position.y;
-    function collision(event){
-        for(let pair of event.source.pairs.list){
+
+    function collision(event) {
+        for (let pair of event.source.pairs.list) {
             let bodyA = pair.bodyA.label;
             let bodyB = pair.bodyB.label;
-            if(bodyA === "player" && kindsOfPickUps.includes(bodyB)){
-                for(let i = 0; i < intractableObjects.length; i++){
+            if (bodyA === "player" && kindsOfPickUps.includes(bodyB)) {
+                for (let i = 0; i < intractableObjects.length; i++) {
                     let body = intractableObjects[i].body;
-                    if(pair.bodyB === body){
+                    if (pair.bodyB === body) {
                         intractableObjects[i].interact(player);
                         intractableObjects.splice(i, 1);
                         World.remove(world, body);
                         break;
                     }
                 }
-            }
-            else if (bodyB === "player" && kindsOfPickUps.includes(bodyA)){
-                for(let i = 0; i < intractableObjects.length; i++){
+            } else if (bodyB === "player" && kindsOfPickUps.includes(bodyA)) {
+                for (let i = 0; i < intractableObjects.length; i++) {
                     let body = intractableObjects[i].body;
-                    if(pair.bodyA === body){
+                    if (pair.bodyA === body) {
                         intractableObjects[i].interact(player);
                         intractableObjects.splice(i, 1);
                         World.remove(world, body);
@@ -67,7 +67,7 @@ function setup() {
                 }
             }
         }
-        if(player.body.velocity.y > 0){
+        if (player.body.velocity.y > 0) {
             player.resetJumps();
         }
     }
@@ -76,115 +76,142 @@ function setup() {
 
 }
 
-function composeWorld(){
-    for(let objs of bounds.concat(platforms).concat(intractableObjects)){
+function composeWorld() {
+    for (let objs of bounds.concat(platforms).concat(intractableObjects)) {
         objs.remove();
     }
     platforms = [];
     intractableObjects = [];
     bounds = [];
-    bounds.push(new Boundary(0, height/2-10, width, 20));
-    bounds.push(new Boundary(-width/2+10, -height+30, 20, gameHeight));
-    bounds.push(new Boundary(width/2-10, -height+30, 20, gameHeight));
 
-    let portal = new Portal(-width/2+70, -gameHeight+(height) - 90);
+    let distanceBetweenPlatforms = 70;
+    let platformHeight = 20;
+    let platformMaxExtraWidth = 30;
+
+    bounds.push(new Boundary(0, height / 2 - 10, width, 20));
+    bounds.push(new Boundary(-width / 2 + 10, height / 2 - gameHeight / 2 - 150, 20, gameHeight + 300));
+    bounds.push(new Boundary(width / 2 - 10, height / 2 - gameHeight / 2 - 150, 20, gameHeight + 300));
+    bounds.push(new Boundary(0, height / 2 - gameHeight - 300, width, 20));
+
+    let portal = new Portal(-width / 2 + 70, height / 2 - gameHeight);
     intractableObjects.push(portal);
 
-    for(let platformIndex = 0; platformIndex < Math.floor(gameHeight/70)-3; platformIndex++){
-        let w = 100 + (platformIndex%3)*30;
-        let side = platformIndex%2 === 0 ? 1 : -1;
-        let x = side*(-width/2+70);
-        let y = -gameHeight+(height) - 70 + platformIndex*70;
+    for (let platformIndex = 0; platformIndex < Math.floor(gameHeight / distanceBetweenPlatforms); platformIndex++) {
+        let side = platformIndex % 2 === 0 ? 1 : -1;
 
-        let platform = new Platform(x + side*(platformIndex%3)*15, y, w, 20);
+        let w = 100 + (platformIndex % 3) * platformMaxExtraWidth;
+
+        let x = side * ((-width / 2 + distanceBetweenPlatforms) + (platformIndex % 3) * platformMaxExtraWidth/2);
+        let y = height / 2 - gameHeight + platformHeight + platformIndex * distanceBetweenPlatforms;
+
+        let platform = new Platform(x , y, w, platformHeight);
         platforms.push(platform);
-        if(random() > 0.8){
-            let healthX = random((x + side*(platformIndex%3)*14)-(w/2),(x + side*(platformIndex%3)*14)+(w/2));
-            let health = new Health(healthX, y-15, Math.floor(random(1, 3)));
+
+        if (random() > 0.8) {
+            let healthX = random(x-w/2+30, x+w/2-30);
+            let health = new Health(healthX, y-20, Math.floor(random(1, 3)));
             intractableObjects.push(health);
         }
-        
-        if(random() > 0.8){
-            let spikeX = random((x + side*(platformIndex%3)*14)-(w/2),(x + side*(platformIndex%3)*14)+(w/2));
+
+        if (random() > 0.8) {
+            let spikeX = random(x-w/2+30, x+w/2-30);
             let spike = new Spike(spikeX, y-20, Math.floor(random(1, 3)));
             intractableObjects.push(spike);
         }
 
-        if(random() > 0.8){
-            let jumpBoostX = random((x + side*(platformIndex%3)*14)-(w/2),(x + side*(platformIndex%3)*14)+(w/2));
-            let jumpBoost = new JumpBoost(jumpBoostX, y-20, Math.floor(random(1, 3)), Math.floor(random(60*3, 60*5)));
+        if (random() > 0.8) {
+            let jumpBoostX = random(x-w/2+30,x+w/2-30);
+            let jumpBoost = new JumpBoost(jumpBoostX, y-20, Math.floor(random(1, 3)), Math.floor(random(60 * 3, 60 * 5)));
             intractableObjects.push(jumpBoost);
         }
     }
 }
 
 function draw() {
-    if(GAME_STATE === "START"){
+    if (GAME_STATE === "START") {
         push();
-        translate(width/2, height/2);
+        translate(width / 2, height / 2);
         background(100);
         fill(255);
         textAlign(CENTER);
         text("Click to start", 0, -60);
         text("Collect the circles to gain lives", 0, 0);
         text("Avoid the triangles", 0, 60);
-        if(mouseIsPressed){
+        if (mouseIsPressed) {
             GAME_STATE = "RUNNING";
         }
         pop();
-    } else if(GAME_STATE === "RUNNING"){
+    } else if (GAME_STATE === "RUNNING") {
         push();
-        text(`player position - x:${player.body.position.x} y:${player.body.position.y}`, width/2, height/2);
-        translate(width/2, (height*2)/3-camera.y);
+        text(`player position - x:${player.body.position.x} y:${player.body.position.y}`, width / 2, height / 2);
+        translate(width / 2, (height * 2) / 3 - camera.y);
         background(50);
         textAlign(CENTER);
-        if (keyIsDown(LEFT_ARROW)){
+        if (keyIsDown(LEFT_ARROW)) {
             player.move(-1);
-        } else if (keyIsDown(RIGHT_ARROW)){
+        } else if (keyIsDown(RIGHT_ARROW)) {
             player.move(1);
         }
         Engine.update(engine);
 
-        for(let platform of platforms){
+        for (let platform of platforms) {
             platform.show();
         }
 
-        for(let bound of bounds){
+        for (let bound of bounds) {
             bound.show();
         }
 
-        for(let thisObj in intractableObjects){
+        for (let thisObj in intractableObjects) {
             intractableObjects[thisObj].show();
         }
         player.update();
         player.show();
         camera.y = player.body.position.y;
 
-        if(player.lives <= 0){
+        if (player.lives <= 0) {
             GAME_STATE = "GAME_OVER";
 
         }
         pop();
-    } else if(GAME_STATE === "GAME_OVER"){
+    } else if (GAME_STATE === "GAME_OVER") {
         push();
-        translate(width/2, height/2);
+        translate(width / 2, height / 2);
         player.remove();
         background(100);
         fill(255);
         textAlign(CENTER);
-        text(`Click to start ${timeout > 0 ? `in ${Math.floor(timeout/60)} sec`: ""}`, 0, 0);
+        text(`Click to start again ${timeout > 0 ? `in ${Math.floor(timeout / 60)} sec` : ""}`, 0, 0);
         timeout--;
-        if(mouseIsPressed && timeout < 0){
+        if (mouseIsPressed && timeout < 0) {
             GAME_STATE = "RUNNING";
-            timeout = 60*5;
+            timeout = 60 * 5;
             player = new Player(0, 0);
+            composeWorld();
+        }
+        pop();
+    } else if (GAME_STATE === "WIN"){
+        push();
+        translate(width / 2, height / 2);
+        player.remove();
+        background(100);
+        fill(255);
+        textAlign(CENTER);
+        text("You Won!", 0, -40);
+        text(`Click to start again ${timeout > 0 ? `in ${Math.floor(timeout / 60)} sec` : ""}`, 0, 0);
+        timeout--;
+        if (mouseIsPressed && timeout < 0) {
+            GAME_STATE = "RUNNING";
+            timeout = 60 * 5;
+            player = new Player(0, 0);
+            composeWorld();
         }
         pop();
     }
 
 }
 
-function keyPressed(){
+function keyPressed() {
     if (keyCode === UP_ARROW) {
         player.jump();
         camera.y = player.body.position.y;
