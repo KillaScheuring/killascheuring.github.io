@@ -43,4 +43,11 @@ class Player {
         rect(0, 0, this.h, this.w);
         pop();
     }
+
+    reset(){
+        this.body.position.x = 0;
+        this.body.position.y = 0;
+        this.lives = 3;
+        this.numJumps = 0;
+    }
 }

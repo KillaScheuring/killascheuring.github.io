@@ -11,10 +11,13 @@ let player, ground;
 
 let platforms = [];
 let intractableObjects = [];
-let kindsOfPickUps = ["h"];
+let kindsOfPickUps = ["health", "spike"];
 let gameHeight = 3000;
 let bounds = [];
 let camera;
+
+let GAME_STATE = "START";
+let timeout = 60*5;
 
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -45,29 +48,38 @@ function setup() {
         platforms.push(platform);
         if(random() > 0.8){
             let healthX = random((x + side*(platformIndex%3)*14)-(w/2),(x + side*(platformIndex%3)*14)+(w/2));
-            let health = new Health(healthX, y-15, Math.floor(random(1, 3)), Object.keys(intractableObjects).length + 1);
+            let health = new Health(healthX, y-15, Math.floor(random(1, 3)));
             intractableObjects.push(health);
+        }
+        if(random() > 0.8){
+            let spikeX = random((x + side*(platformIndex%3)*14)-(w/2),(x + side*(platformIndex%3)*14)+(w/2));
+            let spike = new Spike(spikeX, y-15, Math.floor(random(1, 3)));
+            intractableObjects.push(spike);
         }
     }
     function collision(event){
         for(let pair of event.source.pairs.list){
             let bodyA = pair.bodyA.label;
             let bodyB = pair.bodyB.label;
-            if(bodyA === "player" && kindsOfPickUps.includes(bodyB[0])){
+            if(bodyA === "player" && kindsOfPickUps.includes(bodyB)){
                 for(let i = 0; i < intractableObjects.length; i++){
                     let body = intractableObjects[i].body;
                     if(pair.bodyB === body){
                         intractableObjects[i].interact(player);
                         intractableObjects.splice(i, 1);
+                        World.remove(world, body);
+                        break;
                     }
                 }
             }
-            else if (bodyB === "player" && kindsOfPickUps.includes(bodyA[0])){
+            else if (bodyB === "player" && kindsOfPickUps.includes(bodyA)){
                 for(let i = 0; i < intractableObjects.length; i++){
                     let body = intractableObjects[i].body;
                     if(pair.bodyA === body){
                         intractableObjects[i].interact(player);
                         intractableObjects.splice(i, 1);
+                        World.remove(world, body);
+                        break;
                     }
                 }
             }
@@ -82,28 +94,58 @@ function setup() {
     }
 
 function draw() {
-    translate(width/2, (height*2)/3-camera.y);
-    background(50);
-    if (keyIsDown(LEFT_ARROW)){
-        player.move(-1);
-    } else if (keyIsDown(RIGHT_ARROW)){
-        player.move(1);
-    }
-    Engine.update(engine);
+    if(GAME_STATE === "START"){
+        translate(width/2, height/2);
+        background(100);
+        fill(255);
+        textAlign(CENTER);
+        text("Click to start", 0, -60);
+        text("Collect the circles to gain lives", 0, 0);
+        text("Avoid the triangles", 0, 60);
+        if(mouseIsPressed){
+            GAME_STATE = "RUNNING";
+        }
+    } else if(GAME_STATE === "RUNNING"){
+        translate(width/2, (height*2)/3-camera.y);
+        background(50);
+        if (keyIsDown(LEFT_ARROW)){
+            player.move(-1);
+        } else if (keyIsDown(RIGHT_ARROW)){
+            player.move(1);
+        }
+        Engine.update(engine);
 
-    for(let platform of platforms){
-        platform.show();
+        for(let platform of platforms){
+            platform.show();
+        }
+
+        for(let bound of bounds){
+            bound.show();
+        }
+
+        for(let thisObj in intractableObjects){
+            intractableObjects[thisObj].show();
+        }
+        player.show();
+        camera.y = player.body.position.y;
+
+        if(player.lives <= 0){
+            GAME_STATE = "GAME_OVER";
+        }
+    } else if(GAME_STATE === "GAME_OVER"){
+        translate(width/2, height/2);
+        background(100);
+        fill(255);
+        textAlign(CENTER);
+        text(`Click to start ${timeout > 0 ? `in ${Math.floor(timeout/60)} sec`: ""}`, 0, 0);
+        timeout--;
+        if(mouseIsPressed && timeout < 0){
+            GAME_STATE = "RUNNING";
+            timeout = 60*5;
+            player.reset();
+        }
     }
 
-    for(let bound of bounds){
-        bound.show();
-    }
-
-    for(let thisObj in intractableObjects){
-        intractableObjects[thisObj].show();
-    }
-    player.show();
-    camera.y = player.body.position.y;
 }
 
 function keyPressed(){
