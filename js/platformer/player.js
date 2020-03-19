@@ -19,8 +19,6 @@ class Player {
 
     jump(){
         if(this.numJumps < 2){
-            console.log("jump stat", this.stats.jump);
-            console.log("bonuses", this.bonuses);
             Body.applyForce(this.body, this.body.position, createVector(0, -this.stats.jump));
             this.numJumps++;
         }
@@ -39,14 +37,10 @@ class Player {
             this.bonuses[bonusIndex].duration --;
             if(this.bonuses[bonusIndex].duration > 0){
                 this.stats[this.bonuses[bonusIndex].name] = this.baseStats["jump"] + this.bonuses[bonusIndex].value;
-                console.log(this.baseStats[this.bonuses[bonusIndex].name], this.bonuses[bonusIndex].value);
             } else if(this.bonuses[bonusIndex].duration < 0){
                 this.stats[this.bonuses[bonusIndex].name] = this.baseStats[this.bonuses[bonusIndex].name];
                 this.bonuses.splice(bonusIndex, 1);
             }
-        }
-        if(this.bonuses.length === 0){
-            this.stats = this.baseStats;
         }
     }
 
