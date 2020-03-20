@@ -18,7 +18,8 @@ let kindsOfObjects = {
     "spike": Spike,
     "portal": Portal,
     "jumpBoost": JumpBoost,
-    "speedBoost": SpeedBoost
+    "numJumpBoost": NumJumpBoost,
+    "speedBoost": SpeedBoost,
 };
 let gameHeight = 2000;
 let camera;
@@ -39,7 +40,8 @@ let objectColors = {
     spike: [150, 150, 255],
     portal: [150, 255, 150],
     jump: [255, 255, 255],
-    speed: [150, 255, 150]
+    speed: [150, 255, 150],
+    maxNumJump: [200, 100, 200],
 };
 
 let levelInfo = [
@@ -55,6 +57,7 @@ let levelInfo = [
             health: 0.8,
             spike: 0.9,
             jump: 0.5,
+            maxNumJump: 0.5,
             speed: 0.5,
             platform: 0,
         }
@@ -72,6 +75,7 @@ let levelInfo = [
             health: 0.8,
             spike: 0.8,
             jump: 0.6,
+            maxNumJump: 0.5,
             speed: 0.5,
             platform: 0.3,
         }
@@ -89,6 +93,7 @@ let levelInfo = [
             health: 0.8,
             spike: 0.6,
             jump: 0.8,
+            maxNumJump: 0.5,
             speed: 0.5,
             platform: 0.4,
         }
@@ -107,6 +112,7 @@ let levelInfo = [
             health: 0.8,
             spike: 0.5,
             jump: 0.7,
+            maxNumJump: 0.5,
             speed: 0.5,
             platform: 0.45,
         }
@@ -224,6 +230,12 @@ function composeWorld() {
             let speedBoostX = random(x - w / 2 + 30, x + w / 2 - 30);
             let speedBoost = new SpeedBoost(speedBoostX, y - 20, Math.floor(random(1, 3)), Math.floor(random(60 * 3, 60 * 5)));
             intractableObjects.push(speedBoost);
+        }
+
+        if (random() > levelInfo[GAME_LEVEL].objectRates.maxNumJump) {
+            let maxNumJumpBoostX = random(x - w / 2 + 30, x + w / 2 - 30);
+            let maxNumJumpBoost = new NumJumpBoost(maxNumJumpBoostX, y - 20, Math.floor(random(1, 3)), Math.floor(random(60 * 3, 60 * 5)));
+            intractableObjects.push(maxNumJumpBoost);
         }
     }
 }

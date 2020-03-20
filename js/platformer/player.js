@@ -12,12 +12,13 @@ class Player {
         this.baseStats = {
             jump: 0.03,
             speed: 2,
+            maxNumJump: 2
         };
         this.stats = {...this.baseStats};
     }
 
     jump(){
-        if(this.numJumps < 2){
+        if(this.numJumps < this.stats.maxNumJump){
             Body.applyForce(this.body, this.body.position, createVector(0, -this.stats.jump));
             this.numJumps++;
         }

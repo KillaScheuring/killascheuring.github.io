@@ -60,6 +60,39 @@ class JumpBoost {
     }
 }
 
+class NumJumpBoost {
+    constructor(x, y, boostAmount, duration){
+        this.body = Bodies.rectangle(x, y, 10, 10, {isStatic:true});
+        this.body.label = "numJumpBoost";
+        this.boost = boostAmount;
+        this.duration = duration;
+        World.add(world, this.body);
+    }
+
+    show(){
+        let pos = this.body.position;
+        push();
+        translate(pos.x, pos.y);
+        ellipseMode(CENTER);
+        fill(objectColors.maxNumJump[0], objectColors.maxNumJump[1], objectColors.maxNumJump[2]);
+        ellipse(0, 0, 10, 10);
+        pop();
+    }
+
+    remove(){
+        World.remove(world, this.body);
+    }
+
+    interact(player){
+        player.bonuses.push({
+            name: "maxNumJump",
+            value: this.boost,
+            duration: this.duration,
+            multiplier: this.boost
+        });
+    }
+}
+
 class SpeedBoost {
     constructor(x, y, boostAmount, duration){
         this.body = Bodies.rectangle(x, y, 10, 10, {isStatic:true});
