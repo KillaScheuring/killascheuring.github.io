@@ -11,6 +11,7 @@ class Player {
         this.damgagedTimer = 0;
         this.baseStats = {
             jump: 0.03,
+            speed: 2,
         };
         this.stats = {...this.baseStats};
     }
@@ -27,7 +28,7 @@ class Player {
     }
 
     move(direction){
-        Body.setVelocity(this.body, createVector(direction*2, this.body.velocity.y));
+        Body.setVelocity(this.body, createVector(direction*this.stats.speed, this.body.velocity.y));
     }
 
     update(){
@@ -57,15 +58,17 @@ class Player {
         }
         y = 0;
         for(let bonusIndex = 0; bonusIndex < this.bonuses.length; bonusIndex++){
-            let x = - 40;
+            let x = -80;
             y += 30;
-            fill(colors[this.bonuses[bonusIndex].name][0],
-                colors[this.bonuses[bonusIndex].name][1],
-                colors[this.bonuses[bonusIndex].name][2]);
+            textAlign(CENTER);
+            fill(255);
+            text(`${Math.ceil(this.bonuses[bonusIndex].duration/60)}s`, x-30, y+5);
+            fill(objectColors[this.bonuses[bonusIndex].name][0],
+                objectColors[this.bonuses[bonusIndex].name][1],
+                objectColors[this.bonuses[bonusIndex].name][2]);
             ellipse(x, y, 20, 20);
             fill(255);
-            textAlign(CENTER);
-            text(`${Math.floor(this.bonuses[bonusIndex].duration/60)}s`, x-40, y);
+            text(`x${this.bonuses[bonusIndex].multiplier}`, x+30, y+5);
         }
         pop();
 
