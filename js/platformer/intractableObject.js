@@ -87,7 +87,7 @@ class Spike {
         if(player.damgagedTimer > 0){
             return;
         }
-        player.damgagedTimer = 2*60;
+        player.damgagedTimer = 90;
         player.lives--;
     }
 }

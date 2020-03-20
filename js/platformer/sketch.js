@@ -44,11 +44,17 @@ let levelInfo = [
             spike: [150, 150, 255],
             portal: [150, 255, 150],
             jump: [150, 255, 150]
+        },
+        objectRates: {
+            health: 0.8,
+            spike: 0.9,
+            jump: 0.5
         }
     },
     {
         gameHeight: 3000,
         colors: {
+            //https://www.colourlovers.com/palette/4693855/A%CD%99a%CD%99w%CD%99o%CD%99
             background: [96, 80, 81],
             boundary: [200, 200, 200],
             platform: [218, 196, 172],
@@ -57,6 +63,50 @@ let levelInfo = [
             spike: [150, 150, 255],
             portal: [150, 255, 150],
             jump: [150, 255, 150]
+        },
+        objectRates: {
+            health: 0.8,
+            spike: 0.8,
+            jump: 0.6
+        }
+    },
+    {
+        gameHeight: 4000,
+        colors: {
+            //https://www.colourlovers.com/palette/4706197/%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C_%D0%B4%D0%B0%D1%80
+            background: [205, 5, 0],
+            boundary: [200, 200, 200],
+            platform: [255, 127, 0],
+            player: [255, 185, 0],
+            health: [255, 20, 20],
+            spike: [150, 150, 255],
+            portal: [150, 255, 150],
+            jump: [150, 255, 150]
+        },
+        objectRates: {
+            health: 0.8,
+            spike: 0.6,
+            jump: 0.8
+        }
+    }
+    ,
+    {
+        gameHeight: 5000,
+        colors: {
+            //https://www.colourlovers.com/palette/4706400/Moons_Dark_Side
+            background: [35,38,79],
+            boundary: [26,22,43],
+            platform: [182,157,196],
+            player: [149,182,191],
+            health: [255, 20, 20],
+            spike: [150, 150, 255],
+            portal: [150, 255, 150],
+            jump: [150, 255, 150]
+        },
+        objectRates: {
+            health: 0.8,
+            spike: 0.5,
+            jump: 0.7
         }
     }
 ];
@@ -137,19 +187,19 @@ function composeWorld() {
         let platform = new Platform(x, y, w, platformHeight);
         platforms.push(platform);
 
-        if (random() > 0.8) {
+        if (random() > levelInfo[GAME_LEVEL].objectRates.health) {
             let healthX = random(x - w / 2 + 30, x + w / 2 - 30);
             let health = new Health(healthX, y - 20, Math.floor(random(1, 3)));
             intractableObjects.push(health);
         }
 
-        if (random() > 0.8) {
+        if (random() > levelInfo[GAME_LEVEL].objectRates.spike) {
             let spikeX = random(x - w / 2 + 30, x + w / 2 - 30);
             let spike = new Spike(spikeX, y - 20, Math.floor(random(1, 3)));
             intractableObjects.push(spike);
         }
 
-        if (random() > 0.8) {
+        if (random() > levelInfo[GAME_LEVEL].objectRates.jump) {
             let jumpBoostX = random(x - w / 2 + 30, x + w / 2 - 30);
             let jumpBoost = new JumpBoost(jumpBoostX, y - 20, Math.floor(random(1, 3)), Math.floor(random(60 * 3, 60 * 5)));
             intractableObjects.push(jumpBoost);
@@ -211,7 +261,10 @@ function draw() {
         background(100);
         fill(255);
         textAlign(CENTER);
+        text(`You got to level ${GAME_LEVEL+1}`, 0, -40);
         text(`Click to start again ${timeout > 0 ? `in ${Math.floor(timeout / 60)} sec` : ""}`, 0, 0);
+        GAME_LEVEL = 0;
+        colors = {...levelInfo[GAME_LEVEL].colors};
         timeout--;
         if (mouseIsPressed && timeout < 0) {
             GAME_STATE = "RUNNING";
@@ -227,8 +280,8 @@ function draw() {
         background(100);
         fill(255);
         textAlign(CENTER);
-        text("You Won!", 0, -40);
-        text(`Click to start again ${timeout > 0 ? `in ${Math.floor(timeout / 60)} sec` : ""}`, 0, 0);
+        text(`You Won! Next level is lvl.${GAME_LEVEL+1}`, 0, -40);
+        text(`Click to start next level${timeout > 0 ? ` in ${Math.floor(timeout / 60)} sec` : ""}`, 0, 0);
         timeout--;
         if (mouseIsPressed && timeout < 0) {
             GAME_STATE = "RUNNING";
