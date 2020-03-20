@@ -56,6 +56,7 @@ let levelInfo = [
             spike: 0.9,
             jump: 0.5,
             speed: 0.5,
+            platform: 0,
         }
     },
     {
@@ -72,6 +73,7 @@ let levelInfo = [
             spike: 0.8,
             jump: 0.6,
             speed: 0.5,
+            platform: 0.3,
         }
     },
     {
@@ -88,6 +90,7 @@ let levelInfo = [
             spike: 0.6,
             jump: 0.8,
             speed: 0.5,
+            platform: 0.4,
         }
     }
     ,
@@ -105,6 +108,7 @@ let levelInfo = [
             spike: 0.5,
             jump: 0.7,
             speed: 0.5,
+            platform: 0.45,
         }
     }
 ];
@@ -185,6 +189,9 @@ function composeWorld() {
     intractableObjects.push(portal);
 
     for (let platformIndex = 0; platformIndex < Math.floor(gameHeight / distanceBetweenPlatforms); platformIndex++) {
+        if(random() < levelInfo[GAME_LEVEL].objectRates.platform && platformIndex !== 0){
+            continue;
+        }
         let side = platformIndex % 2 === 0 ? 1 : -1;
 
         let w = 100 + (platformIndex % 3) * platformMaxExtraWidth;
@@ -201,7 +208,7 @@ function composeWorld() {
             intractableObjects.push(health);
         }
 
-        if (random() > levelInfo[GAME_LEVEL].objectRates.spike) {
+        if (random() > levelInfo[GAME_LEVEL].objectRates.spike && platformIndex !== 0) {
             let spikeX = random(x - w / 2 + 30, x + w / 2 - 30);
             let spike = new Spike(spikeX, y - 20, Math.floor(random(1, 3)));
             intractableObjects.push(spike);
@@ -275,7 +282,6 @@ function draw() {
 
         if (player.lives <= 0) {
             GAME_STATE = "GAME_OVER";
-            console.log(GAME_LEVEL);
 
         }
         pop();
@@ -305,11 +311,12 @@ function draw() {
         background(100);
         fill(255);
         textAlign(CENTER);
-        colors = {...levelInfo[GAME_LEVEL].colors};
-        text(`You Won! Next level is lvl.${GAME_LEVEL+1}`, 0, -40);
-        text(`Click to start next level${timeout > 0 ? ` in ${Math.floor(timeout / 60)} sec` : ""}`, 0, 0);
+        text(`You Won!${GAME_LEVEL === levelInfo.length ? "" :` Next level is lvl.${GAME_LEVEL+1}`}`, 0, -40);
+        text(`Click to ${GAME_LEVEL === levelInfo.length ? " play again" : "start next level"}${timeout > 0 ? ` in ${Math.floor(timeout / 60)} sec` : ""}`, 0, 0);
         timeout--;
         if (mouseIsPressed && timeout < 0) {
+            GAME_LEVEL = GAME_LEVEL === levelInfo.length ? 0 : GAME_LEVEL;
+            colors = {...levelInfo[GAME_LEVEL].colors};
             GAME_STATE = "RUNNING";
             timeout = 60 * 5;
             player = new Player(0, 0);
