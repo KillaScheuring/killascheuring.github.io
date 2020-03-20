@@ -8,6 +8,7 @@ class Player {
         this.numJumps = 0;
         this.bonuses = [];
         this.lives = 3;
+        this.damgagedTimer = 0;
         this.baseStats = {
             jump: 0.03,
         };
@@ -39,6 +40,9 @@ class Player {
                 this.bonuses.splice(bonusIndex, 1);
             }
         }
+        if(this.damgagedTimer > 0){
+            this.damgagedTimer--;
+        }
     }
 
     show() {
@@ -69,7 +73,19 @@ class Player {
         translate(this.body.position.x, this.body.position.y);
         rotate(this.body.angle);
         rectMode(CENTER);
-        fill(colors.player[0], colors.player[1], colors.player[2]);
+        if(this.damgagedTimer > 0){
+            fill(min(colors.player[0]+(this.damgagedTimer%10 * 20), 255),
+                max(colors.player[1]-(this.damgagedTimer%10 * 20), 0),
+                max(colors.player[2]-(this.damgagedTimer%10 * 20), 0),
+                map(this.damgagedTimer%10, 0, 9, 100, 255)
+            );
+        } else {
+            fill(min(colors.player[0]+(this.damgagedTimer%10 * 20), 255),
+                max(colors.player[1]-(this.damgagedTimer%10 * 20), 0),
+                max(colors.player[2]-(this.damgagedTimer%10 * 20), 0)
+            );
+        }
+
         rect(0, 0, this.h, this.w);
         pop();
     }

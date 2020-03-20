@@ -18,18 +18,48 @@ let gameHeight = 2000;
 let camera;
 
 let GAME_STATE = "START";
+let GAME_LEVEL = 0;
 let timeout = 60 * 5;
 
 let colors = {
+    background: [50, 50, 50],
     boundary: [200, 200, 200],
     platform: [100, 100, 100],
     player: [255, 55, 255],
     health: [255, 20, 20],
     spike: [150, 150, 255],
     portal: [150, 255, 150],
-    jump: [150, 255, 150],
-
+    jump: [150, 255, 150]
 };
+
+let levelInfo = [
+    {
+        gameHeight: 2000,
+        colors: {
+            background: [50, 50, 50],
+            boundary: [200, 200, 200],
+            platform: [100, 100, 100],
+            player: [255, 55, 255],
+            health: [255, 20, 20],
+            spike: [150, 150, 255],
+            portal: [150, 255, 150],
+            jump: [150, 255, 150]
+        }
+    },
+    {
+        gameHeight: 3000,
+        colors: {
+            background: [96, 80, 81],
+            boundary: [200, 200, 200],
+            platform: [218, 196, 172],
+            player: [183, 227, 240],
+            health: [255, 20, 20],
+            spike: [150, 150, 255],
+            portal: [150, 255, 150],
+            jump: [150, 255, 150]
+        }
+    }
+];
 
 function setup() {
     createCanvas(400, 800);
@@ -101,27 +131,27 @@ function composeWorld() {
 
         let w = 100 + (platformIndex % 3) * platformMaxExtraWidth;
 
-        let x = side * ((-width / 2 + distanceBetweenPlatforms) + (platformIndex % 3) * platformMaxExtraWidth/2);
+        let x = side * ((-width / 2 + distanceBetweenPlatforms) + (platformIndex % 3) * platformMaxExtraWidth / 2);
         let y = height / 2 - gameHeight + platformHeight + platformIndex * distanceBetweenPlatforms;
 
-        let platform = new Platform(x , y, w, platformHeight);
+        let platform = new Platform(x, y, w, platformHeight);
         platforms.push(platform);
 
         if (random() > 0.8) {
-            let healthX = random(x-w/2+30, x+w/2-30);
-            let health = new Health(healthX, y-20, Math.floor(random(1, 3)));
+            let healthX = random(x - w / 2 + 30, x + w / 2 - 30);
+            let health = new Health(healthX, y - 20, Math.floor(random(1, 3)));
             intractableObjects.push(health);
         }
 
         if (random() > 0.8) {
-            let spikeX = random(x-w/2+30, x+w/2-30);
-            let spike = new Spike(spikeX, y-20, Math.floor(random(1, 3)));
+            let spikeX = random(x - w / 2 + 30, x + w / 2 - 30);
+            let spike = new Spike(spikeX, y - 20, Math.floor(random(1, 3)));
             intractableObjects.push(spike);
         }
 
         if (random() > 0.8) {
-            let jumpBoostX = random(x-w/2+30,x+w/2-30);
-            let jumpBoost = new JumpBoost(jumpBoostX, y-20, Math.floor(random(1, 3)), Math.floor(random(60 * 3, 60 * 5)));
+            let jumpBoostX = random(x - w / 2 + 30, x + w / 2 - 30);
+            let jumpBoost = new JumpBoost(jumpBoostX, y - 20, Math.floor(random(1, 3)), Math.floor(random(60 * 3, 60 * 5)));
             intractableObjects.push(jumpBoost);
         }
     }
@@ -145,7 +175,7 @@ function draw() {
         push();
         text(`player position - x:${player.body.position.x} y:${player.body.position.y}`, width / 2, height / 2);
         translate(width / 2, (height * 2) / 3 - camera.y);
-        background(50);
+        background(colors.background[0], colors.background[1], colors.background[2]);
         textAlign(CENTER);
         if (keyIsDown(LEFT_ARROW)) {
             player.move(-1);
@@ -190,7 +220,7 @@ function draw() {
             composeWorld();
         }
         pop();
-    } else if (GAME_STATE === "WIN"){
+    } else if (GAME_STATE === "WIN") {
         push();
         translate(width / 2, height / 2);
         player.remove();

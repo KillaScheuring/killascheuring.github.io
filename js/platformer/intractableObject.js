@@ -84,6 +84,10 @@ class Spike {
     }
 
     interact(player){
+        if(player.damgagedTimer > 0){
+            return;
+        }
+        player.damgagedTimer = 2*60;
         player.lives--;
     }
 }
@@ -112,6 +116,8 @@ class Portal {
     }
 
     interact(){
+        GAME_LEVEL++;
+        colors = {...levelInfo[GAME_LEVEL].colors};
         GAME_STATE = "WIN";
     }
 }
