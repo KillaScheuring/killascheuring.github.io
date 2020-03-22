@@ -187,7 +187,7 @@ let levelsInfo = [
             jump: 0.5,
             maxNumJump: 0.3,
             speed: 0.3,
-            platform: 0.5,
+            platform: 0.4,
         }
     },
     {
@@ -205,7 +205,7 @@ let levelsInfo = [
             jump: 0.5,
             maxNumJump: 0.3,
             speed: 0.3,
-            platform: 0.6,
+            platform: 0.4,
         }
     }
 
