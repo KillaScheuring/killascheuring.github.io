@@ -32,7 +32,7 @@ let camera = {
     x: null,
     y: null,
     orientation: "VERTICAL", // VERTICAL or HORIZONTAL
-    smaller: 350,
+    smaller: 400,
     larger: 700
 };
 
@@ -94,7 +94,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.2,
             spike: 0.0,
-            jump: 0.5,
+            jump: 0.0,
             maxNumJump: 0.0,
             speed: 0.0,
             platform: 0.0,
@@ -112,9 +112,9 @@ let levelsInfo = [
         objectRates: {
             health: 0.2,
             spike: 0.0,
-            jump: 0.5,
-            maxNumJump: 0.2,
-            speed: 0.2,
+            jump: 0.0,
+            maxNumJump: 0.0,
+            speed: 0.0,
             platform: 0.1,
         }
     },
@@ -130,9 +130,9 @@ let levelsInfo = [
         objectRates: {
             health: 0.3,
             spike: 0.1,
-            jump: 0.5,
-            maxNumJump: 0.2,
-            speed: 0.2,
+            jump: 0.0,
+            maxNumJump: 0.0,
+            speed: 0.0,
             platform: 0.2,
         }
     },
@@ -148,9 +148,9 @@ let levelsInfo = [
         objectRates: {
             health: 0.4,
             spike: 0.2,
-            jump: 0.5,
-            maxNumJump: 0.2,
-            speed: 0.2,
+            jump: 0.2,
+            maxNumJump: 0.0,
+            speed: 0.0,
             platform: 0.3,
         }
     },
@@ -166,9 +166,9 @@ let levelsInfo = [
         objectRates: {
             health: 0.4,
             spike: 0.3,
-            jump: 0.5,
-            maxNumJump: 0.3,
-            speed: 0.2,
+            jump: 0.2,
+            maxNumJump: 0.1,
+            speed: 0.0,
             platform: 0.4,
         }
     },
@@ -184,10 +184,10 @@ let levelsInfo = [
         objectRates: {
             health: 0.4,
             spike: 0.4,
-            jump: 0.5,
-            maxNumJump: 0.3,
-            speed: 0.3,
-            platform: 0.4,
+            jump: 0.3,
+            maxNumJump: 0.1,
+            speed: 0.0,
+            platform: 0.5,
         }
     },
     {
@@ -202,10 +202,28 @@ let levelsInfo = [
         objectRates: {
             health: 0.5,
             spike: 0.5,
-            jump: 0.5,
-            maxNumJump: 0.3,
-            speed: 0.3,
-            platform: 0.4,
+            jump: 0.3,
+            maxNumJump: 0.2,
+            speed: 0.1,
+            platform: 0.6,
+        }
+    },
+    {
+        gameHeight: 9000,
+        colors: {
+            // https://www.colourlovers.com/palette/4707234/Dear_Patience
+            background: [252,242,189],
+            boundary: [184,204,192],
+            platform: [215,230,171],
+            player: [170,174,179]
+        },
+        objectRates: {
+            health: 0.6,
+            spike: 0.5,
+            jump: 0.4,
+            maxNumJump: 0.2,
+            speed: 0.1,
+            platform: 0.7,
         }
     }
 
@@ -214,7 +232,8 @@ let levelsInfo = [
 let currentLevelInfo = levelsInfo[0];
 
 function setup() {
-    createCanvas(camera.smaller, camera.larger);
+    let cnv = createCanvas(camera.smaller, camera.larger);
+    cnv.parent('game');
     noStroke();
     engine = Engine.create();
     world = engine.world;
@@ -277,20 +296,23 @@ function composeWorld() {
     bounds = [];
 
     if (camera.orientation === "VERTICAL") {
+        let playerStart = (height)/3;
         let reloading = false;
         if (previousLevel.playerPos) {
             player = new Player(previousLevel.playerPos.x, previousLevel.playerPos.y, player.lives, player.maxLives);
             previousLevel.playerPos = null;
             reloading = true;
         } else if (GAME_LEVEL === 0) {
-            player = new Player(0, 0);
+            player = new Player(0, playerStart);
         } else {
-            player = new Player(0, 0, GAME_LEVEL !== 0 ? player.lives : null, (GAME_LEVEL % 2) === 0 ? player.maxLives + 2 : player.maxLives);
+            player = new Player(0, playerStart, GAME_LEVEL !== 0 ? player.lives : null, (GAME_LEVEL % 2) === 0 ? player.maxLives + 2 : player.maxLives);
         }
         currentLevelInfo = {...levelsInfo[GAME_LEVEL]};
         resizeCanvas(camera.smaller, camera.larger);
-        let minDistanceBetweenPlatforms = 100;
-        let maxDistanceBetweenPlatforms = map(currentLevelInfo.objectRates.platform, 0, 1, minDistanceBetweenPlatforms, 400);
+        // min 150
+        let minDistanceBetweenPlatforms = 150;
+        let maxDistanceBetweenPlatforms = map(currentLevelInfo.objectRates.platform, 0, 1, minDistanceBetweenPlatforms, 600);
+        // max without pickups 490
         let platformHeight = 20;
         let top = -currentLevelInfo.gameHeight;
 
@@ -301,25 +323,39 @@ function composeWorld() {
 
         platforms.push(new Platform(width / 2 - 50, height / 2 - 100, 100, platformHeight));
 
-        for (let platformIndex = 1; platformIndex < Math.ceil(currentLevelInfo.gameHeight / minDistanceBetweenPlatforms); platformIndex++) {
-            let lastPlatformY = platforms[platformIndex - 1].body.position.y;
+        for (let platformIndex = 1; platformIndex < currentLevelInfo.gameHeight; platformIndex++) {
+            let lastPlatformPos = platforms[platformIndex - 1].body.position;
+            let lastPlatformW = platforms[platformIndex - 1].w;
 
-            let side = random(-1, 1) > 0 ? 1 : -1;
+            // let side = random(-1, 1) > 0 ? 1 : -1;
+            let newDist = Math.floor(random(minDistanceBetweenPlatforms, maxDistanceBetweenPlatforms));
 
-            let w = Math.floor(random(50, width / 3));
+            let angle = lastPlatformPos.x > 0 ? random((2*PI)/3, (5*PI)/6) : random((PI/3), (PI/6));
 
-            let x = side * (width / 2 - w);
-            let y = min(lastPlatformY - platformHeight - Math.floor(random(minDistanceBetweenPlatforms, maxDistanceBetweenPlatforms)), currentLevelInfo.gameHeight - 80);
+            let xDist = newDist * Math.cos(angle);
+            let yDist = newDist * Math.sin(angle);
+
+            let x = lastPlatformPos.x + + xDist + lastPlatformPos.x  > 0 ? lastPlatformW/2 : -lastPlatformW/2;
+            let y = lastPlatformPos.y + platformHeight/2 - yDist;
+
+            let w = random(50, width/2 - Math.abs(x));
+
+            if(x-w-25 < (lastPlatformPos.x - lastPlatformW/2) && x+w+25 > (lastPlatformPos.x + lastPlatformW/2)){
+                x *= -1;
+            }
+
+            w *= 2;
+
+            if (y - top < maxDistanceBetweenPlatforms) {
+                break;
+            }
 
             let platform = new Platform(x, y, w, platformHeight);
+            platform.dist = newDist;
             platforms.push(platform);
 
             if (platformIndex === 0) {
                 continue;
-            }
-
-            if (y - top < 250) {
-                break;
             }
 
             for (let thisType of Object.keys(currentLevelInfo.objectRates)) {
@@ -510,7 +546,7 @@ function draw() {
         if (mouseIsPressed && timeout < 0) {
             GAME_LEVEL = GAME_LEVEL === levelsInfo.length ? 0 : GAME_LEVEL;
             GAME_STATE = "RUNNING";
-            timeout = 60 * 5;
+            timeout = 60 * 3;
             composeWorld();
         }
         pop();
