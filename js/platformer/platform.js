@@ -7,13 +7,13 @@ class Platform {
         this.body.label = "platform";
     }
 
-    show(){
-        fill(colors.platform[0], colors.platform[1], colors.platform[2]);
+    show() {
+        fill(currentLevelInfo.colors.platform[0], currentLevelInfo.colors.platform[1], currentLevelInfo.colors.platform[2]);
         rectMode(CENTER);
         rect(this.body.position.x, this.body.position.y, this.w, this.h,);
     }
 
-    remove(){
+    remove() {
         World.remove(world, this.body);
     }
 }
