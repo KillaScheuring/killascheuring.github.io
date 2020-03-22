@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/platformer.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/platformer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/boundary.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/boundary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/camera.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/platform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/platformer/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="333" column="40" selection-start-line="333" selection-start-column="40" selection-end-line="333" selection-end-column="40" />
+            <state relative-caret-position="123">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
                 <element signature="e#1140#1148#0" />
                 <element signature="n#!!block;n#collision#0;n#!!block;n#setup#0" />
@@ -341,14 +335,7 @@
       <workItem from="1584470115052" duration="11000" />
       <workItem from="1584502028566" duration="13000" />
       <workItem from="1584502392843" duration="63000" />
-      <workItem from="1584567175966" duration="92497000" />
-    </task>
-    <task id="LOCAL-00001" summary="Removed example links that will not be used. Added War! example.">
-      <created>1580952707878</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1580952707878</updated>
+      <workItem from="1584567175966" duration="93334000" />
     </task>
     <task id="LOCAL-00002" summary="Removed example links that will not be used. Added War! example.">
       <created>1580952811153</created>
@@ -679,11 +666,25 @@
       <option name="project" value="LOCAL" />
       <updated>1584672051437</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="added bonus levels and more normal levels">
+      <created>1584852898432</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1584852898432</updated>
+    </task>
+    <task id="LOCAL-00050" summary="rebalanced higher levels">
+      <created>1584854538973</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1584854538980</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254248000" />
+    <option name="totallyTimeSpent" value="255085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -693,7 +694,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32858837" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32858837" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -735,8 +736,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Documentation and styling changed." />
-    <MESSAGE value="Started Squirrels Game" />
     <MESSAGE value="updated movement, spawn, and animations" />
     <MESSAGE value="added winning and loosing and restart" />
     <MESSAGE value="added new win condition and framework for waves" />
@@ -760,7 +759,9 @@
     <MESSAGE value="if you collect health while in damage animation, animation stops. Non-health pick-ups have a chance to respawn." />
     <MESSAGE value="doesn't crash when player finishes last level" />
     <MESSAGE value="dded numJump bonus" />
-    <option name="LAST_COMMIT_MESSAGE" value="dded numJump bonus" />
+    <MESSAGE value="added bonus levels and more normal levels" />
+    <MESSAGE value="rebalanced higher levels" />
+    <option name="LAST_COMMIT_MESSAGE" value="rebalanced higher levels" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/styles.css" />
@@ -984,8 +985,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/platformer/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="333" column="40" selection-start-line="333" selection-start-column="40" selection-end-line="333" selection-end-column="40" />
+        <state relative-caret-position="123">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
             <element signature="e#1140#1148#0" />
             <element signature="n#!!block;n#collision#0;n#!!block;n#setup#0" />

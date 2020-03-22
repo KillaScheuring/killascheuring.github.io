@@ -23,8 +23,8 @@ let kindsOfObjects = {
 };
 
 let bonusLevelTypes = {
-    maxHealth: 0.4,
-    jump: 0.5,
+    maxHealth: 0.3,
+    jump: 0.4,
     maxNumJump: 0,
     speed: 0.0,
 };
