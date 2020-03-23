@@ -32,8 +32,8 @@ let camera = {
     x: null,
     y: null,
     orientation: "VERTICAL", // VERTICAL or HORIZONTAL
-    smaller: 400,
-    larger: 700
+    smaller: 450,
+    larger: 800
 };
 
 let GAME_STATE = "START";
@@ -80,6 +80,17 @@ let bonusLevelsInfo = [
             player: [228, 184, 51]
         }
     },
+    {
+        gameHeight: 3500,
+        gameLength: 4000,
+        colors: {
+            // Ice Cream
+            background: [176, 136, 94],
+            boundary: [229, 255, 229],
+            platform: [255, 253, 208],
+            player: [255,192,203]
+        }
+    }
 ];
 
 let levelsInfo = [
@@ -105,7 +116,7 @@ let levelsInfo = [
         colors: {
             // https://www.colourlovers.com/palette/4693855/A%CD%99a%CD%99w%CD%99o%CD%99
             background: [96, 80, 81],
-            boundary: [200, 200, 200],
+            boundary: [190, 176, 152],
             platform: [218, 196, 172],
             player: [183, 227, 240]
         },
@@ -123,7 +134,7 @@ let levelsInfo = [
         colors: {
             // https://www.colourlovers.com/palette/4706197/%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C_%D0%B4%D0%B0%D1%80
             background: [205, 5, 0],
-            boundary: [200, 200, 200],
+            boundary: [205, 77, 0],
             platform: [255, 127, 0],
             player: [255, 185, 0]
         },
@@ -183,7 +194,7 @@ let levelsInfo = [
         },
         objectRates: {
             health: 0.4,
-            spike: 0.4,
+            spike: 0.5,
             jump: 0.3,
             maxNumJump: 0.1,
             speed: 0.0,
@@ -201,7 +212,7 @@ let levelsInfo = [
         },
         objectRates: {
             health: 0.5,
-            spike: 0.5,
+            spike: 0.6,
             jump: 0.3,
             maxNumJump: 0.2,
             speed: 0.1,
@@ -212,18 +223,36 @@ let levelsInfo = [
         gameHeight: 9000,
         colors: {
             // https://www.colourlovers.com/palette/4707234/Dear_Patience
-            background: [252,242,189],
+            background: [170,174,179],
             boundary: [184,204,192],
             platform: [215,230,171],
-            player: [170,174,179]
+            player: [252,242,189]
         },
         objectRates: {
             health: 0.6,
-            spike: 0.5,
+            spike: 0.6,
             jump: 0.4,
             maxNumJump: 0.2,
             speed: 0.1,
             platform: 0.7,
+        }
+    },
+    {
+        gameHeight: 10000,
+        colors: {
+            // https://www.colourlovers.com/palette/2219694/Reds_and_pink
+            background: [194,20,38],
+            boundary: [248,8,59],
+            platform: [246,90,90],
+            player: [253,252,252]
+        },
+        objectRates: {
+            health: 0.7,
+            spike: 0.7,
+            jump: 0.4,
+            maxNumJump: 0.2,
+            speed: 0.1,
+            platform: 0.8,
         }
     }
 
@@ -235,6 +264,7 @@ function setup() {
     let cnv = createCanvas(camera.smaller, camera.larger);
     cnv.parent('game');
     noStroke();
+    textSize(24);
     engine = Engine.create();
     world = engine.world;
     player = new Player(0, 0);
@@ -346,7 +376,7 @@ function composeWorld() {
 
             w *= 2;
 
-            if (y - top < maxDistanceBetweenPlatforms) {
+            if (y - top < maxDistanceBetweenPlatforms + 60) {
                 break;
             }
 
@@ -479,7 +509,7 @@ function draw() {
             translate(width / 5 - camera.x, (height) / 2 - camera.y);
             camera.y = player.body.position.y;
             camera.x = player.body.position.x;
-            if (player.body.position.y > currentLevelInfo.gameHeight) {
+            if (player.body.position.y > currentLevelInfo.gameHeight/2) {
                 player.lives--;
                 player = new Player(0, 0, player.lives, player.maxLives);
                 player.damgagedTimer = 90;

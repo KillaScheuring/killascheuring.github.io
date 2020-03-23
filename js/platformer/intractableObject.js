@@ -2,7 +2,7 @@ class Health {
     constructor(x, y, healAmount) {
         this.w = 10 + 5 * (healAmount - 1);
         this.h = 10 + 5 * (healAmount - 1);
-        this.body = Bodies.rectangle(x, y-10-this.h/2, this.w, this.h, {isStatic: true});
+        this.body = Bodies.rectangle(x, y - 10 - this.h / 2, this.w, this.h, {isStatic: true});
         this.body.label = "health";
         this.healAmount = healAmount;
         World.add(world, this.body);
@@ -37,7 +37,7 @@ class MaxHealth {
     constructor(x, y) {
         this.w = 10;
         this.h = 10;
-        this.body = Bodies.rectangle(x, y-10-this.h/2, this.w, this.h, {isStatic: true});
+        this.body = Bodies.rectangle(x, y - 10 - this.h / 2, this.w, this.h, {isStatic: true});
         this.body.label = "maxHealth";
         World.add(world, this.body);
     }
@@ -57,7 +57,7 @@ class MaxHealth {
     }
 
     interact(player) {
-        player.maxLives ++;
+        player.maxLives++;
         player.lives = player.maxLives;
         player.damgagedTimer = 0;
     }
@@ -67,7 +67,7 @@ class JumpBoost {
     constructor(x, y, boostAmount, duration) {
         this.w = 10 + 5 * (boostAmount - 1);
         this.h = 10 + 5 * (boostAmount - 1);
-        this.body = Bodies.rectangle(x, y-10-this.h/2, this.w, this.h, {isStatic: true});
+        this.body = Bodies.rectangle(x, y - 10 - this.h / 2, this.w, this.h, {isStatic: true});
         this.body.label = "jump";
         this.boost = 0.0025 * boostAmount;
         this.multiplier = boostAmount;
@@ -103,7 +103,7 @@ class NumJumpBoost {
     constructor(x, y, boostAmount, duration) {
         this.w = 10 + 5 * (boostAmount - 1);
         this.h = 10 + 5 * (boostAmount - 1);
-        this.body = Bodies.rectangle(x, y-10-this.h/2, this.w, this.h, {isStatic: true});
+        this.body = Bodies.rectangle(x, y - 10 - this.h / 2, this.w, this.h, {isStatic: true});
         this.body.label = "maxNumJump";
         this.boost = boostAmount;
         this.multiplier = boostAmount;
@@ -139,7 +139,7 @@ class SpeedBoost {
     constructor(x, y, boostAmount, duration) {
         this.w = 10 + 5 * (boostAmount - 1);
         this.h = 10 + 5 * (boostAmount - 1);
-        this.body = Bodies.rectangle(x, y-10-this.h/2, this.w, this.h, {isStatic: true});
+        this.body = Bodies.rectangle(x, y - 10 - this.h / 2, this.w, this.h, {isStatic: true});
         this.body.label = "speed";
         this.boost = 0.5 * boostAmount;
         this.multiplier = boostAmount;
@@ -174,7 +174,7 @@ class SpeedBoost {
 class Spike {
     constructor(x, y) {
         this.size = 10;
-        this.body = Bodies.rectangle(x, y-10-this.size, this.size * 2, this.size * 2, {isStatic: true});
+        this.body = Bodies.rectangle(x, y - 10 - this.size, this.size * 2, this.size * 2, {isStatic: true});
         World.add(world, this.body);
         this.body.label = "spike";
     }
@@ -207,7 +207,7 @@ class Portal {
         this.type = typeof type === "string" ? type : "NEXT_LEVEL";
         this.w = 30;
         this.h = 50;
-        this.body = Bodies.rectangle(x, y-10-this.h/2, this.w, this.h, {isStatic: true});
+        this.body = Bodies.rectangle(x, y - 10 - this.h / 2, this.w, this.h, {isStatic: true});
         World.add(world, this.body);
         this.body.label = "portal";
     }
@@ -216,13 +216,17 @@ class Portal {
         let pos = this.body.position;
         push();
         translate(pos.x, pos.y);
-        if(this.type === "NEXT_LEVEL"){
+        if (this.type === "NEXT_LEVEL") {
             fill(objectColors.portal[0], objectColors.portal[1], objectColors.portal[2]);
-        } else if(this.type === "BONUS_LEVEL"){
+
+            rectMode(CENTER);
+            rect(0, 0, this.w, this.h);
+        } else if (this.type === "BONUS_LEVEL") {
             fill(objectColors.bonusPortal[0], objectColors.bonusPortal[1], objectColors.bonusPortal[2], 100);
+            rectMode(CENTER);
+            rect(0, 0, this.w, this.h);
         }
-        rectMode(CENTER);
-        rect(0, 0, this.w, this.h);
+
         pop();
     }
 
@@ -231,13 +235,13 @@ class Portal {
     }
 
     interact() {
-        if(this.type === "NEXT_LEVEL"){
-            if(camera.orientation === "VERTICAL"){
+        if (this.type === "NEXT_LEVEL") {
+            if (camera.orientation === "VERTICAL") {
                 GAME_LEVEL++;
             }
             GAME_STATE = "WIN";
             camera.orientation = "VERTICAL";
-        } else if(this.type === "BONUS_LEVEL"){
+        } else if (this.type === "BONUS_LEVEL") {
             GAME_STATE = "WIN";
             camera.orientation = "HORIZONTAL";
         }
