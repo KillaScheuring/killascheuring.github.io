@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/platformer/movingPlatform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/platformer.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/platformer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/platformer.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/platformer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/platform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,47 +19,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>feat</find>
-      <find>http://placekitten.com/350/300/</find>
-      <find>md-6</find>
-      <find>length</find>
-      <find>upda</find>
-      <find>len</find>
-      <find>offset</find>
-      <find>Spike</find>
-      <find>composeWorld</find>
-      <find>Jump</find>
-      <find>Speed</find>
-      <find>numJump</find>
-      <find>boostAmount</find>
-      <find>camer</find>
-      <find>gameHeight</find>
-      <find>this.h/2</find>
-      <find>camera.y = player.body.position.y</find>
-      <find>base</find>
-      <find>playerPos</find>
-      <find>currentLevelInfo.playerPos</find>
-      <find>previousLevel.playerPos</find>
-      <find>timeout</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>http://placekitten.com/100/100/</replace>
-      <replace>placekitten.com/200/200/</replace>
-      <replace>Speed</replace>
-      <replace>NumJump</replace>
-      <replace>maxNumJump</replace>
-      <replace>this.h</replace>
-      <replace>(boostAmount-1)</replace>
-      <replace>JumpBoost</replace>
-      <replace>previousLevel.playerPos</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -166,14 +131,8 @@
       <workItem from="1584502392843" duration="63000" />
       <workItem from="1584567175966" duration="108823000" />
       <workItem from="1584921028624" duration="269000" />
-      <workItem from="1584922162464" duration="9125000" />
-    </task>
-    <task id="LOCAL-00004" summary="Trying to load in json">
-      <created>1580953840441</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1580953840441</updated>
+      <workItem from="1584922162464" duration="9199000" />
+      <workItem from="1584997812916" duration="9998000" />
     </task>
     <task id="LOCAL-00005" summary="Trying to load in json">
       <created>1580953912171</created>
@@ -511,14 +470,20 @@
       <option name="project" value="LOCAL" />
       <updated>1584920926275</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="changed size">
+      <created>1584935794150</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1584935794150</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new win condition and framework for waves" />
     <MESSAGE value="Added Squirrel names to end screen" />
     <MESSAGE value="documentation and changed name flourishes" />
     <MESSAGE value="changed the styling of the names display" />
@@ -543,6 +508,21 @@
     <MESSAGE value="rebalanced higher levels" />
     <MESSAGE value="rebalanced bonus level drops" />
     <MESSAGE value="new platform generation and site wrapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="new platform generation and site wrapper" />
+    <MESSAGE value="changed size" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed size" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1584935792989">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1584935792989" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1584935799545">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1584935799545" />
+    <state x="413" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1585007938098">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="413" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1585007938098" />
   </component>
 </project>

@@ -102,7 +102,7 @@ class JumpBoost {
 class NumJumpBoost {
     constructor(x, y, boostAmount, duration) {
         this.w = 10 + 5 * (boostAmount - 1);
-        this.h = 10 + 5 * (boostAmount - 1);
+        this.h = this.w;
         this.body = Bodies.rectangle(x, y - 10 - this.h / 2, this.w, this.h, {isStatic: true});
         this.body.label = "maxNumJump";
         this.boost = boostAmount;

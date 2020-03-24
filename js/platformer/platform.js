@@ -13,8 +13,9 @@ class Platform {
         rectMode(CENTER);
         rect(this.body.position.x, this.body.position.y, this.w, this.h,);
         // fill(255);
+        // textSize(12);
         // textAlign(CENTER);
-        // text(`dist: ${this.dist}`, this.body.position.x, this.body.position.y);
+        // text(`x: ${Math.floor(this.body.position.x)} y: ${Math.floor(this.body.position.y)}`, this.body.position.x, this.body.position.y);
     }
 
     remove() {

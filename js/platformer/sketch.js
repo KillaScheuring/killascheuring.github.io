@@ -1,17 +1,23 @@
+
+// Initialize matter.js variables
 let Engine = Matter.Engine,
     World = Matter.World,
     Bodies = Matter.Bodies,
     Body = Matter.Body,
     Events = Matter.Events;
 
+// Initialize the engine and world to be used
 let engine, world;
 
+// Initialize the player variable
 let player;
 
+// Declare world object arrays
 let platforms = [];
 let intractableObjects = [];
 let bounds = [];
 
+// Dictionary for all intractable objects
 let kindsOfObjects = {
     "health": Health,
     "maxHealth": MaxHealth,
@@ -22,30 +28,43 @@ let kindsOfObjects = {
     "speed": SpeedBoost,
 };
 
+
+// Dictionary for all types of intractable object rates for bonus levels
 let bonusLevelTypes = {
     maxHealth: 0.3,
     jump: 0.4,
     maxNumJump: 0,
     speed: 0.0,
 };
+
+// Declare camera object
 let camera = {
+    // camera position
     x: null,
     y: null,
+    // set orientation
     orientation: "VERTICAL", // VERTICAL or HORIZONTAL
+    // set size (smaller X larger for vertical) (larger X smaller for horizontal)
     smaller: 450,
     larger: 800
 };
 
+// Declare game state
 let GAME_STATE = "START";
+// Declare game level
 let GAME_LEVEL = 0;
+
+// Set between level timeout
 let timeout = 60 * 3;
 
+// for rebuilding level after bonus level TODO finish this
 let previousLevel = {
     platforms: [],
     intractableObjects: [],
     bounds: [],
 };
 
+// Declare colors for each pick-up
 let objectColors = {
     health: [255, 20, 20],
     maxHealth: [150, 75, 75],
@@ -57,6 +76,7 @@ let objectColors = {
     bonusPortal: [200, 200, 100],
 };
 
+// Set pool for bonus level information
 let bonusLevelsInfo = [
     {
         gameHeight: 2000,
@@ -93,6 +113,11 @@ let bonusLevelsInfo = [
     }
 ];
 
+// Set list for level information
+// This will have
+// The height of the level,
+// The color palette (background, boundary, platform, player)
+// The object spawn rates for the level
 let levelsInfo = [
     {
         gameHeight: 2000,
@@ -258,25 +283,41 @@ let levelsInfo = [
 
 ];
 
+
+// Set current level information (first level to begin with)
 let currentLevelInfo = levelsInfo[0];
 
+// Set up canvas
 function setup() {
+    // Create the canvas (Vertically)
     let cnv = createCanvas(camera.smaller, camera.larger);
+    // Place canvas in the container on the web page
     cnv.parent('game');
+
     noStroke();
     textSize(24);
+
+    // Declare engine and world
     engine = Engine.create();
     world = engine.world;
+
+    // Generate the player object
     player = new Player(0, 0);
+
+    // Compose world
     composeWorld();
 
+    // Declare function to handle jump resets and interact with objects
     function collision(event) {
+        // loop through all collision pairs
         for (let pair of event.source.pairs.list) {
+            // assign each label to a variable to make using them easier
             let bodyA = pair.bodyA.label;
             let bodyB = pair.bodyB.label;
-            if (bodyA === "player" && Object.keys(kindsOfObjects).includes(bodyB)) {
-                for (let i = 0; i < intractableObjects.length; i++) {
-                    let body = intractableObjects[i].body;
+            // loop through all objects to check
+            for (let i = 0; i < intractableObjects.length; i++) {
+                let body = intractableObjects[i].body;
+                if (bodyA === "player" && Object.keys(kindsOfObjects).includes(bodyB)) {
                     if (pair.bodyB === body) {
                         intractableObjects[i].interact(player);
                         if (bodyB !== "spike") {
@@ -288,23 +329,22 @@ function setup() {
                         }
                         break;
                     }
-                }
-            } else if (bodyB === "player" && Object.keys(kindsOfObjects).includes(bodyA)) {
-                for (let i = 0; i < intractableObjects.length; i++) {
-                    let body = intractableObjects[i].body;
+                } else if (bodyB === "player" && Object.keys(kindsOfObjects).includes(bodyA)) {
                     if (pair.bodyA === body) {
                         intractableObjects[i].interact(player);
                         if (bodyA !== "spike") {
                             intractableObjects.splice(i, 1);
                             World.remove(world, body);
-                            if (bodyB !== "health" && random() > 0.5) {
+                            if (bodyA !== "health" && random() > 0.5) {
                                 spawnObject(bodyA);
                             }
                         }
                         break;
                     }
                 }
+
             }
+
         }
         if (player.body.velocity.y > 0) {
             player.resetJumps();
@@ -351,7 +391,7 @@ function composeWorld() {
         bounds.push(new Boundary(width / 2 - 10, height / 2 - currentLevelInfo.gameHeight / 2 - 150, 20, currentLevelInfo.gameHeight + 300));
         bounds.push(new Boundary(0, height / 2 - currentLevelInfo.gameHeight - 300, width, 20));
 
-        platforms.push(new Platform(width / 2 - 50, height / 2 - 100, 100, platformHeight));
+        platforms.push(new MovingPlatform(width / 2 - 50, height / 2 - 100, 100, platformHeight));
 
         for (let platformIndex = 1; platformIndex < currentLevelInfo.gameHeight; platformIndex++) {
             let lastPlatformPos = platforms[platformIndex - 1].body.position;
@@ -504,6 +544,9 @@ function draw() {
         push();
         if (camera.orientation === "VERTICAL") {
             translate(width / 2, (height * 2) / 3 - camera.y);
+            // if(player.body.position.y < camera.y || player.body.position.y - camera.y > 100){
+            //     camera.y = player.body.position.y;
+            // }
             camera.y = player.body.position.y;
         } else if (camera.orientation === "HORIZONTAL") {
             translate(width / 5 - camera.x, (height) / 2 - camera.y);
@@ -518,6 +561,9 @@ function draw() {
 
         // Display all entities
         for (let platform of platforms) {
+            if(platform.body.label === "movingPlatform"){
+                platform.move();
+            }
             platform.show();
         }
 

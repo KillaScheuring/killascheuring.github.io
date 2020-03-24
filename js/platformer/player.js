@@ -5,6 +5,8 @@ class Player {
         this.body = Bodies.rectangle(x, y, this.w, this.h);
         World.add(world, this.body);
         this.body.label = "player";
+        this.body.friction = 0.9;
+        this.body.frictionStatic = 0.9;
         this.numJumps = 0;
         this.bonuses = [];
         this.lives = numLives ? numLives : 3;
@@ -21,6 +23,7 @@ class Player {
     jump() {
         if (this.numJumps < this.stats.maxNumJump) {
             Body.applyForce(this.body, this.body.position, createVector(0, -this.stats.jump));
+            // Body.setVelocity(this.body, createVector(this.body.velocity.x, this.body.velocity.y - 5));
             this.numJumps++;
         }
     }
@@ -51,7 +54,7 @@ class Player {
     show() {
         push();
         if (camera.orientation === "VERTICAL") {
-            translate(width / 2, this.body.position.y - height / 2 - height/6);
+            translate(width / 2, camera.y - height / 2 - height/6);
         } else if (camera.orientation === "HORIZONTAL") {
             translate(width + this.body.position.x - width/5, this.body.position.y - height / 2 + height/20);
         }
