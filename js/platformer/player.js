@@ -5,8 +5,6 @@ class Player {
         this.body = Bodies.rectangle(x, y, this.w, this.h);
         World.add(world, this.body);
         this.body.label = "player";
-        this.body.friction = 0.9;
-        this.body.frictionStatic = 0.9;
         this.numJumps = 0;
         this.bonuses = [];
         this.lives = numLives ? numLives : 3;
@@ -18,9 +16,18 @@ class Player {
             maxNumJump: 2
         };
         this.stats = {...this.baseStats};
+        let options = {
+            bodyA: this.body,
+            bodyB: this.body,
+            length: 30,
+            damping: 0.5
+        };
+        this.constraint = Constraint.create(options);
+        World.add(world, this.constraint);
     }
 
     jump() {
+        this.detach();
         if (this.numJumps < this.stats.maxNumJump) {
             Body.applyForce(this.body, this.body.position, createVector(0, -this.stats.jump));
             // Body.setVelocity(this.body, createVector(this.body.velocity.x, this.body.velocity.y - 5));
@@ -110,5 +117,16 @@ class Player {
 
     remove() {
         World.remove(world, this.body);
+    }
+
+    attach(platform){
+        console.log("attach");
+        this.constraint.bodyB = platform.body;
+        console.log(this.constraint);
+    }
+
+    detach(){
+        console.log("detach");
+        this.constraint.bodyB = this.body;
     }
 }

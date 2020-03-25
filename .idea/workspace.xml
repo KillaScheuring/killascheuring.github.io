@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/platformer/movingPlatform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/platformer.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/platformer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/platform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/movingPlatform.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/movingPlatform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
     </list>
@@ -132,14 +130,8 @@
       <workItem from="1584567175966" duration="108823000" />
       <workItem from="1584921028624" duration="269000" />
       <workItem from="1584922162464" duration="9199000" />
-      <workItem from="1584997812916" duration="9998000" />
-    </task>
-    <task id="LOCAL-00005" summary="Trying to load in json">
-      <created>1580953912171</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1580953912171</updated>
+      <workItem from="1584997812916" duration="17978000" />
+      <workItem from="1585078849046" duration="19918000" />
     </task>
     <task id="LOCAL-00006" summary="Trying to load in json">
       <created>1580954159979</created>
@@ -477,14 +469,20 @@
       <option name="project" value="LOCAL" />
       <updated>1584935794150</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="trying to add moving platforms">
+      <created>1585014093508</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1585014093508</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Squirrel names to end screen" />
     <MESSAGE value="documentation and changed name flourishes" />
     <MESSAGE value="changed the styling of the names display" />
     <MESSAGE value="Trying to get angular to work" />
@@ -509,20 +507,21 @@
     <MESSAGE value="rebalanced bonus level drops" />
     <MESSAGE value="new platform generation and site wrapper" />
     <MESSAGE value="changed size" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed size" />
+    <MESSAGE value="trying to add moving platforms" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to add moving platforms" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1584935792989">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585014092321">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1584935792989" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1584935799545">
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585014092321" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1585014095853">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1584935799545" />
-    <state x="413" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1585007938098">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1585014095853" />
+    <state x="414" y="207" width="672" height="678" key="search.everywhere.popup" timestamp="1585075308860">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="413" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1585007938098" />
+    <state x="414" y="207" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1585075308860" />
   </component>
 </project>
