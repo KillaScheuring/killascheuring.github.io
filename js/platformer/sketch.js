@@ -567,6 +567,8 @@ function composeWorld() {
         // end
         bounds.push(new Boundary(end, -currentLevelInfo.gameHeight / 2 + height / 2, 20, currentLevelInfo.gameHeight * 2));
 
+        ///////////////// Generate platforms ////////////////////////////
+
         // first platform
         platforms.push(new Platform(-width / 5 + 100, height / 2 - 10, 200, 20));
 

@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/movingPlatform.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/movingPlatform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,14 +128,10 @@
       <workItem from="1584921028624" duration="269000" />
       <workItem from="1584922162464" duration="9199000" />
       <workItem from="1584997812916" duration="17978000" />
-      <workItem from="1585078849046" duration="19918000" />
-    </task>
-    <task id="LOCAL-00006" summary="Trying to load in json">
-      <created>1580954159979</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1580954159979</updated>
+      <workItem from="1585078849046" duration="20764000" />
+      <workItem from="1585166048088" duration="600000" />
+      <workItem from="1585180703889" duration="21000" />
+      <workItem from="1585257619014" duration="19000" />
     </task>
     <task id="LOCAL-00007" summary="added api functionality">
       <created>1580955670021</created>
@@ -476,14 +469,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585014093508</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="new horizontal platform generation and refactoring">
+      <created>1585106115883</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1585106115884</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="documentation and changed name flourishes" />
     <MESSAGE value="changed the styling of the names display" />
     <MESSAGE value="Trying to get angular to work" />
     <MESSAGE value="added basic angular project" />
@@ -508,13 +507,14 @@
     <MESSAGE value="new platform generation and site wrapper" />
     <MESSAGE value="changed size" />
     <MESSAGE value="trying to add moving platforms" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to add moving platforms" />
+    <MESSAGE value="new horizontal platform generation and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="new horizontal platform generation and refactoring" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585014092321">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585106114868">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585014092321" />
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585106114868" />
     <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1585014095853">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
