@@ -16,21 +16,15 @@ class Player {
             maxNumJump: 2
         };
         this.stats = {...this.baseStats};
-        let options = {
-            bodyA: this.body,
-            bodyB: this.body,
-            length: 30,
-            damping: 0.5
-        };
-        this.constraint = Constraint.create(options);
-        World.add(world, this.constraint);
+        this.platform = null;
     }
 
     jump() {
-        this.detach();
+        if(this.platform){
+            this.detach();
+        }
         if (this.numJumps < this.stats.maxNumJump) {
             Body.applyForce(this.body, this.body.position, createVector(0, -this.stats.jump));
-            // Body.setVelocity(this.body, createVector(this.body.velocity.x, this.body.velocity.y - 5));
             this.numJumps++;
         }
     }
@@ -44,6 +38,11 @@ class Player {
     }
 
     update() {
+        if(this.platform){
+            if(this.body.position.y > this.platform.body.position.y){
+                this.detach();
+            }
+        }
         this.stats = {...this.baseStats};
         for (let bonusIndex = this.bonuses.length - 1; bonusIndex >= 0; bonusIndex--) {
             this.bonuses[bonusIndex].duration--;
@@ -84,6 +83,7 @@ class Player {
             y += 30;
             textAlign(CENTER);
             fill(255);
+            textSize(12);
             text(`${Math.ceil(this.bonuses[bonusIndex].duration / 60)}s`, x - 30, y + 5);
             fill(objectColors[this.bonuses[bonusIndex].name][0],
                 objectColors[this.bonuses[bonusIndex].name][1],
@@ -120,13 +120,13 @@ class Player {
     }
 
     attach(platform){
-        console.log("attach");
-        this.constraint.bodyB = platform.body;
-        console.log(this.constraint);
+        this.platform = platform;
     }
 
     detach(){
-        console.log("detach");
-        this.constraint.bodyB = this.body;
+        if(this.platform){
+            this.platform.detach();
+        }
+        this.platform = null;
     }
 }

@@ -69,6 +69,10 @@ let objectColors = {
 };
 
 // Set pool for bonus level information
+// This will have
+// The height and length of the level
+// The color palette
+// The object spawn rates
 let bonusLevelsInfo = [
     {
         gameHeight: 2000,
@@ -81,7 +85,7 @@ let bonusLevelsInfo = [
             player: [227, 164, 146]
         },
         objectRates: {
-            maxHealth: 0.3,
+            maxHealth: 0.2,
             jump: 0.4,
             maxNumJump: 0.0,
             speed: 0.0,
@@ -98,7 +102,7 @@ let bonusLevelsInfo = [
             player: [228, 184, 51]
         },
         objectRates: {
-            maxHealth: 0.3,
+            maxHealth: 0.2,
             jump: 0.4,
             maxNumJump: 0.0,
             speed: 0.0,
@@ -115,9 +119,26 @@ let bonusLevelsInfo = [
             player: [255, 192, 203]
         },
         objectRates: {
-            maxHealth: 0.3,
+            maxHealth: 0.2,
             jump: 0.4,
             maxNumJump: 0.0,
+            speed: 0.0,
+        }
+    },
+    {
+        gameHeight: 4000,
+        gameLength: 4500,
+        colors: {
+            // https://www.colourlovers.com/palette/4709644/Girly_Summer
+            background: [213, 187, 249],
+            boundary: [255, 210, 167],
+            platform: [255, 237, 167],
+            player: [249, 219, 238]
+        },
+        objectRates: {
+            maxHealth: 0.2,
+            jump: 0.4,
+            maxNumJump: 0.1,
             speed: 0.0,
         }
     }
@@ -144,7 +165,8 @@ let levelsInfo = [
             maxNumJump: 0.0,
             speed: 0.0,
         },
-        platformRate: 0.0
+        platformRate: 0.0,
+        movingPlatformRate: 0.0
     },
     {
         gameHeight: 3000,
@@ -162,7 +184,8 @@ let levelsInfo = [
             maxNumJump: 0.0,
             speed: 0.0,
         },
-        platformRate: 0.1
+        platformRate: 0.1,
+        movingPlatformRate: 0.0
     },
     {
         gameHeight: 4000,
@@ -180,7 +203,8 @@ let levelsInfo = [
             maxNumJump: 0.0,
             speed: 0.0,
         },
-        platformRate: 0.2
+        platformRate: 0.2,
+        movingPlatformRate: 0.0
     },
     {
         gameHeight: 5000,
@@ -198,7 +222,8 @@ let levelsInfo = [
             maxNumJump: 0.0,
             speed: 0.0,
         },
-        platformRate: 0.3
+        platformRate: 0.3,
+        movingPlatformRate: 0.0
     },
     {
         gameHeight: 6000,
@@ -216,7 +241,8 @@ let levelsInfo = [
             maxNumJump: 0.1,
             speed: 0.0,
         },
-        platformRate: 0.4
+        platformRate: 0.4,
+        movingPlatformRate: 0.1
     },
     {
         gameHeight: 7000,
@@ -234,7 +260,8 @@ let levelsInfo = [
             maxNumJump: 0.1,
             speed: 0.0,
         },
-        platformRate: 0.5
+        platformRate: 0.5,
+        movingPlatformRate: 0.2
     },
     {
         gameHeight: 8000,
@@ -252,7 +279,8 @@ let levelsInfo = [
             maxNumJump: 0.2,
             speed: 0.1,
         },
-        platformRate: 0.6
+        platformRate: 0.6,
+        movingPlatformRate: 0.2
     },
     {
         gameHeight: 9000,
@@ -270,7 +298,8 @@ let levelsInfo = [
             maxNumJump: 0.2,
             speed: 0.1,
         },
-        platformRate: 0.7
+        platformRate: 0.7,
+        movingPlatformRate: 0.3
     },
     {
         gameHeight: 10000,
@@ -288,14 +317,33 @@ let levelsInfo = [
             maxNumJump: 0.2,
             speed: 0.1,
         },
-        platformRate: 0.8
+        platformRate: 0.8,
+        movingPlatformRate: 0.3
+    },
+    {
+        gameHeight: 12000,
+        colors: {
+            // https://www.colourlovers.com/palette/4709642/Youre_a_Natural
+            background: [14, 42, 28],
+            boundary: [51, 88, 53],
+            platform: [86, 117, 112],
+            player: [236, 239, 240]
+        },
+        objectRates: {
+            health: 0.7,
+            spike: 0.7,
+            jump: 0.5,
+            maxNumJump: 0.3,
+            speed: 0.1,
+        },
+        platformRate: 0.8,
+        movingPlatformRate: 0.4
     }
-
 ];
 
 
 // Set current level information (first level to begin with)
-let currentLevelInfo = levelsInfo[0];
+let currentLevelInfo = levelsInfo[GAME_LEVEL];
 
 // Set up canvas
 function setup() {
@@ -325,8 +373,8 @@ function setup() {
             let bodyA = pair.bodyA.label;
             let bodyB = pair.bodyB.label;
             // loop through all objects to find the body that was in the collision
-            if([bodyA, bodyB].includes("player")){
-                if(Object.keys(kindsOfObjects).includes(bodyA) || Object.keys(kindsOfObjects).includes(bodyB)){
+            if ([bodyA, bodyB].includes("player")) {
+                if (Object.keys(kindsOfObjects).includes(bodyA) || Object.keys(kindsOfObjects).includes(bodyB)) {
                     for (let objectIndex = 0; objectIndex < intractableObjects.length; objectIndex++) {
                         // assign the body to a variable to make using it easier
                         let body = intractableObjects[objectIndex].body;
@@ -372,20 +420,20 @@ function setup() {
                 if (player.body.velocity.y >= 0) {
                     player.resetJumps();
                 }
-                // TODO get moving with platform to work
-                // if([bodyA, bodyB].includes("movingPlatform")){
-                //     for(let platform of platforms){
-                //         if([pair.bodyA, pair.bodyB].includes(platform.body)){
-                //             player.attach(platform);
-                //         }
-                //     }
-                // }
+
+                // check if player collided with a moving platform
+                if ([bodyA, bodyB].includes("movingPlatform")) {
+                    for (let platform of platforms) {
+                        if ([pair.bodyA, pair.bodyB].includes(platform.body)) {
+                            // if so, attach the player to the platform
+                            platform.attach(player);
+                        }
+                    }
+                }
 
             }
 
         }
-
-
     }
 
     // call the collision function when a collision starts
@@ -464,7 +512,7 @@ function composeWorld() {
         ///////////////// Generate platforms ////////////////////////////
 
         // first platform
-        platforms.push(new MovingPlatform(width / 2 - 50, height / 2 - 100, 100, platformHeight));
+        platforms.push(new Platform(width / 2 - 50 - 20, height / 2 - 100, 100, platformHeight));
 
         // loop though the maximum number of platforms
         for (let platformIndex = 1; platformIndex < currentLevelInfo.gameHeight; platformIndex++) {
@@ -489,12 +537,11 @@ function composeWorld() {
             let y = lastPlatformPos.y + platformHeight / 2 - yDist;
 
             // generate a random width for the new position
-            let w = random(50, width / 2 - Math.abs(x));
+            let w = random(50, width / 2 - 20 - Math.abs(x));
 
             // if the new platform is covering the last one
             // flip it to the other side
-            // TODO Fix checker
-            if (x - w < (lastPlatformPos.x - lastPlatformW / 2) && x + w > (lastPlatformPos.x + lastPlatformW / 2)) {
+            if (x - w - 30 < (lastPlatformPos.x - lastPlatformW / 2) && x + w + 30 > (lastPlatformPos.x + lastPlatformW / 2)) {
                 x *= -1;
             }
 
@@ -502,11 +549,11 @@ function composeWorld() {
             w *= 2;
 
             // Construct new platform
-            let platform = new Platform(x, y, w, platformHeight);
+            let platform = random() < currentLevelInfo.movingPlatformRate ? new MovingPlatform(x, y, w, platformHeight) : new Platform(x, y, w, platformHeight);
             platforms.push(platform);
 
             // if this platform is close to the top break to stop generating platforms
-            if (y - top < maxDistanceBetweenPlatforms*2) {
+            if (y - top < maxDistanceBetweenPlatforms * 2) {
                 break;
             }
 
@@ -645,6 +692,9 @@ function spawnObject(typeOfObj, platform) {
 
     // generate the object
     let spawnedObject = new kindsOfObjects[typeOfObj](x, pos.y, Math.floor(random(1, 3)), Math.floor(random(60 * 3, 60 * 5)));
+    if(platform.body.label === "movingPlatform"){
+        platform.add(spawnedObject);
+    }
     intractableObjects.push(spawnedObject);
 }
 
@@ -688,7 +738,7 @@ function draw() {
             player.move(1);
         }
         // move all moving platforms
-        for(let platform of platforms){
+        for (let platform of platforms) {
             if (platform.body.label === "movingPlatform") {
                 platform.move();
             }
@@ -737,6 +787,7 @@ function draw() {
         background(100);
         fill(0);
         textAlign(CENTER);
+        textSize(24);
         // Display game over info to user
         text(`You got to level ${GAME_LEVEL + 1}`, 0, -40);
         text(`Click to start again ${timeout > 0 ? `in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
@@ -761,6 +812,7 @@ function draw() {
         background(150, 255, 150);
         fill(0);
         textAlign(CENTER);
+        textSize(24);
         // display info to user
         // let the user know they won and if there is a next level display what it is
         text(`You Won!${GAME_LEVEL === levelsInfo.length ? "" : ` Next level is lvl.${GAME_LEVEL + 1}`}`, 0, -40);
