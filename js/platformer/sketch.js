@@ -51,6 +51,7 @@ let timeout = 60 * 3;
 // for rebuilding level after bonus level TODO finish this
 // currently only used to check if player coming back from bonus level
 let previousLevel = {
+    playerPos: null,
     platforms: [],
     intractableObjects: [],
     bounds: [],
@@ -65,7 +66,6 @@ let objectColors = {
     jump: [255, 255, 255],
     speed: [150, 255, 150],
     maxNumJump: [200, 100, 200],
-    bonusPortal: [200, 200, 100],
 };
 
 // Set pool for bonus level information
@@ -466,8 +466,20 @@ function composeWorld() {
             // if player position in previous level info set player to that position
             // also give the new player object the same stats
             player = new Player(previousLevel.playerPos.x, previousLevel.playerPos.y, player.lives, player.maxLives);
+            bounds = previousLevel.bounds;
+            intractableObjects = previousLevel.intractableObjects;
+            platforms = previousLevel.platforms;
 
-            previousLevel.playerPos = null;
+            previousLevel = {
+                playerPos: null,
+                platforms: [],
+                intractableObjects: [],
+                bounds: [],
+            };
+
+            for(let object of bounds.concat(intractableObjects).concat(platforms)){
+                World.add(world, object.body);
+            }
 
             reloading = true;
 
@@ -481,113 +493,117 @@ function composeWorld() {
         }
         // set current level info
         currentLevelInfo = {...levelsInfo[GAME_LEVEL]};
+
         // set canvas orientation to vertical
         resizeCanvas(camera.smaller, camera.larger);
 
-        // set minimum distance between platforms
-        // the min that works is 150
-        let minDistanceBetweenPlatforms = 150;
-        // set the maximum distance between the minimum distance and the the maximum allowed in the game
-        // mapped to the current platform difficulty rate
-        // the maximum without pickups is 490
-        let maxDistanceBetweenPlatforms = map(currentLevelInfo.platformRate, 0, 1, minDistanceBetweenPlatforms, 600);
+        if(!reloading){
+            // set minimum distance between platforms
+            // the min that works is 150
+            let minDistanceBetweenPlatforms = 150;
+            // set the maximum distance between the minimum distance and the the maximum allowed in the game
+            // mapped to the current platform difficulty rate
+            // the maximum without pickups is 490
+            let maxDistanceBetweenPlatforms = map(currentLevelInfo.platformRate, 0, 1, minDistanceBetweenPlatforms, 600);
 
-        // set universal platform height
-        let platformHeight = 20;
+            // set universal platform height
+            let platformHeight = 20;
 
-        // set top of the world
-        // used to determine when to stop making platforms
-        let top = -currentLevelInfo.gameHeight;
+            // set top of the world
+            // used to determine when to stop making platforms
+            let top = -currentLevelInfo.gameHeight;
 
-        // build the boundaries
-        // ground
-        bounds.push(new Boundary(0, height / 2 - 10, width, 20));
-        // left side
-        bounds.push(new Boundary(-width / 2 + 10, height / 2 - currentLevelInfo.gameHeight / 2 - 150, 20, currentLevelInfo.gameHeight + 300));
-        // right side
-        bounds.push(new Boundary(width / 2 - 10, height / 2 - currentLevelInfo.gameHeight / 2 - 150, 20, currentLevelInfo.gameHeight + 300));
-        // ceiling
-        bounds.push(new Boundary(0, height / 2 - currentLevelInfo.gameHeight - 300, width, 20));
+            // build the boundaries
+            // ground
+            bounds.push(new Boundary(0, height / 2 - 10, width, 20));
+            // left side
+            bounds.push(new Boundary(-width / 2 + 10, height / 2 - currentLevelInfo.gameHeight / 2 - 150, 20, currentLevelInfo.gameHeight + 300));
+            // right side
+            bounds.push(new Boundary(width / 2 - 10, height / 2 - currentLevelInfo.gameHeight / 2 - 150, 20, currentLevelInfo.gameHeight + 300));
+            // ceiling
+            bounds.push(new Boundary(0, height / 2 - currentLevelInfo.gameHeight - 300, width, 20));
 
-        ///////////////// Generate platforms ////////////////////////////
+            ///////////////// Generate platforms ////////////////////////////
 
-        // first platform
-        platforms.push(new Platform(width / 2 - 50 - 20, height / 2 - 100, 100, platformHeight));
+            // first platform
+            platforms.push(new Platforms(width / 2 - 50 - 20, height / 2 - 100, 100, platformHeight));
 
-        // loop though the maximum number of platforms
-        for (let platformIndex = 1; platformIndex < currentLevelInfo.gameHeight; platformIndex++) {
+            // loop though the maximum number of platforms
+            for (let platformIndex = 1; platformIndex < currentLevelInfo.gameHeight; platformIndex++) {
 
-            // get the last platforms position and width
-            let lastPlatformPos = platforms[platformIndex - 1].body.position;
-            let lastPlatformW = platforms[platformIndex - 1].w;
+                // get the last platforms position and width
+                let lastPlatformPos = platforms[platformIndex - 1].body.position;
+                let lastPlatformW = platforms[platformIndex - 1].w;
 
-            // generate a random distance between the last platform and the new one
-            let newDist = random(minDistanceBetweenPlatforms, maxDistanceBetweenPlatforms);
+                // generate a random distance between the last platform and the new one
+                let newDist = random(minDistanceBetweenPlatforms, maxDistanceBetweenPlatforms);
 
-            // generate a random angle from the last platform to the new one
-            let angle = lastPlatformPos.x > 0 ? random((2 * PI) / 3, (5 * PI) / 6) : random((PI / 3), (PI / 6));
+                // generate a random angle from the last platform to the new one
+                let angle = lastPlatformPos.x > 0 ? random((2 * PI) / 3, (5 * PI) / 6) : random((PI / 3), (PI / 6));
 
-            // compute the horizontal distance from the last platform to the new one
-            let xDist = newDist * Math.cos(angle);
-            // compute the vertical distance from the last platform to the new one
-            let yDist = newDist * Math.sin(angle);
+                // compute the horizontal distance from the last platform to the new one
+                let xDist = newDist * Math.cos(angle);
+                // compute the vertical distance from the last platform to the new one
+                let yDist = newDist * Math.sin(angle);
 
-            // compute the new platforms position
-            let x = lastPlatformPos.x + xDist + lastPlatformPos.x > 0 ? lastPlatformW / 2 : -lastPlatformW / 2;
-            let y = lastPlatformPos.y + platformHeight / 2 - yDist;
+                // compute the new platforms position
+                let x = lastPlatformPos.x + xDist + lastPlatformPos.x > 0 ? lastPlatformW / 2 : -lastPlatformW / 2;
+                let y = lastPlatformPos.y + platformHeight / 2 - yDist;
 
-            // generate a random width for the new position
-            let w = random(50, width / 2 - 20 - Math.abs(x));
+                // generate a random width for the new position
+                let w = random(50, width / 2 - 20 - Math.abs(x));
 
-            // if the new platform is covering the last one
-            // flip it to the other side
-            if (x - w - 30 < (lastPlatformPos.x - lastPlatformW / 2) && x + w + 30 > (lastPlatformPos.x + lastPlatformW / 2)) {
-                x *= -1;
-            }
+                // if the new platform is covering the last one
+                // flip it to the other side
+                if (x - w - 30 < (lastPlatformPos.x - lastPlatformW / 2) && x + w + 30 > (lastPlatformPos.x + lastPlatformW / 2)) {
+                    x *= -1;
+                }
 
-            // double the width (platforms drawn from the center)
-            w *= 2;
+                // double the width (platforms drawn from the center)
+                w *= 2;
 
-            // Construct new platform
-            let platform = random() < currentLevelInfo.movingPlatformRate ? new MovingPlatform(x, y, w, platformHeight) : new Platform(x, y, w, platformHeight);
-            platforms.push(platform);
+                // Construct new platform
+                let platform = random() < currentLevelInfo.movingPlatformRate ? new MovingPlatform(x, y, w, platformHeight) : new Platforms(x, y, w, platformHeight);
+                platforms.push(platform);
 
-            // if this platform is close to the top break to stop generating platforms
-            if (y - top < maxDistanceBetweenPlatforms * 2) {
-                break;
-            }
+                // if this platform is close to the top break to stop generating platforms
+                if (y - top < maxDistanceBetweenPlatforms * 2) {
+                    break;
+                }
 
-            // Generate objects on all but the first and last platforms
-            if (platformIndex !== 0) {
-                // loop through all the object rates in the level
-                for (let thisType of Object.keys(currentLevelInfo.objectRates)) {
-                    // if the random number is less than the object rate spawn an object
-                    // ignore the platform rate
-                    if (random() < currentLevelInfo.objectRates[thisType]) {
-                        spawnObject(thisType, platforms[platformIndex]);
+                // Generate objects on all but the first and last platforms
+                if (platformIndex !== 0) {
+                    // loop through all the object rates in the level
+                    for (let thisType of Object.keys(currentLevelInfo.objectRates)) {
+                        // if the random number is less than the object rate spawn an object
+                        // ignore the platform rate
+                        if (random() < currentLevelInfo.objectRates[thisType]) {
+                            spawnObject(thisType, platforms[platformIndex]);
+                        }
                     }
                 }
             }
+
+            // spawn portal on the last platform
+            spawnObject("portal", platforms[platforms.length - 1]);
+
+            // if the level isn't being reloaded there is a chance for a bonus level portal to generate
+            if (random() < 0.3) {
+                // pick a random platform to spawn the portal
+                let platform = random(platforms);
+                // get it's position
+                let pos = platform.body.position;
+                // spawn it in the wall based on the side the platform was on
+                let x = pos.x < 0 ? -width / 2 + 5 : width / 2 - 5;
+
+                // construct the bonus level portal
+                let bonusPortal = new Portal(x, pos.y, "BONUS_LEVEL");
+                intractableObjects.push(bonusPortal);
+            }
+
+            // set the camera position to the center on the x-axis and the player's y
         }
 
-        // spawn portal on the last platform
-        spawnObject("portal", platforms[platforms.length - 1]);
-
-        // if the level isn't being reloaded there is a chance for a bonus level portal to generate
-        if (!reloading && random() < 0.3) {
-            // pick a random platform to spawn the portal
-            let platform = random(platforms);
-            // get it's position
-            let pos = platform.body.position;
-            // spawn it in the wall based on the side the platform was on
-            let x = pos.x < 0 ? -width / 2 + 5 : width / 2 - 5;
-
-            // construct the bonus level portal
-            let bonusPortal = new Portal(x, pos.y, "BONUS_LEVEL");
-            intractableObjects.push(bonusPortal);
-        }
-
-        // set the camera position to the center on the x-axis and the player's y
         camera.x = width / 2;
         camera.y = player.body.position.y;
 
@@ -617,7 +633,7 @@ function composeWorld() {
         ///////////////// Generate platforms ////////////////////////////
 
         // first platform
-        platforms.push(new Platform(-width / 5 + 100, height / 2 - 10, 200, 20));
+        platforms.push(new Platforms(-width / 5 + 100, height / 2 - 10, 200, 20));
 
         // loop through maximum number of platforms
         for (let platformIndex = 1; platformIndex < Math.ceil(currentLevelInfo.gameLength / 30); platformIndex++) {
@@ -652,7 +668,7 @@ function composeWorld() {
             w *= 2;
 
             // generate new platform
-            platforms.push(new Platform(x, y, w, 20));
+            platforms.push(new Platforms(x, y, w, 20));
 
             // if this platform is close to the end break
             if (end - x <= 400) {

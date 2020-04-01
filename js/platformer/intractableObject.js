@@ -146,11 +146,10 @@ class Portal {
         translate(pos.x, pos.y);
         if (this.type === "NEXT_LEVEL") {
             fill(objectColors.portal[0], objectColors.portal[1], objectColors.portal[2]);
-
             rectMode(CENTER);
             rect(0, 0, this.w, this.h);
         } else if (this.type === "BONUS_LEVEL") {
-            fill(objectColors.bonusPortal[0], objectColors.bonusPortal[1], objectColors.bonusPortal[2], 100);
+            fill(currentLevelInfo.colors.background[0], currentLevelInfo.colors.background[1], currentLevelInfo.colors.background[2]);
             rectMode(CENTER);
             rect(0, 0, this.w, this.h);
         }
@@ -171,6 +170,10 @@ class Portal {
             camera.orientation = "VERTICAL";
         } else if (this.type === "BONUS_LEVEL") {
             GAME_STATE = "WIN";
+            previousLevel.bounds = bounds.slice();
+            previousLevel.intractableObjects = intractableObjects.slice();
+            previousLevel.intractableObjects.splice(intractableObjects.indexOf(this), 1);
+            previousLevel.platforms = platforms.slice();
             camera.orientation = "HORIZONTAL";
         }
     }
