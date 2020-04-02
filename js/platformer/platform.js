@@ -1,4 +1,4 @@
-class Platforms {
+class Platform {
     constructor(x, y, w, h) {
         this.body = Bodies.rectangle(x, y, w, h, {isStatic: true});
         World.add(world, this.body);
@@ -7,6 +7,7 @@ class Platforms {
         this.body.label = "platform";
         this.dist = null;
         this.objects = [];
+        this.direction = "NONE";
     }
 
     show() {
@@ -28,7 +29,7 @@ class Platforms {
     }
 }
 
-class Boundary extends Platforms {
+class Boundary extends Platform {
     constructor(x, y, w, h) {
         super(x, y, w, h);
         this.body.label = "boundary";
@@ -45,30 +46,42 @@ class Boundary extends Platforms {
     }
 }
 
-class MovingPlatform extends Platforms {
-    constructor(x, y, w, h, minX, maxX) {
+class MovingPlatform extends Platform {
+    constructor(x, y, w, h, min, max, direction) {
         super(x, y, w, h);
         this.body.label = "movingPlatform";
         this.player = null;
-        this.maxX = maxX ? maxX : width/2-20;
-        this.minX = minX ? minX : -width/2+20;
-        this.vx = x > 0 ? -1 : 1;
+        this.max = max ? max : width/2-20;
+        this.min = min ? min : -width/2+20;
+        this.v = null;
+        this.direction = direction ? direction : "HORIZONTAL";
+        if(this.direction === "HORIZONTAL"){
+            this.v = createVector(1, 0);
+        } else if (this.direction === "VERTICAL") {
+            this.v = createVector(0, 1);
+        }
     }
 
     move(){
         let pos = this.body.position;
-        Body.translate(this.body, createVector(this.vx, 0));
-        if(this.player && this.player.body.position.y > pos.y - this.h - this.player.h){
-            Body.translate(this.player.body, createVector(this.vx, 0));
+        if(this.direction === "HORIZONTAL"){
+            if(this.player && this.player.body.position.y > pos.y - this.h - this.player.h){
+                Body.translate(this.player.body, this.v);
+            }
+            if((pos.x+this.w/2 >= this.max && this.v.x > 0) || (pos.x-this.w/2 <= this.min && this.v.x < 0)) {
+                this.v.x *= -1;
+            }
+        } else if (this.direction === "VERTICAL"){
+            if((pos.y+this.h/2 >= this.max && this.v.y > 0) || (pos.y-this.h/2 <= this.min && this.v.y < 0)){
+                this.v.y *= -1;
+            }
         }
         for(let object of this.objects){
             if(object.body){
-                Body.translate(object.body, createVector(this.vx, 0));
+                Body.translate(object.body, this.v);
             }
         }
-        if((pos.x+this.w/2 >= this.maxX && this.vx > 0) || (pos.x-this.w/2 <= this.minX && this.vx < 0)){
-            this.vx *= -1;
-        }
+        Body.translate(this.body, this.v);
     }
 
     attach(player){
@@ -78,7 +91,7 @@ class MovingPlatform extends Platforms {
 
     detach(){
         if(this.player){
-            Body.setVelocity(this.player.body, createVector(this.vx, this.player.body.velocity.y));
+            Body.setVelocity(this.player.body, this.v);
         }
         this.player = null;
     }

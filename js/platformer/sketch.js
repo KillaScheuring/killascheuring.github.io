@@ -48,8 +48,8 @@ let GAME_LEVEL = 0;
 // Set between level timeout
 let timeout = 60 * 3;
 
-// for rebuilding level after bonus level TODO finish this
-// currently only used to check if player coming back from bonus level
+// for rebuilding level after bonus level
+// holds previous level information
 let previousLevel = {
     playerPos: null,
     platforms: [],
@@ -166,7 +166,8 @@ let levelsInfo = [
             speed: 0.0,
         },
         platformRate: 0.0,
-        movingPlatformRate: 0.0
+        horizontalPlatformRate: 0.0,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 3000,
@@ -185,7 +186,8 @@ let levelsInfo = [
             speed: 0.0,
         },
         platformRate: 0.1,
-        movingPlatformRate: 0.0
+        horizontalPlatformRate: 0.0,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 4000,
@@ -204,7 +206,8 @@ let levelsInfo = [
             speed: 0.0,
         },
         platformRate: 0.2,
-        movingPlatformRate: 0.0
+        horizontalPlatformRate: 0.0,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 5000,
@@ -223,7 +226,8 @@ let levelsInfo = [
             speed: 0.0,
         },
         platformRate: 0.3,
-        movingPlatformRate: 0.0
+        horizontalPlatformRate: 0.0,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 6000,
@@ -242,7 +246,8 @@ let levelsInfo = [
             speed: 0.0,
         },
         platformRate: 0.4,
-        movingPlatformRate: 0.1
+        horizontalPlatformRate: 0.1,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 7000,
@@ -261,7 +266,8 @@ let levelsInfo = [
             speed: 0.0,
         },
         platformRate: 0.5,
-        movingPlatformRate: 0.2
+        horizontalPlatformRate: 0.2,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 8000,
@@ -280,7 +286,8 @@ let levelsInfo = [
             speed: 0.1,
         },
         platformRate: 0.6,
-        movingPlatformRate: 0.2
+        horizontalPlatformRate: 0.2,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 9000,
@@ -299,7 +306,8 @@ let levelsInfo = [
             speed: 0.1,
         },
         platformRate: 0.7,
-        movingPlatformRate: 0.3
+        horizontalPlatformRate: 0.3,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 10000,
@@ -318,7 +326,8 @@ let levelsInfo = [
             speed: 0.1,
         },
         platformRate: 0.8,
-        movingPlatformRate: 0.3
+        horizontalPlatformRate: 0.3,
+        verticalPlatformRate: 0.0,
     },
     {
         gameHeight: 12000,
@@ -337,7 +346,8 @@ let levelsInfo = [
             speed: 0.1,
         },
         platformRate: 0.8,
-        movingPlatformRate: 0.4
+        horizontalPlatformRate: 0.4,
+        verticalPlatformRate: 0.2,
     }
 ];
 
@@ -424,7 +434,9 @@ function setup() {
                 // check if player collided with a moving platform
                 if ([bodyA, bodyB].includes("movingPlatform")) {
                     for (let platform of platforms) {
-                        if ([pair.bodyA, pair.bodyB].includes(platform.body)) {
+                        if ([pair.bodyA, pair.bodyB].includes(platform.body) &&
+                            platform.direction === "HORIZONTAL"
+                        ) {
                             // if so, attach the player to the platform
                             platform.attach(player);
                         }
@@ -526,7 +538,7 @@ function composeWorld() {
             ///////////////// Generate platforms ////////////////////////////
 
             // first platform
-            platforms.push(new Platforms(width / 2 - 50 - 20, height / 2 - 100, 100, platformHeight));
+            platforms.push(new Platform(width / 2 - 50 - 20, height / 2 - 100, 100, platformHeight));
 
             // loop though the maximum number of platforms
             for (let platformIndex = 1; platformIndex < currentLevelInfo.gameHeight; platformIndex++) {
@@ -563,7 +575,12 @@ function composeWorld() {
                 w *= 2;
 
                 // Construct new platform
-                let platform = random() < currentLevelInfo.movingPlatformRate ? new MovingPlatform(x, y, w, platformHeight) : new Platforms(x, y, w, platformHeight);
+                let platform = null;
+                if(random() < currentLevelInfo.verticalPlatformRate && lastPlatformPos.y - y > 100){
+                    platform = new MovingPlatform(x, y, w, platformHeight, y,lastPlatformPos.y - 20, "VERTICAL");
+                } else {
+                    platform = random() < currentLevelInfo.horizontalPlatformRate ? new MovingPlatform(x, y, w, platformHeight) : new Platform(x, y, w, platformHeight);
+                }
                 platforms.push(platform);
 
                 // if this platform is close to the top break to stop generating platforms
@@ -633,7 +650,7 @@ function composeWorld() {
         ///////////////// Generate platforms ////////////////////////////
 
         // first platform
-        platforms.push(new Platforms(-width / 5 + 100, height / 2 - 10, 200, 20));
+        platforms.push(new Platform(-width / 5 + 100, height / 2 - 10, 200, 20));
 
         // loop through maximum number of platforms
         for (let platformIndex = 1; platformIndex < Math.ceil(currentLevelInfo.gameLength / 30); platformIndex++) {
@@ -668,7 +685,7 @@ function composeWorld() {
             w *= 2;
 
             // generate new platform
-            platforms.push(new Platforms(x, y, w, 20));
+            platforms.push(new Platform(x, y, w, 20));
 
             // if this platform is close to the end break
             if (end - x <= 400) {
