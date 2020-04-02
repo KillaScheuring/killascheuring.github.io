@@ -522,6 +522,7 @@ function composeWorld() {
             // set minimum distance between platforms
             // the min that works is 150
             let minDistanceBetweenPlatforms = 150;
+            let currentMinDistanceBetweenPlatforms = map(currentLevelInfo.platformRate, 0, 1, 150, 250);
             // set the maximum distance between the minimum distance and the the maximum allowed in the game
             // mapped to the current platform difficulty rate
             // the maximum without pickups is 490
@@ -557,7 +558,7 @@ function composeWorld() {
                 let lastPlatformW = platforms[platformIndex - 1].w;
 
                 // generate a random distance between the last platform and the new one
-                let newDist = random(minDistanceBetweenPlatforms, maxDistanceBetweenPlatforms);
+                let newDist = random(currentMinDistanceBetweenPlatforms, maxDistanceBetweenPlatforms);
 
                 // generate a random angle from the last platform to the new one
                 let angle = lastPlatformPos.x > 0 ? random((2 * PI) / 3, (5 * PI) / 6) : random((PI / 3), (PI / 6));
@@ -586,7 +587,7 @@ function composeWorld() {
                 // Construct new platform
                 let platform = null;
                 if(random() < currentLevelInfo.verticalPlatformRate && lastPlatformPos.y - y > 100){
-                    platform = new MovingPlatform(x, y, w, platformHeight, y,lastPlatformPos.y - 20, "VERTICAL");
+                    platform = new MovingPlatform(x, y, w, platformHeight, y,lastPlatformPos.y - minDistanceBetweenPlatforms, "VERTICAL");
                 } else {
                     platform = random() < currentLevelInfo.horizontalPlatformRate ? new MovingPlatform(x, y, w, platformHeight) : new Platform(x, y, w, platformHeight);
                 }
