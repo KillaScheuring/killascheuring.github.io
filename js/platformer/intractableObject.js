@@ -129,6 +129,26 @@ class Spike {
     }
 }
 
+class UnderSpike extends Spike {
+    constructor(x, y) {
+        super(x, y);
+        this.body.label = "underSpike";
+        this.body.position.y += 20 + this.size*2;
+    }
+
+    show() {
+        let pos = this.body.position;
+        push();
+        translate(pos.x, pos.y);
+        fill(255);
+        rect(pos.x, pos.y, this.size*2, this.size*2);
+        rotate(PI);
+        fill(objectColors.underSpike[0], objectColors.underSpike[1], objectColors.underSpike[2]);
+        triangle(-this.size, this.size, 0, -this.size, this.size, this.size);
+        pop();
+    }
+}
+
 
 class Portal {
     constructor(x, y, type) {

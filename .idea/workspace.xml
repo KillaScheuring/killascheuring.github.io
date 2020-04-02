@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/platformer.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/platformer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/platforms.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/platform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,14 +133,7 @@
       <workItem from="1585166048088" duration="600000" />
       <workItem from="1585180703889" duration="21000" />
       <workItem from="1585257619014" duration="633000" />
-      <workItem from="1585678398905" duration="17211000" />
-    </task>
-    <task id="LOCAL-00010" summary="Fixed card taking order">
-      <created>1580956773936</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1580956773936</updated>
+      <workItem from="1585678398905" duration="19609000" />
     </task>
     <task id="LOCAL-00011" summary="changed test 1 data">
       <created>1581010920778</created>
@@ -480,14 +471,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585782713337</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="added vertical platform movement">
+      <created>1585787989133</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1585787989133</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed basic angular project" />
     <MESSAGE value="Added link to stack blitz angular project" />
     <MESSAGE value="moved star wars react example to StackBlitz" />
     <MESSAGE value="Added beginning of platformer" />
@@ -512,17 +509,18 @@
     <MESSAGE value="added documentation" />
     <MESSAGE value="added moving platforms to levels" />
     <MESSAGE value="fixed reloading level for coming back from bonus level" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed reloading level for coming back from bonus level" />
+    <MESSAGE value="added vertical platform movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="added vertical platform movement" />
   </component>
   <component name="WindowStateProjectService">
     <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585776458937">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585776458937" />
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585782712258">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585787988301">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585782712258" />
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585787988301" />
     <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1585782714572">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

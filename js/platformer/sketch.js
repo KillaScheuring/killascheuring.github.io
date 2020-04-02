@@ -22,6 +22,7 @@ let kindsOfObjects = {
     "health": Health,
     "maxHealth": MaxHealth,
     "spike": Spike,
+    "underSpike": UnderSpike,
     "portal": Portal,
     "jump": JumpBoost,
     "maxNumJump": NumJumpBoost,
@@ -62,6 +63,7 @@ let objectColors = {
     health: [255, 20, 20],
     maxHealth: [150, 75, 75],
     spike: [150, 150, 255],
+    underSpike: [100, 100, 255],
     portal: [255, 255, 100],
     jump: [255, 255, 255],
     speed: [150, 255, 150],
@@ -161,6 +163,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.2,
             spike: 0.0,
+            underSpike: 0.5,
             jump: 0.0,
             maxNumJump: 0.0,
             speed: 0.0,
@@ -181,6 +184,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.2,
             spike: 0.0,
+            underSpike: 0.0,
             jump: 0.0,
             maxNumJump: 0.0,
             speed: 0.0,
@@ -201,6 +205,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.3,
             spike: 0.1,
+            underSpike: 0.0,
             jump: 0.0,
             maxNumJump: 0.0,
             speed: 0.0,
@@ -221,6 +226,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.4,
             spike: 0.2,
+            underSpike: 0.0,
             jump: 0.2,
             maxNumJump: 0.0,
             speed: 0.0,
@@ -241,6 +247,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.4,
             spike: 0.3,
+            underSpike: 0.0,
             jump: 0.2,
             maxNumJump: 0.1,
             speed: 0.0,
@@ -261,6 +268,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.4,
             spike: 0.5,
+            underSpike: 0.0,
             jump: 0.3,
             maxNumJump: 0.1,
             speed: 0.0,
@@ -281,6 +289,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.5,
             spike: 0.6,
+            underSpike: 0.1,
             jump: 0.3,
             maxNumJump: 0.2,
             speed: 0.1,
@@ -301,6 +310,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.6,
             spike: 0.6,
+            underSpike: 0.2,
             jump: 0.4,
             maxNumJump: 0.2,
             speed: 0.1,
@@ -321,6 +331,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.7,
             spike: 0.7,
+            underSpike: 0.2,
             jump: 0.4,
             maxNumJump: 0.2,
             speed: 0.1,
@@ -341,6 +352,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.7,
             spike: 0.7,
+            underSpike: 0.3,
             jump: 0.5,
             maxNumJump: 0.3,
             speed: 0.1,
@@ -390,12 +402,11 @@ function setup() {
                         let body = intractableObjects[objectIndex].body;
                         // check if either of the pair in the collision is the body of this object
                         if (pair.bodyB === body || pair.bodyA === body) {
+                            intractableObjects[objectIndex].interact(player);
                             // if so check if one is the player
                             if (bodyA === "player") {
-                                // if bodyA is the object have it interact with the player
-                                intractableObjects[objectIndex].interact(player);
 
-                                if (bodyB !== "spike") {
+                                if (bodyB !== "spike" || bodyB !== "underSpike") {
                                     // if it is not a spike have it removed
                                     intractableObjects.splice(objectIndex, 1);
                                     World.remove(world, body);
@@ -408,10 +419,8 @@ function setup() {
                                 // break because we found the corresponding intractable object
                                 break;
                             } else if (bodyB === "player") {
-                                // if bodyB is the object have it interact with the player
-                                intractableObjects[objectIndex].interact(player);
-                                // if it is not a spike have it removed
-                                if (bodyA !== "spike") {
+                                if (bodyB !== "spike" || bodyB !== "underSpike") {
+                                    // if it is not a spike have it removed
                                     intractableObjects.splice(objectIndex, 1);
                                     World.remove(world, body);
                                     // if it is not health
