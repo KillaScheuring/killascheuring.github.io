@@ -163,7 +163,7 @@ let levelsInfo = [
         objectRates: {
             health: 0.2,
             spike: 0.0,
-            underSpike: 0.5,
+            underSpike: 0.0,
             jump: 0.0,
             maxNumJump: 0.0,
             speed: 0.0,
@@ -406,7 +406,7 @@ function setup() {
                             // if so check if one is the player
                             if (bodyA === "player") {
 
-                                if (bodyB !== "spike" || bodyB !== "underSpike") {
+                                if (bodyB !== "spike" && bodyB !== "underSpike") {
                                     // if it is not a spike have it removed
                                     intractableObjects.splice(objectIndex, 1);
                                     World.remove(world, body);
@@ -419,7 +419,7 @@ function setup() {
                                 // break because we found the corresponding intractable object
                                 break;
                             } else if (bodyB === "player") {
-                                if (bodyB !== "spike" || bodyB !== "underSpike") {
+                                if (bodyB !== "spike" && bodyB !== "underSpike") {
                                     // if it is not a spike have it removed
                                     intractableObjects.splice(objectIndex, 1);
                                     World.remove(world, body);

@@ -133,14 +133,7 @@
       <workItem from="1585166048088" duration="600000" />
       <workItem from="1585180703889" duration="21000" />
       <workItem from="1585257619014" duration="633000" />
-      <workItem from="1585678398905" duration="19609000" />
-    </task>
-    <task id="LOCAL-00011" summary="changed test 1 data">
-      <created>1581010920778</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1581010920778</updated>
+      <workItem from="1585678398905" duration="20576000" />
     </task>
     <task id="LOCAL-00012" summary="Response to game over added for both app and test.">
       <created>1581990917932</created>
@@ -478,14 +471,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585787989133</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="started spikes underneath platforms">
+      <created>1585790628269</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1585790628269</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added link to stack blitz angular project" />
     <MESSAGE value="moved star wars react example to StackBlitz" />
     <MESSAGE value="Added beginning of platformer" />
     <MESSAGE value="got health items working" />
@@ -510,21 +509,22 @@
     <MESSAGE value="added moving platforms to levels" />
     <MESSAGE value="fixed reloading level for coming back from bonus level" />
     <MESSAGE value="added vertical platform movement" />
-    <option name="LAST_COMMIT_MESSAGE" value="added vertical platform movement" />
+    <MESSAGE value="started spikes underneath platforms" />
+    <option name="LAST_COMMIT_MESSAGE" value="started spikes underneath platforms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585776458937">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585776458937" />
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585787988301">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585790627406">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585787988301" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1585782714572">
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585790627406" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1585790631044">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1585782714572" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1585790631044" />
     <state x="414" y="207" width="672" height="678" key="search.everywhere.popup" timestamp="1585075308860">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
