@@ -156,7 +156,8 @@ const POSSIBLE_NAMES = [
 
 function setup() {
     // Set up canvas
-    createCanvas(1000, 750);
+    let cnvs = createCanvas(1000, 750);
+    cnvs.parent("canvas");
     textSize(24);
     car = {
         lives: 5,

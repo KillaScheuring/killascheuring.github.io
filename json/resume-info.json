@@ -1,0 +1,134 @@
+{
+  "contacts": {
+    "email": {
+      "url": "mailto:killashandra@sylvia.com",
+      "value": "killashandra@sylvia.com"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/killashandra-scheuring-b82415111",
+      "value": "Killashandra Scheuring"
+    },
+    "location": {
+      "url": "",
+      "value": "Lenexa, KS"
+    }
+  },
+  "skills": {
+    "languages": {
+      "HTML5": "http://www.w3.org/html/",
+      "JavaScript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "TypeScript": "https://www.typescriptlang.org/",
+      "CSS": "http://www.w3.org/Style/CSS/Overview.en.html",
+      "Python": "https://www.python.org/",
+      "Java": "https://www.java.com/en/"
+    },
+    "frameworks": {
+      "React": "https://reactjs.org/",
+      "Angular": "https://angular.io/"
+    },
+    "tools": {
+      "Microsoft Office Suite": "https://products.office.com/en-us/products",
+      "Adobe": {
+        "url": "http://www.adobe.com/",
+        "subSkills": {
+          "Acrobat DC": "https://acrobat.adobe.com/us/en/products/acrobat-pro-cc.html",
+          "Photoshop": "https://acrobat.adobe.com/us/en/products/acrobat-pro-cc.html",
+          "Illustrator": "https://acrobat.adobe.com/us/en/products/acrobat-pro-cc.html"
+        }
+      },
+      "Gimp": "https://www.gimp.org/"
+    }
+  },
+  "workExperience": [
+    {
+      "employer": "LaunchCode",
+      "title": "Teaching Fellow",
+      "yearStarted": "Oct 2019",
+      "yearEnded": null,
+      "description": "Dummy Text"
+    },
+    {
+      "employer": "Arroki, Inc",
+      "title": "Associate Developer",
+      "yearStarted": "Aug 2009",
+      "yearEnded": "Jul 2019",
+      "description": "Dummy Text"
+    },
+    {
+      "employer": "University of Kansas",
+      "title": "Undergraduate Researcher",
+      "yearStarted": "Aug 2014",
+      "yearEnded": "Aug 2016",
+      "description": "Dummy Text"
+    },
+    {
+      "employer": "University of Kansas",
+      "title": "QuarkNet High School Intern",
+      "yearStarted": "May 2014",
+      "yearEnded": "Aug 2014",
+      "description": "Dummy Text"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Kansas",
+      "descriptor": "Bachelor of Mathematics",
+      "year": null,
+      "description": "Dummy text"
+    },
+    {
+      "institution": "Udacity",
+      "descriptor": "Front-End Web Design Nanodegree",
+      "year": 2016,
+      "description": "Dummy text"
+    },
+    {
+      "institution": "Udacity",
+      "descriptor": "Intro to Programming & Statistics",
+      "year": 2012,
+      "description": "Dummy text"
+    }
+  ],
+  "projects": [
+    {
+      "id": "pokemon-quiz",
+      "url": "https://pokemon-quiz.stackblitz.io/",
+      "title": "Pokemon Trivia Quiz",
+      "img": "images/pokemon.png",
+      "phoneFriendly": true,
+      "description": "Automatically generates question based on information retrieved from the Poke Api and using Angular."
+    },
+    {
+      "id": "war-card-game",
+      "url": "examples/war_example.html",
+      "title": "War!",
+      "img": "images/war.png",
+      "phoneFriendly": false,
+      "description": "Plays out a game of war from the user's choice of test sets or from randomly shuffled cards."
+    },
+    {
+      "id": "platformer-game",
+      "url": "examples/platformer.html",
+      "title": "Platformer with matter.js",
+      "img": "images/platformer.png",
+      "phoneFriendly": false,
+      "description": "Platforming game built using the drawing library p5.js and the physics library matter.js"
+    },
+    {
+      "id": "squirrels-game",
+      "url": "examples/squirrels_game.html",
+      "title": "Squirrels! with p5.js",
+      "img": "images/squirrels.png",
+      "phoneFriendly": false,
+      "description": "Simple game where the player clicks 'squirrels' to keep them from reaching a 'car'. Animated using the drawing library p5.js"
+    },
+    {
+      "id": "star-wars-quiz",
+      "url": "https://star-wars-quiz.stackblitz.io/",
+      "title": "Star Wars Trivia Quiz",
+      "img": "images/starwars.png",
+      "phoneFriendly": true,
+      "description": "Automatically generates question based on information retrieved from the Star Wars Api and using React."
+    }
+  ]
+}

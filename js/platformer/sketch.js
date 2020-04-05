@@ -37,8 +37,8 @@ let camera = {
     // set orientation
     orientation: "VERTICAL", // VERTICAL or HORIZONTAL
     // set size (smaller by larger for vertical) (larger by smaller for horizontal)
-    smaller: 450,
-    larger: 800
+    smaller: 400,
+    larger: 700
 };
 
 // Declare game state
@@ -360,6 +360,27 @@ let levelsInfo = [
         platformRate: 0.8,
         horizontalPlatformRate: 0.4,
         verticalPlatformRate: 0.2,
+    },
+    {
+        gameHeight: 14000,
+        colors: {
+            // https://www.colourlovers.com/palette/4710778/idunno
+            background: [151, 50, 116],
+            boundary: [255, 61, 127],
+            platform: [78, 232, 141],
+            player: [184, 252, 255]
+        },
+        objectRates: {
+            health: 0.7,
+            spike: 0.7,
+            underSpike: 0.4,
+            jump: 0.6,
+            maxNumJump: 0.4,
+            speed: 0.2,
+        },
+        platformRate: 0.8,
+        horizontalPlatformRate: 0.4,
+        verticalPlatformRate: 0.3,
     }
 ];
 
@@ -419,7 +440,7 @@ function setup() {
                                 // break because we found the corresponding intractable object
                                 break;
                             } else if (bodyB === "player") {
-                                if (bodyB !== "spike" && bodyB !== "underSpike") {
+                                if (bodyA !== "spike" && bodyA !== "underSpike") {
                                     // if it is not a spike have it removed
                                     intractableObjects.splice(objectIndex, 1);
                                     World.remove(world, body);
@@ -498,7 +519,7 @@ function composeWorld() {
                 bounds: [],
             };
 
-            for(let object of bounds.concat(intractableObjects).concat(platforms)){
+            for (let object of bounds.concat(intractableObjects).concat(platforms)) {
                 World.add(world, object.body);
             }
 
@@ -518,7 +539,7 @@ function composeWorld() {
         // set canvas orientation to vertical
         resizeCanvas(camera.smaller, camera.larger);
 
-        if(!reloading){
+        if (!reloading) {
             // set minimum distance between platforms
             // the min that works is 150
             let minDistanceBetweenPlatforms = 150;
@@ -560,6 +581,11 @@ function composeWorld() {
                 // generate a random distance between the last platform and the new one
                 let newDist = random(currentMinDistanceBetweenPlatforms, maxDistanceBetweenPlatforms);
 
+                if (newDist > 490) {
+                    spawnObject("maxNumJump", platforms[platformIndex - 1]);
+                    spawnObject("jump", platforms[platformIndex - 1]);
+                }
+
                 // generate a random angle from the last platform to the new one
                 let angle = lastPlatformPos.x > 0 ? random((2 * PI) / 3, (5 * PI) / 6) : random((PI / 3), (PI / 6));
 
@@ -586,8 +612,8 @@ function composeWorld() {
 
                 // Construct new platform
                 let platform = null;
-                if(random() < currentLevelInfo.verticalPlatformRate && lastPlatformPos.y - y > 100){
-                    platform = new MovingPlatform(x, y, w, platformHeight, y,lastPlatformPos.y - minDistanceBetweenPlatforms, "VERTICAL");
+                if (random() < currentLevelInfo.verticalPlatformRate && lastPlatformPos.y - y > 100) {
+                    platform = new MovingPlatform(x, y, w, platformHeight, y, lastPlatformPos.y - minDistanceBetweenPlatforms, "VERTICAL");
                 } else {
                     platform = random() < currentLevelInfo.horizontalPlatformRate ? new MovingPlatform(x, y, w, platformHeight) : new Platform(x, y, w, platformHeight);
                 }
@@ -735,7 +761,7 @@ function spawnObject(typeOfObj, platform) {
 
     // generate the object
     let spawnedObject = new kindsOfObjects[typeOfObj](x, pos.y, Math.floor(random(1, 3)), Math.floor(random(60 * 3, 60 * 5)));
-    if(platform.body.label === "movingPlatform"){
+    if (platform.body.label === "movingPlatform") {
         platform.add(spawnedObject);
     }
     intractableObjects.push(spawnedObject);
@@ -761,14 +787,9 @@ function draw() {
         textAlign(CENTER);
         textSize(24);
         // display instructions to the player
-        text("Click to start", 0, -60);
+        text("Press any key to start", 0, -60);
         text("Collect the circles to gain lives", 0, 0);
         text("Avoid the triangles", 0, 60);
-
-        // start if mouse is pressed
-        if (mouseIsPressed) {
-            GAME_STATE = "RUNNING";
-        }
         pop();
     } else if (GAME_STATE === "RUNNING") {
         // set background color
@@ -833,18 +854,9 @@ function draw() {
         textSize(24);
         // Display game over info to user
         text(`You got to level ${GAME_LEVEL + 1}`, 0, -40);
-        text(`Click to start again ${timeout > 0 ? `in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
+        text(`Press any key to start again ${timeout > 0 ? `in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
         // tick down time out
         timeout--;
-        // if user clicks after time out
-        // run new game
-        if (mouseIsPressed && timeout < 0) {
-            GAME_LEVEL = 0;
-            GAME_STATE = "RUNNING";
-            timeout = 60 * 3;
-            player = new Player(0, 0);
-            composeWorld();
-        }
         pop();
     } else if (GAME_STATE === "WIN") {
         push();
@@ -859,18 +871,9 @@ function draw() {
         // display info to user
         // let the user know they won and if there is a next level display what it is
         text(`You Won!${GAME_LEVEL === levelsInfo.length ? "" : ` Next level is lvl.${GAME_LEVEL + 1}`}`, 0, -40);
-
-        text(`Click to ${GAME_LEVEL === levelsInfo.length ? " play again" : "start next level"}${timeout > 0 ? ` in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
+        text(`Press any key to ${GAME_LEVEL === levelsInfo.length ? " play again" : "start next level"}${timeout > 0 ? ` in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
         // tick down timeout
         timeout--;
-        // if user clicks after time out
-        // run next level
-        if (mouseIsPressed && timeout < 0) {
-            GAME_LEVEL = GAME_LEVEL === levelsInfo.length ? 0 : GAME_LEVEL;
-            GAME_STATE = "RUNNING";
-            timeout = 60 * 3;
-            composeWorld();
-        }
         pop();
     }
 
@@ -879,5 +882,18 @@ function draw() {
 function keyPressed() {
     if (keyCode === UP_ARROW || keyCode === 87) {
         player.jump();
+    }
+
+    if (timeout <= 0 || GAME_STATE === "START") {
+        GAME_STATE = "RUNNING";
+        timeout = 60 * 3;
+
+        if (GAME_STATE === "GAME_OVER") {
+            GAME_LEVEL = 0;
+        } else if (GAME_STATE === "WIN") {
+            GAME_LEVEL = GAME_LEVEL === levelsInfo.length ? 0 : GAME_LEVEL;
+        }
+
+        composeWorld();
     }
 }

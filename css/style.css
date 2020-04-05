@@ -1,135 +1,108 @@
-/** {*/
-    /*border: solid yellow;*/
-/*}*/
+/*Palette from https://www.colourlovers.com/palette/4710777/laughter_is_the_cure */
 
-body {
-    font-family: "Philosopher", sans-serif;
-    color: #4b5436;
-    font-weight: 700;
-    background-color: aliceblue;
+/* All */
+
+body{
+    background: #BA6159;
+    color: #786C8B;
+    font-weight: bold;
 }
 
-img,
-embed,
-object,
-video {
-    max-width: 100%;
+hr{
+    height: 20%;
+    background: #AAC3C0;
 }
 
-.header {
-    margin-top: 10px;
+#container {
+    background: #C5E5CD;
 }
 
-.text-thin {
-    font-weight: 400;
+.modal-content{
+    background: #BA6159;
+    color: #C5E5CD;
 }
 
-.text-muted {
-    color: #b8c3d6;
+.modal-content a{
+    color: #C5E5CD;
 }
 
-.title-super {
-    font-size: 44px;
+.modal-content a:hover{
+    color: #C5E5CD;
+    text-decoration: underline;
 }
 
-.title-logo {
-    margin-top: 20px;
+#projects{
+    padding-left: 1%;
 }
 
-.text-large {
-    font-size: 45px;
+.project {
+    margin: 1%;
 }
 
-hr {
-    height: 5px;
-    background-color: #b8c3d6;
+.clickable-img:hover {
+    border: solid 3px #BA6159;
 }
 
-a {
-    color: #676858;
+.contact-info {
+    background: #AAC3C0;
 }
 
-h4 {
-    font-size: 20px;
+a{
+    color: #877490;
+    font-weight: normal;
 }
 
-.list {
-    font-size: 20px;
-    /*color: ;*/
+a:hover{
+    color: #BA6159;
 }
 
-h5 {
-    font-size: 20px;
-}
+/* Resume */
 
-.list {
-    font-size: 17px;
-}
-
-.other-projects {
-    opacity: 0.4;
+.group{
+    margin-left: 1%;
 }
 
 .job {
+    padding: 2%;
     margin-left: 3%;
     font-size: 15px;
 }
 
+.job-title:hover {
+    font-style: italic;
+}
 
 .years-employed {
     font-style: italic;
 }
 
-@media screen and (max-width: 992px) {
-    .text-align-control {
-        text-align: left;
-    }
+/* Games */
 
-    .contact-info {
-        text-align: center;
-    }
-
-}
-@media screen and (min-width: 992px) {
-    .text-align-control {
-        text-align: center;
-    }
-
+#game {
+    height: 700px;
 }
 
-.level1 {
-    list-style-type: circle;
+nav {
+    background: #AAC3C0;
 }
 
-.level2 {
-    list-style-type: circle;
+/* War! */
+
+.page{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
 }
 
-.contact-info {
-    background-color: #b8c3d6;
+#tests{
+    display: grid;
+    grid-template-rows: auto;
 }
 
-.make-collapse {
-    overflow-y: hidden;
+#controlButtons{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
-/*.title-nav {*/
-    /*margin-top: 10px;*/
-/*}*/
-
-.nav-fix {
-    overflow-y: hidden;
-}
-
-/*nav {*/
-    /*color: #B8C3D6;*/
-/*}*/
-
-figure img {
-    border: solid #b8c3d6 2px;
-}
-
-.img-center {
-    margin-left: auto;
-    margin-right: auto;
+#controlButtons button{
+    height: 30px;
 }

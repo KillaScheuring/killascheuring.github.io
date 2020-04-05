@@ -2,8 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/platformer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/pokemon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/squirrels.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/starwars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/war.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/resume.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json/resume-info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/killascheuring.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/killascheuring.github.io.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/platformer.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/platformer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/platformer.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/platformer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/squirrels_game.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/squirrels_game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/war_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/war_example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-2.1.4.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/squirrels/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/squirrels/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -39,7 +65,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/examples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -47,39 +73,41 @@
     <property name="ts.external.directory.path" value="C:\Users\killa\Documents\GitHub\killascheuring.github.io\star-trek-quiz\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\js\squirrels" />
-      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\projects" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\images" />
       <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\examples" />
       <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\js" />
       <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\images" />
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\js\squirrels" />
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\projects" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
-    <configuration name="index2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/index2.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.war_example.html">
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/star-trek-quiz/src/index.html" useBuiltInWebServerPort="true">
+    <configuration name="platformer.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/platformer.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="resume.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/resume.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="squirrels_game.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/squirrels_game.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="star_wars_trivia_example.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/star_wars_trivia_example.html" useBuiltInWebServerPort="true">
+    <configuration name="war_example.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/war_example.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.war_example.html" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.index2.html" />
+        <item itemvalue="JavaScript Debug.resume.html" />
+        <item itemvalue="JavaScript Debug.platformer.html" />
         <item itemvalue="JavaScript Debug.squirrels_game.html" />
-        <item itemvalue="JavaScript Debug.star_wars_trivia_example.html" />
       </list>
     </recent_temporary>
   </component>
@@ -132,14 +160,7 @@
       <workItem from="1585166048088" duration="600000" />
       <workItem from="1585180703889" duration="21000" />
       <workItem from="1585257619014" duration="633000" />
-      <workItem from="1585678398905" duration="21389000" />
-    </task>
-    <task id="LOCAL-00013" summary="added test 2">
-      <created>1582056643512</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1582056643512</updated>
+      <workItem from="1585678398905" duration="81407000" />
     </task>
     <task id="LOCAL-00014" summary="Started React Example.">
       <created>1583124527409</created>
@@ -477,14 +498,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585853494512</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="changed platforms distances">
+      <created>1585854340692</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1585854340692</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added beginning of platformer" />
     <MESSAGE value="got health items working" />
     <MESSAGE value="got damage and game over working" />
     <MESSAGE value="adding bonuses" />
@@ -509,24 +536,101 @@
     <MESSAGE value="added vertical platform movement" />
     <MESSAGE value="started spikes underneath platforms" />
     <MESSAGE value="fixed spikes under platforms" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed spikes under platforms" />
+    <MESSAGE value="changed platforms distances" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed platforms distances" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585776458937">
+    <state x="501" y="283" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585940491014">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585776458937" />
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585853493801">
+    <state x="501" y="283" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1500.960@0.0.1500.960" timestamp="1585940491014" />
+    <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585860120949">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585853493801" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1585790631044">
+    <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585860120949" />
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585854339990">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1585790631044" />
-    <state x="414" y="207" width="672" height="678" key="search.everywhere.popup" timestamp="1585075308860">
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585854339990" />
+    <state width="1480" height="316" key="GridCell.Tab.0.bottom" timestamp="1585857881262">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="414" y="207" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1585075308860" />
+    <state width="1480" height="316" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
+    <state width="1480" height="316" key="GridCell.Tab.0.center" timestamp="1585857881262">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
+    <state width="1480" height="316" key="GridCell.Tab.0.left" timestamp="1585857881262">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
+    <state width="1480" height="316" key="GridCell.Tab.0.right" timestamp="1585857881262">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
+    <state width="1480" height="316" key="GridCell.Tab.1.bottom" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state width="1480" height="316" key="GridCell.Tab.1.center" timestamp="1585857881262">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
+    <state width="1480" height="316" key="GridCell.Tab.1.left" timestamp="1585857881262">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
+    <state width="1480" height="316" key="GridCell.Tab.1.right" timestamp="1585857881262">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
+    <state width="1480" height="316" key="GridCell.Tab.2.bottom" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state width="1480" height="316" key="GridCell.Tab.2.center" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state width="1480" height="316" key="GridCell.Tab.2.left" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state width="1480" height="316" key="GridCell.Tab.2.right" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state width="1480" height="316" key="GridCell.Tab.3.bottom" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.3.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state width="1480" height="316" key="GridCell.Tab.3.center" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.3.center/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state width="1480" height="316" key="GridCell.Tab.3.left" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.3.left/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state width="1480" height="316" key="GridCell.Tab.3.right" timestamp="1585857881263">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1480" height="316" key="GridCell.Tab.3.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1585854342705">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1585854342705" />
+    <state x="886" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585864631584">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="886" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1585864631584" />
+    <state x="409" y="222" key="run.anything.popup" timestamp="1585858462396">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="409" y="222" key="run.anything.popup/0.0.1500.960@0.0.1500.960" timestamp="1585858462396" />
+    <state x="416" y="209" width="672" height="678" key="search.everywhere.popup" timestamp="1585953752910">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="416" y="209" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1585953752910" />
   </component>
 </project>
