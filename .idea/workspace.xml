@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/platformer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/pokemon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/squirrels.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/starwars.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/war.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/resume.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/resume-info.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project_nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/killascheuring.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/killascheuring.github.io.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/platformer.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/platformer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/platformer.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/platformer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/squirrels_game.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/squirrels_game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/war_example.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/war_example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/resume.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-2.1.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/squirrels/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/squirrels/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,14 +133,7 @@
       <workItem from="1585166048088" duration="600000" />
       <workItem from="1585180703889" duration="21000" />
       <workItem from="1585257619014" duration="633000" />
-      <workItem from="1585678398905" duration="81407000" />
-    </task>
-    <task id="LOCAL-00014" summary="Started React Example.">
-      <created>1583124527409</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1583124527409</updated>
+      <workItem from="1585678398905" duration="82047000" />
     </task>
     <task id="LOCAL-00015" summary="Fixed the errors in getting the species and planets names. Changed the way wrong answers were chosen.">
       <created>1583284230157</created>
@@ -505,14 +471,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585854340692</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="updated portfolio, resume, and palette">
+      <created>1586046747446</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1586046747446</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="got health items working" />
     <MESSAGE value="got damage and game over working" />
     <MESSAGE value="adding bonuses" />
     <MESSAGE value="got jump bonus working" />
@@ -537,7 +509,8 @@
     <MESSAGE value="started spikes underneath platforms" />
     <MESSAGE value="fixed spikes under platforms" />
     <MESSAGE value="changed platforms distances" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed platforms distances" />
+    <MESSAGE value="updated portfolio, resume, and palette" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated portfolio, resume, and palette" />
   </component>
   <component name="WindowStateProjectService">
     <state x="501" y="283" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585940491014">
@@ -548,10 +521,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585860120949" />
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1585854339990">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1586046746463">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1585854339990" />
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586046746463" />
     <state width="1480" height="316" key="GridCell.Tab.0.bottom" timestamp="1585857881262">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -616,10 +589,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1480" height="316" key="GridCell.Tab.3.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1585854342705">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1586046754189">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1585854342705" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1586046754189" />
     <state x="886" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585864631584">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
