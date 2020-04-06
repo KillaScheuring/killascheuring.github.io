@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/war.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/platform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,14 +137,7 @@
       <workItem from="1585166048088" duration="600000" />
       <workItem from="1585180703889" duration="21000" />
       <workItem from="1585257619014" duration="633000" />
-      <workItem from="1585678398905" duration="83281000" />
-    </task>
-    <task id="LOCAL-00017" summary="Basic Scoring functionality in place.">
-      <created>1583298192635</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1583298192635</updated>
+      <workItem from="1585678398905" duration="94773000" />
     </task>
     <task id="LOCAL-00018" summary="added favicon to star wars quiz">
       <created>1583298830929</created>
@@ -478,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586118114338</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="updated nav bar">
+      <created>1586128786352</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1586128786352</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,10 +525,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585860120949" />
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1586118113750">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1586128785709">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586118113750" />
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586128785709" />
     <state width="1480" height="316" key="GridCell.Tab.0.bottom" timestamp="1585857881262">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -589,10 +593,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1480" height="316" key="GridCell.Tab.3.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1586058987270">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1586128789678">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1586058987270" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1586128789678" />
     <state x="886" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585864631584">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

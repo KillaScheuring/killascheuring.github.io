@@ -111,6 +111,7 @@ class Spike {
         let pos = this.body.position;
         push();
         translate(pos.x, pos.y);
+        rotate(this.body.angle);
         fill(objectColors.spike[0], objectColors.spike[1], objectColors.spike[2]);
         triangle(-this.size, this.size, 0, -this.size, this.size, this.size);
         pop();
@@ -140,6 +141,7 @@ class UnderSpike extends Spike {
         let pos = this.body.position;
         push();
         translate(pos.x, pos.y);
+        rotate(this.body.angle);
         fill(objectColors.underSpike[0], objectColors.underSpike[1], objectColors.underSpike[2]);
         triangle(-this.size, -this.size, 0, this.size, this.size, -this.size);
         pop();

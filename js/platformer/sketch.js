@@ -91,6 +91,11 @@ let bonusLevelsInfo = [
             jump: 0.4,
             maxNumJump: 0.0,
             speed: 0.0,
+        },
+        platformRates: {
+            horizontal: 0.3,
+            vertical: 0.3,
+            rotating: 0.3,
         }
     },
     {
@@ -108,6 +113,11 @@ let bonusLevelsInfo = [
             jump: 0.4,
             maxNumJump: 0.0,
             speed: 0.0,
+        },
+        platformRates: {
+            horizontal: 0.3,
+            vertical: 0.3,
+            rotating: 0.3,
         }
     },
     {
@@ -125,6 +135,11 @@ let bonusLevelsInfo = [
             jump: 0.4,
             maxNumJump: 0.0,
             speed: 0.0,
+        },
+        platformRates: {
+            horizontal: 0.3,
+            vertical: 0.3,
+            rotating: 0.3,
         }
     },
     {
@@ -142,6 +157,11 @@ let bonusLevelsInfo = [
             jump: 0.4,
             maxNumJump: 0.1,
             speed: 0.0,
+        },
+        platformRates: {
+            horizontal: 0.3,
+            vertical: 0.3,
+            rotating: 0.3,
         }
     }
 ];
@@ -152,6 +172,7 @@ let bonusLevelsInfo = [
 // The color palette (background, boundary, platform, player)
 // The object spawn rates for the level
 let levelsInfo = [
+    // Level 1
     {
         gameHeight: 2000,
         colors: {
@@ -168,10 +189,14 @@ let levelsInfo = [
             maxNumJump: 0.0,
             speed: 0.0,
         },
-        platformRate: 0.0,
-        horizontalPlatformRate: 0.0,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.0,
+        platformRates: {
+            horizontal: 0.0,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 2
     {
         gameHeight: 3000,
         colors: {
@@ -189,10 +214,14 @@ let levelsInfo = [
             maxNumJump: 0.0,
             speed: 0.0,
         },
-        platformRate: 0.1,
-        horizontalPlatformRate: 0.0,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.1,
+        platformRates: {
+            horizontal: 0.0,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 3
     {
         gameHeight: 4000,
         colors: {
@@ -210,10 +239,14 @@ let levelsInfo = [
             maxNumJump: 0.0,
             speed: 0.0,
         },
-        platformRate: 0.2,
-        horizontalPlatformRate: 0.0,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.2,
+        platformRates: {
+            horizontal: 0.0,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 4
     {
         gameHeight: 5000,
         colors: {
@@ -231,10 +264,14 @@ let levelsInfo = [
             maxNumJump: 0.0,
             speed: 0.0,
         },
-        platformRate: 0.3,
-        horizontalPlatformRate: 0.0,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.3,
+        platformRates: {
+            horizontal: 0.0,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 5
     {
         gameHeight: 6000,
         colors: {
@@ -252,10 +289,14 @@ let levelsInfo = [
             maxNumJump: 0.1,
             speed: 0.0,
         },
-        platformRate: 0.4,
-        horizontalPlatformRate: 0.1,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.4,
+        platformRates: {
+            horizontal: 0.1,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 6
     {
         gameHeight: 7000,
         colors: {
@@ -273,10 +314,14 @@ let levelsInfo = [
             maxNumJump: 0.1,
             speed: 0.0,
         },
-        platformRate: 0.5,
-        horizontalPlatformRate: 0.2,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.5,
+        platformRates: {
+            horizontal: 0.2,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 7
     {
         gameHeight: 8000,
         colors: {
@@ -294,10 +339,14 @@ let levelsInfo = [
             maxNumJump: 0.2,
             speed: 0.1,
         },
-        platformRate: 0.6,
-        horizontalPlatformRate: 0.2,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.6,
+        platformRates: {
+            horizontal: 0.2,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 8
     {
         gameHeight: 9000,
         colors: {
@@ -315,10 +364,14 @@ let levelsInfo = [
             maxNumJump: 0.2,
             speed: 0.1,
         },
-        platformRate: 0.7,
-        horizontalPlatformRate: 0.3,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.7,
+        platformRates: {
+            horizontal: 0.3,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 9
     {
         gameHeight: 10000,
         colors: {
@@ -336,12 +389,16 @@ let levelsInfo = [
             maxNumJump: 0.2,
             speed: 0.1,
         },
-        platformRate: 0.8,
-        horizontalPlatformRate: 0.3,
-        verticalPlatformRate: 0.0,
+        platformDistance: 0.8,
+        platformRates: {
+            horizontal: 0.3,
+            vertical: 0.0,
+            rotating: 0.0,
+        }
     },
+    // Level 10
     {
-        gameHeight: 12000,
+        gameHeight: 11000,
         colors: {
             // https://www.colourlovers.com/palette/4709642/Youre_a_Natural
             background: [14, 42, 28],
@@ -357,12 +414,16 @@ let levelsInfo = [
             maxNumJump: 0.3,
             speed: 0.1,
         },
-        platformRate: 0.8,
-        horizontalPlatformRate: 0.4,
-        verticalPlatformRate: 0.2,
+        platformDistance: 0.8,
+        platformRates: {
+            horizontal: 0.4,
+            vertical: 0.2,
+            rotating: 0.0,
+        }
     },
+    // Level 11
     {
-        gameHeight: 14000,
+        gameHeight: 12000,
         colors: {
             // https://www.colourlovers.com/palette/4710778/idunno
             background: [151, 50, 116],
@@ -378,9 +439,87 @@ let levelsInfo = [
             maxNumJump: 0.4,
             speed: 0.2,
         },
-        platformRate: 0.8,
-        horizontalPlatformRate: 0.4,
-        verticalPlatformRate: 0.3,
+        platformDistance: 0.8,
+        platformRates: {
+            horizontal: 0.4,
+            vertical: 0.3,
+            rotating: 0.2,
+        }
+    },
+    // Level 12
+    {
+        gameHeight: 13000,
+        colors: {
+            // https://www.colourlovers.com/palette/46688/fresh_cut_day
+            background: [0, 168, 198],
+            boundary: [143, 190, 0],
+            platform: [174, 226, 57],
+            player: [249, 242, 231]
+        },
+        objectRates: {
+            health: 0.7,
+            spike: 0.7,
+            underSpike: 0.4,
+            jump: 0.6,
+            maxNumJump: 0.5,
+            speed: 0.2,
+        },
+        platformDistance: 0.8,
+        platformRates: {
+            horizontal: 0.4,
+            vertical: 0.3,
+            rotating: 0.3,
+        }
+    },
+    // Level 13
+    {
+        gameHeight: 14000,
+        colors: {
+            // https://www.colourlovers.com/palette/848743/(_%E2%80%9D_)
+            background: [73, 10, 61],
+            boundary: [233, 127, 2],
+            platform: [189, 21, 80],
+            player: [248, 202, 0]
+        },
+        objectRates: {
+            health: 0.7,
+            spike: 0.7,
+            underSpike: 0.4,
+            jump: 0.6,
+            maxNumJump: 0.5,
+            speed: 0.2,
+        },
+        platformDistance: 0.8,
+        platformRates: {
+            horizontal: 0.4,
+            vertical: 0.4,
+            rotating: 0.4,
+        }
+    },
+    // Level 14
+    {
+        gameHeight: 15000,
+        colors: {
+            // https://www.colourlovers.com/palette/848743/(_%E2%80%9D_)
+            background: [0, 95, 107],
+            boundary: [0, 140, 158],
+            platform: [0, 180, 204],
+            player: [0, 223, 252]
+        },
+        objectRates: {
+            health: 0.7,
+            spike: 0.7,
+            underSpike: 0.4,
+            jump: 0.6,
+            maxNumJump: 0.5,
+            speed: 0.2,
+        },
+        platformDistance: 0.9,
+        platformRates: {
+            horizontal: 0.4,
+            vertical: 0.5,
+            rotating: 0.3,
+        }
     }
 ];
 
@@ -543,11 +682,11 @@ function composeWorld() {
             // set minimum distance between platforms
             // the min that works is 150
             let minDistanceBetweenPlatforms = 150;
-            let currentMinDistanceBetweenPlatforms = map(currentLevelInfo.platformRate, 0, 1, 150, 250);
+            let currentMinDistanceBetweenPlatforms = map(currentLevelInfo.platformDistance, 0, 1, 150, 250);
             // set the maximum distance between the minimum distance and the the maximum allowed in the game
             // mapped to the current platform difficulty rate
             // the maximum without pickups is 490
-            let maxDistanceBetweenPlatforms = map(currentLevelInfo.platformRate, 0, 1, minDistanceBetweenPlatforms, 600);
+            let maxDistanceBetweenPlatforms = map(currentLevelInfo.platformDistance, 0, 1, minDistanceBetweenPlatforms, 600);
 
             // set universal platform height
             let platformHeight = 20;
@@ -581,8 +720,10 @@ function composeWorld() {
                 // generate a random distance between the last platform and the new one
                 let newDist = random(currentMinDistanceBetweenPlatforms, maxDistanceBetweenPlatforms);
 
-                if (newDist > 490) {
+                if (newDist > 350) {
                     spawnObject("maxNumJump", platforms[platformIndex - 1]);
+                    spawnObject("maxNumJump", platforms[platformIndex - 1]);
+                    spawnObject("jump", platforms[platformIndex - 1]);
                     spawnObject("jump", platforms[platformIndex - 1]);
                 }
 
@@ -612,11 +753,24 @@ function composeWorld() {
 
                 // Construct new platform
                 let platform = null;
-                if (random() < currentLevelInfo.verticalPlatformRate && lastPlatformPos.y - y > 100) {
-                    platform = new MovingPlatform(x, y, w, platformHeight, y, lastPlatformPos.y - minDistanceBetweenPlatforms, "VERTICAL");
-                } else {
-                    platform = random() < currentLevelInfo.horizontalPlatformRate ? new MovingPlatform(x, y, w, platformHeight) : new Platform(x, y, w, platformHeight);
+                for (let rate in currentLevelInfo.platformRates) {
+                    if (random() < currentLevelInfo.platformRates[rate]) {
+                        if (rate === "horizontal") {
+                            platform = new MovingPlatform(x, y, w, platformHeight);
+                        }
+
+                        if (rate === "vertical") {
+                            platform = new MovingPlatform(x, y - random(0, 200), w, platformHeight, y, lastPlatformPos.y - minDistanceBetweenPlatforms, "VERTICAL");
+                        }
+
+                        if (rate === "rotating") {
+                            platform = new MovingPlatform(x, y - 150, w, platformHeight, random(-PI / 2, 0), random(0, PI / 2), "ROTATE");
+                        }
+
+                        break;
+                    }
                 }
+                platform = platform ? platform : new Platform(x, y, w, platformHeight);
                 platforms.push(platform);
 
                 // if this platform is close to the top break to stop generating platforms
@@ -677,6 +831,10 @@ function composeWorld() {
         let top = -currentLevelInfo.gameHeight + height / 2;
         let end = currentLevelInfo.gameLength - width / 5;
 
+        let minDistance = 50;
+        let maxDistance = 200;
+        let platformHeight = 20;
+
         // generate boundaries
         // beginning
         bounds.push(new Boundary(-width / 5, -currentLevelInfo.gameHeight / 2 + height / 2, 20, currentLevelInfo.gameHeight * 2));
@@ -695,7 +853,7 @@ function composeWorld() {
             let lastPlatformW = platforms[platformIndex - 1].w;
 
             // generate a random distance between the last platform and the new one
-            let newDist = random(30, 200);
+            let newDist = random(minDistance, maxDistance);
 
             // generate a random angle from the last platform to the new one
             let angle = 0;
@@ -713,15 +871,39 @@ function composeWorld() {
             let yDist = newDist * Math.sin(angle);
 
             // generate a random width for the new position
-            let w = random(15, 100);
+            let w = random(minDistance / 2, maxDistance / 2);
 
             // compute the new platforms position
             let x = lastPlatformPos.x + xDist + lastPlatformW / 2 + w;
             let y = lastPlatformPos.y + 10 - yDist;
             w *= 2;
 
+            let platform = null;
+
+            for (let rate in currentLevelInfo.platformRates) {
+                if (random() < currentLevelInfo.platformRates[rate]) {
+                    if (rate === "horizontal") {
+                        let range = random(100, 200);
+                        platform = new MovingPlatform(x + range, y, w, platformHeight, lastPlatformPos.x + lastPlatformW, x + range, "HORIZONTAL")
+                    }
+
+                    if (rate === "vertical") {
+                        let range = random(100, 200);
+                        platform = new MovingPlatform(x, y, w, platformHeight, max(y - range / 2, top), min(y + range / 2, bottom), "VERTICAL")
+                    }
+
+                    if (rate === "rotating") {
+                        platform = new MovingPlatform(x, y - 150, w, platformHeight, random(-PI / 2, 0), random(0, PI / 2), "ROTATE");
+                    }
+
+                    break;
+                }
+            }
+
+            platform = platform ? platform : new Platform(x, y, w, platformHeight);
+
             // generate new platform
-            platforms.push(new Platform(x, y, w, 20));
+            platforms.push(platform);
 
             // if this platform is close to the end break
             if (end - x <= 400) {

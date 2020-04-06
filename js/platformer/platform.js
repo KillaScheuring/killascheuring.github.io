@@ -40,10 +40,6 @@ class Boundary extends Platform {
         rectMode(CENTER);
         rect(this.body.position.x, this.body.position.y, this.w, this.h,);
     }
-
-    remove() {
-        World.remove(world, this.body);
-    }
 }
 
 class MovingPlatform extends Platform {
@@ -54,12 +50,25 @@ class MovingPlatform extends Platform {
         this.max = max ? max : width/2-20;
         this.min = min ? min : -width/2+20;
         this.v = null;
+        this.vTheta = null;
         this.direction = direction ? direction : "HORIZONTAL";
         if(this.direction === "HORIZONTAL"){
             this.v = createVector(1, 0);
         } else if (this.direction === "VERTICAL") {
             this.v = createVector(0, 1);
+        } else if (this.direction === "ROTATE"){
+            this.vTheta = PI/300;
         }
+    }
+
+    show(){
+        push();
+        translate(this.body.position.x, this.body.position.y);
+        rotate(this.body.angle);
+        rectMode(CENTER);
+        fill(currentLevelInfo.colors.platform[0], currentLevelInfo.colors.platform[1], currentLevelInfo.colors.platform[2]);
+        rect(0, 0, this.w, this.h,);
+        pop();
     }
 
     move(){
@@ -75,25 +84,44 @@ class MovingPlatform extends Platform {
             if((pos.y+this.h/2 >= this.max && this.v.y > 0) || (pos.y-this.h/2 <= this.min && this.v.y < 0)){
                 this.v.y *= -1;
             }
-        }
-        for(let object of this.objects){
-            if(object.body){
-                Body.translate(object.body, this.v);
+        } else if(this.direction === "ROTATE"){
+            if(this.body.angle >= this.max && this.vTheta > 0 || this.body.angle <= this.min && this.vTheta < 0){
+                this.vTheta *= -1;
             }
         }
-        Body.translate(this.body, this.v);
+
+
+        if(this.direction === "HORIZONTAL" || this.direction === "VERTICAL"){
+            for(let object of this.objects){
+                if(object.body){
+                    Body.translate(object.body, this.v);
+                }
+            }
+            Body.translate(this.body, this.v);
+        } else if(this.direction === "ROTATE"){
+            for(let object of this.objects){
+                if(object.body){
+                    Body.rotate(object.body, this.vTheta, this.body.position);
+                }
+            }
+            Body.rotate(this.body, this.vTheta);
+        }
     }
 
     attach(player){
-        this.player = player;
-        this.player.attach(this);
+        if(this.direction === "HORIZONTAL" || this.direction === "ROTATE"){
+            this.player = player;
+            this.player.attach(this);
+        }
     }
 
     detach(){
-        if(this.player){
-            Body.setVelocity(this.player.body, this.v);
+        if(this.direction === "HORIZONTAL" || this.direction === "ROTATE"){
+            if(this.player){
+                Body.setVelocity(this.player.body, this.v);
+            }
+            this.player = null;
         }
-        this.player = null;
     }
 }
 
