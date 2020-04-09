@@ -1033,7 +1033,7 @@ function draw() {
         background(100);
         fill(0);
         textAlign(CENTER);
-        textSize(24);
+        textSize(20);
         // Display game over info to user
         text(`You got to level ${GAME_LEVEL + 1}`, 0, -40);
         text(`Press any key to start again ${timeout > 0 ? `in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
@@ -1049,11 +1049,19 @@ function draw() {
         background(150, 255, 150);
         fill(0);
         textAlign(CENTER);
-        textSize(24);
-        // display info to user
-        // let the user know they won and if there is a next level display what it is
-        text(`You Won!${GAME_LEVEL === levelsInfo.length ? "" : ` Next level is lvl.${GAME_LEVEL + 1}`}`, 0, -40);
-        text(`Press any key to ${GAME_LEVEL === levelsInfo.length ? " play again" : "start next level"}${timeout > 0 ? ` in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
+        textSize(20);
+        if(camera.orientation === "VERTICAL"){
+            // display info to user
+            // let the user know they won and if there is a next level display what it is
+            text(`You Won!${GAME_LEVEL === levelsInfo.length ? "" : ` Next level is lvl.${GAME_LEVEL + 1}`}`, 0, -40);
+            text(`Press any key to ${GAME_LEVEL === levelsInfo.length ? " play again" : "start next level"}${timeout > 0 ? ` in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
+        } else if(camera.orientation === "HORIZONTAL"){
+            // display info to user
+            // let the user know they're going to a bonus level
+            text(`Loading bonus level`, 0, -40);
+            text(`Press any key to start next level${timeout > 0 ? ` in ${Math.ceil(timeout / 60)} sec` : ""}`, 0, 0);
+        }
+
         // tick down timeout
         timeout--;
         pop();
@@ -1067,14 +1075,14 @@ function keyPressed() {
     }
 
     if (timeout <= 0 || GAME_STATE === "START") {
-        GAME_STATE = "RUNNING";
-        timeout = 60 * 3;
-
         if (GAME_STATE === "GAME_OVER") {
             GAME_LEVEL = 0;
         } else if (GAME_STATE === "WIN") {
             GAME_LEVEL = GAME_LEVEL === levelsInfo.length ? 0 : GAME_LEVEL;
         }
+        
+        GAME_STATE = "RUNNING";
+        timeout = 60 * 3;
 
         composeWorld();
     }

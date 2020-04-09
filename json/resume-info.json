@@ -129,6 +129,14 @@
       "img": "images/starwars.png",
       "phoneFriendly": true,
       "description": "Automatically generates question based on information retrieved from the Star Wars Api and using React."
+    },
+    {
+      "id": "COVID-19-map",
+      "url": "examples/covid_19_map.html",
+      "title": "COVID-19 Map",
+      "img": "images/covid.png",
+      "phoneFriendly": true,
+      "description": "Polar bar graphs of the last 30 days of the COVID-19 pandemic for each country in the Johns Hopkins Data\nOrange is Active cases, Red is Deaths, and Green is Recovered cases"
     }
   ]
 }

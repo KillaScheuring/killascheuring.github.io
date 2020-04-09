@@ -1,12 +1,244 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
+    <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="added rotating platforms and more levels">
+      <change afterPath="$PROJECT_DIR$/examples/covid_19_map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/covid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/afghanistan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/albania_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/algeria_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/andorra_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/angola_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/antigua_and_barbuda_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/argentina_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/armenia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/aruba_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/australia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/austria_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/azerbaijan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/bahamas,_the_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/bahamas_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/bahrain_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/bangladesh_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/barbados_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/belarus_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/belgium_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/belize_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/benin_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/bhutan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/bolivia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/bosnia_and_herzegovina_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/botswana_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/brazil_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/brunei_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/bulgaria_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/burkina_faso_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/burma_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/burundi_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cabo_verde_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cambodia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cameroon_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/canada_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cape_verde_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cayman_islands_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/central_african_republic_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/chad_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/channel_islands_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/chile_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/china_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/colombia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/congo_(brazzaville)_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/congo_(kinshasa)_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/costa_rica_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cote_d'ivoire_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/croatia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cruise_ship_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cuba_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/curacao_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/cyprus_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/czech_republic_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/czechia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/denmark_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/diamond_princess_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/djibouti_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/dominica_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/dominican_republic_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/east_timor_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/ecuador_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/egypt_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/el_salvador_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/equatorial_guinea_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/eritrea_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/estonia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/eswatini_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/ethiopia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/faroe_islands_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/fiji_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/finland_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/france_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/french_guiana_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/gabon_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/gambia,_the_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/gambia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/georgia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/germany_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/ghana_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/gibraltar_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/greece_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/greenland_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/grenada_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/guadeloupe_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/guam_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/guatemala_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/guernsey_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/guinea-bissau_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/guinea_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/guyana_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/haiti_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/holy_see_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/honduras_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/hong_kong_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/hong_kong_sar_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/hungary_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/iceland_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/india_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/indonesia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/iran_(islamic_republic_of)_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/iran_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/iraq_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/ireland_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/israel_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/italy_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/jamaica_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/japan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/jersey_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/jordan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/kazakhstan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/kenya_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/korea,_south_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/kosovo_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/kuwait_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/kyrgyzstan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/laos_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/latvia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/lebanon_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/liberia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/libya_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/liechtenstein_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/lithuania_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/luxembourg_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/macao_sar_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/macau_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/madagascar_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/mainland_china_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/malawi_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/malaysia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/maldives_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/mali_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/malta_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/martinique_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/mauritania_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/mauritius_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/mayotte_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/mexico_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/moldova_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/monaco_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/mongolia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/montenegro_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/morocco_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/mozambique_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/ms_zaandam_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/namibia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/nepal_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/netherlands_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/new_zealand_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/nicaragua_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/niger_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/nigeria_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/north_macedonia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/norway_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/occupied_palestinian_territory_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/oman_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/others_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/pakistan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/palestine_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/panama_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/papua_new_guinea_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/paraguay_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/peru_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/philippines_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/poland_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/portugal_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/puerto_rico_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/qatar_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/republic_of_ireland_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/republic_of_korea_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/republic_of_moldova_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/republic_of_the_congo_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/reunion_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/romania_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/russia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/russian_federation_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/rwanda_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/saint_barthelemy_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/saint_kitts_and_nevis_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/saint_lucia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/saint_martin_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/saint_vincent_and_the_grenadines_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/san_marino_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/sao_tome_and_principe_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/saudi_arabia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/senegal_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/serbia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/seychelles_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/sierra_leone_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/singapore_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/slovakia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/slovenia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/somalia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/south_africa_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/south_korea_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/south_sudan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/spain_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/sri_lanka_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/st._martin_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/sudan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/suriname_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/sweden_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/switzerland_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/syria_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/taipei_and_environs_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/taiwan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/tanzania_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/thailand_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/the_bahamas_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/the_gambia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/timor-leste_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/togo_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/trinidad_and_tobago_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/tunisia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/turkey_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/uganda_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/uk_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/ukraine_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/united_arab_emirates_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/united_kingdom_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/uruguay_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/us_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/uzbekistan_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/vatican_city_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/venezuela_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/viet_nam_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/vietnam_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/west_bank_and_gaza_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/western_sahara_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/zambia_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/svgs/zimbabwe_plot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/covid_19_map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/war.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/platform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/resume-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/resume-info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,41 +282,42 @@
     <property name="ts.external.directory.path" value="C:\Users\killa\Documents\GitHub\killascheuring.github.io\star-trek-quiz\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\images" />
-      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\examples" />
-      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\js" />
-      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\images" />
       <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\js\squirrels" />
       <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\projects" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\images" />
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\images\svgs" />
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\examples" />
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io\js" />
+      <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.war_example.html">
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/index.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="covid_19_map.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/covid_19_map.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="platformer.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/platformer.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="resume.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/resume.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="squirrels_game.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/squirrels_game.html" useBuiltInWebServerPort="true">
+    <configuration name="war_example.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/war_example.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="war_example.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/war_example.html" useBuiltInWebServerPort="true">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/index.js" working-dir="$PROJECT_DIR$/js">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.war_example.html" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="JavaScript Debug.covid_19_map.html" />
+        <item itemvalue="JavaScript Debug.war_example.html" />
         <item itemvalue="JavaScript Debug.resume.html" />
-        <item itemvalue="JavaScript Debug.platformer.html" />
-        <item itemvalue="JavaScript Debug.squirrels_game.html" />
       </list>
     </recent_temporary>
   </component>
@@ -137,14 +370,8 @@
       <workItem from="1585166048088" duration="600000" />
       <workItem from="1585180703889" duration="21000" />
       <workItem from="1585257619014" duration="633000" />
-      <workItem from="1585678398905" duration="94773000" />
-    </task>
-    <task id="LOCAL-00018" summary="added favicon to star wars quiz">
-      <created>1583298830929</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1583298830930</updated>
+      <workItem from="1585678398905" duration="97672000" />
+      <workItem from="1586232721581" duration="19303000" />
     </task>
     <task id="LOCAL-00019" summary="fixed stylesheet">
       <created>1583299002779</created>
@@ -482,14 +709,20 @@
       <option name="project" value="LOCAL" />
       <updated>1586128786352</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="added rotating platforms and more levels">
+      <created>1586143109795</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1586143109795</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding bonuses" />
     <MESSAGE value="got jump bonus working" />
     <MESSAGE value="got jump bonus stacking working" />
     <MESSAGE value="all bonuses working and added win screen" />
@@ -514,7 +747,8 @@
     <MESSAGE value="changed platforms distances" />
     <MESSAGE value="updated portfolio, resume, and palette" />
     <MESSAGE value="updated nav bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated nav bar" />
+    <MESSAGE value="added rotating platforms and more levels" />
+    <option name="LAST_COMMIT_MESSAGE" value="added rotating platforms and more levels" />
   </component>
   <component name="WindowStateProjectService">
     <state x="501" y="283" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585940491014">
@@ -525,78 +759,78 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585860120949" />
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1586128785709">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1586391279043">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586128785709" />
-    <state width="1480" height="316" key="GridCell.Tab.0.bottom" timestamp="1585857881262">
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586391279043" />
+    <state width="1480" height="256" key="GridCell.Tab.0.bottom" timestamp="1586391759701">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
-    <state width="1480" height="316" key="GridCell.Tab.0.center" timestamp="1585857881262">
+    <state width="1480" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586391759701" />
+    <state width="1480" height="256" key="GridCell.Tab.0.center" timestamp="1586391759700">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
-    <state width="1480" height="316" key="GridCell.Tab.0.left" timestamp="1585857881262">
+    <state width="1480" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1586391759700" />
+    <state width="1480" height="256" key="GridCell.Tab.0.left" timestamp="1586391759700">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
-    <state width="1480" height="316" key="GridCell.Tab.0.right" timestamp="1585857881262">
+    <state width="1480" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1586391759700" />
+    <state width="1480" height="256" key="GridCell.Tab.0.right" timestamp="1586391759701">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
-    <state width="1480" height="316" key="GridCell.Tab.1.bottom" timestamp="1585857881263">
+    <state width="1480" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1586391759701" />
+    <state width="727" height="315" key="GridCell.Tab.1.bottom" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state width="1480" height="316" key="GridCell.Tab.1.center" timestamp="1585857881262">
+    <state width="727" height="315" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.1.center" timestamp="1586382790934">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
-    <state width="1480" height="316" key="GridCell.Tab.1.left" timestamp="1585857881262">
+    <state width="727" height="315" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1586382790934" />
+    <state width="727" height="315" key="GridCell.Tab.1.left" timestamp="1586382790934">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
-    <state width="1480" height="316" key="GridCell.Tab.1.right" timestamp="1585857881262">
+    <state width="727" height="315" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1586382790934" />
+    <state width="727" height="315" key="GridCell.Tab.1.right" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881262" />
-    <state width="1480" height="316" key="GridCell.Tab.2.bottom" timestamp="1585857881263">
+    <state width="727" height="315" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.2.bottom" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state width="1480" height="316" key="GridCell.Tab.2.center" timestamp="1585857881263">
+    <state width="727" height="315" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.2.center" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state width="1480" height="316" key="GridCell.Tab.2.left" timestamp="1585857881263">
+    <state width="727" height="315" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.2.left" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state width="1480" height="316" key="GridCell.Tab.2.right" timestamp="1585857881263">
+    <state width="727" height="315" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.2.right" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state width="1480" height="316" key="GridCell.Tab.3.bottom" timestamp="1585857881263">
+    <state width="727" height="315" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.3.bottom" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.3.bottom/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state width="1480" height="316" key="GridCell.Tab.3.center" timestamp="1585857881263">
+    <state width="727" height="315" key="GridCell.Tab.3.bottom/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.3.center" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.3.center/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state width="1480" height="316" key="GridCell.Tab.3.left" timestamp="1585857881263">
+    <state width="727" height="315" key="GridCell.Tab.3.center/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.3.left" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.3.left/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state width="1480" height="316" key="GridCell.Tab.3.right" timestamp="1585857881263">
+    <state width="727" height="315" key="GridCell.Tab.3.left/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state width="727" height="315" key="GridCell.Tab.3.right" timestamp="1586382790935">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1480" height="316" key="GridCell.Tab.3.right/0.0.1500.960@0.0.1500.960" timestamp="1585857881263" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1586128789678">
+    <state width="727" height="315" key="GridCell.Tab.3.right/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1586143115049">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1586128789678" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1586143115049" />
     <state x="886" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585864631584">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

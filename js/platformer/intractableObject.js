@@ -163,6 +163,7 @@ class Portal {
         let pos = this.body.position;
         push();
         translate(pos.x, pos.y);
+        rotate(this.body.angle);
         if (this.type === "NEXT_LEVEL") {
             fill(objectColors.portal[0], objectColors.portal[1], objectColors.portal[2]);
             rectMode(CENTER);
