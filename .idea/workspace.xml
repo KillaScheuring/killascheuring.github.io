@@ -1,244 +1,469 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="added rotating platforms and more levels">
-      <change afterPath="$PROJECT_DIR$/examples/covid_19_map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/covid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/afghanistan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/albania_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/algeria_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/andorra_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/angola_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/antigua_and_barbuda_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/argentina_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/armenia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/aruba_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/australia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/austria_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/azerbaijan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/bahamas,_the_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/bahamas_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/bahrain_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/bangladesh_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/barbados_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/belarus_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/belgium_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/belize_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/benin_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/bhutan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/bolivia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/bosnia_and_herzegovina_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/botswana_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/brazil_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/brunei_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/bulgaria_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/burkina_faso_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/burma_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/burundi_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cabo_verde_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cambodia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cameroon_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/canada_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cape_verde_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cayman_islands_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/central_african_republic_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/chad_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/channel_islands_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/chile_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/china_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/colombia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/congo_(brazzaville)_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/congo_(kinshasa)_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/costa_rica_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cote_d'ivoire_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/croatia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cruise_ship_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cuba_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/curacao_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/cyprus_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/czech_republic_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/czechia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/denmark_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/diamond_princess_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/djibouti_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/dominica_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/dominican_republic_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/east_timor_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/ecuador_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/egypt_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/el_salvador_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/equatorial_guinea_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/eritrea_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/estonia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/eswatini_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/ethiopia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/faroe_islands_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/fiji_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/finland_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/france_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/french_guiana_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/gabon_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/gambia,_the_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/gambia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/georgia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/germany_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/ghana_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/gibraltar_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/greece_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/greenland_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/grenada_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/guadeloupe_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/guam_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/guatemala_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/guernsey_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/guinea-bissau_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/guinea_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/guyana_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/haiti_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/holy_see_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/honduras_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/hong_kong_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/hong_kong_sar_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/hungary_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/iceland_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/india_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/indonesia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/iran_(islamic_republic_of)_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/iran_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/iraq_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/ireland_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/israel_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/italy_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/jamaica_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/japan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/jersey_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/jordan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/kazakhstan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/kenya_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/korea,_south_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/kosovo_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/kuwait_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/kyrgyzstan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/laos_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/latvia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/lebanon_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/liberia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/libya_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/liechtenstein_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/lithuania_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/luxembourg_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/macao_sar_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/macau_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/madagascar_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/mainland_china_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/malawi_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/malaysia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/maldives_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/mali_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/malta_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/martinique_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/mauritania_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/mauritius_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/mayotte_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/mexico_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/moldova_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/monaco_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/mongolia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/montenegro_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/morocco_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/mozambique_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/ms_zaandam_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/namibia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/nepal_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/netherlands_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/new_zealand_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/nicaragua_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/niger_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/nigeria_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/north_macedonia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/norway_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/occupied_palestinian_territory_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/oman_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/others_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/pakistan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/palestine_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/panama_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/papua_new_guinea_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/paraguay_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/peru_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/philippines_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/poland_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/portugal_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/puerto_rico_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/qatar_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/republic_of_ireland_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/republic_of_korea_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/republic_of_moldova_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/republic_of_the_congo_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/reunion_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/romania_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/russia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/russian_federation_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/rwanda_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/saint_barthelemy_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/saint_kitts_and_nevis_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/saint_lucia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/saint_martin_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/saint_vincent_and_the_grenadines_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/san_marino_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/sao_tome_and_principe_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/saudi_arabia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/senegal_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/serbia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/seychelles_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/sierra_leone_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/singapore_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/slovakia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/slovenia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/somalia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/south_africa_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/south_korea_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/south_sudan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/spain_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/sri_lanka_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/st._martin_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/sudan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/suriname_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/sweden_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/switzerland_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/syria_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/taipei_and_environs_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/taiwan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/tanzania_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/thailand_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/the_bahamas_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/the_gambia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/timor-leste_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/togo_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/trinidad_and_tobago_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/tunisia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/turkey_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/uganda_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/uk_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/ukraine_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/united_arab_emirates_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/united_kingdom_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/uruguay_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/us_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/uzbekistan_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/vatican_city_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/venezuela_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/viet_nam_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/vietnam_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/west_bank_and_gaza_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/western_sahara_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/zambia_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/svgs/zimbabwe_plot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/covid_19_map.js" afterDir="false" />
+    <list default="true" id="b0d6b22e-a425-4ad8-885c-a8ad44fcd49a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/afghanistan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/albania_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/algeria_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/andorra_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/angola_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/antigua_and_barbuda_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/argentina_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/armenia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/aruba_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/australia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/austria_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/azerbaijan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/bahamas,_the_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/bahamas_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/bahrain_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/bangladesh_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/barbados_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/belarus_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/belgium_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/belize_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/benin_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/bhutan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/bolivia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/bosnia_and_herzegovina_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/botswana_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/brazil_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/brunei_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/bulgaria_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/burkina_faso_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/burma_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/burundi_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cabo_verde_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cambodia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cameroon_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/canada_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cape_verde_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cayman_islands_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/central_african_republic_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/chad_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/channel_islands_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/chile_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/china_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/colombia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/congo_(brazzaville)_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/congo_(kinshasa)_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/costa_rica_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cote_d'ivoire_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/croatia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cruise_ship_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cuba_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/curacao_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/cyprus_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/czech_republic_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/czechia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/denmark_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/diamond_princess_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/djibouti_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/dominica_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/dominican_republic_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/east_timor_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/ecuador_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/egypt_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/el_salvador_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/equatorial_guinea_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/eritrea_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/estonia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/eswatini_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/ethiopia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/faroe_islands_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/fiji_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/finland_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/france_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/french_guiana_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/gabon_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/gambia,_the_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/gambia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/georgia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/germany_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/ghana_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/gibraltar_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/greece_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/greenland_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/grenada_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/guadeloupe_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/guam_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/guatemala_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/guernsey_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/guinea-bissau_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/guinea_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/guyana_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/haiti_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/holy_see_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/honduras_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/hong_kong_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/hong_kong_sar_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/hungary_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/iceland_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/india_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/indonesia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/iran_(islamic_republic_of)_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/iran_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/iraq_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/ireland_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/israel_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/italy_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/jamaica_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/japan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/jersey_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/jordan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/kazakhstan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/kenya_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/korea,_south_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/kosovo_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/kuwait_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/kyrgyzstan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/laos_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/latvia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/lebanon_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/liberia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/libya_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/liechtenstein_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/lithuania_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/luxembourg_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/macao_sar_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/macau_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/madagascar_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/mainland_china_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/malawi_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/malaysia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/maldives_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/mali_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/malta_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/martinique_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/mauritania_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/mauritius_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/mayotte_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/mexico_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/moldova_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/monaco_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/mongolia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/montenegro_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/morocco_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/mozambique_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/ms_zaandam_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/namibia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/nepal_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/netherlands_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/new_zealand_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/nicaragua_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/niger_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/nigeria_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/north_macedonia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/norway_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/occupied_palestinian_territory_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/oman_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/others_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/pakistan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/palestine_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/panama_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/papua_new_guinea_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/paraguay_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/peru_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/philippines_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/poland_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/portugal_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/puerto_rico_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/qatar_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/republic_of_ireland_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/republic_of_korea_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/republic_of_moldova_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/republic_of_the_congo_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/reunion_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/romania_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/russia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/russian_federation_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/rwanda_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/saint_barthelemy_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/saint_kitts_and_nevis_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/saint_lucia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/saint_martin_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/saint_vincent_and_the_grenadines_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/san_marino_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/sao_tome_and_principe_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/saudi_arabia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/senegal_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/serbia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/seychelles_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/sierra_leone_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/singapore_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/slovakia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/slovenia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/somalia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/south_africa_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/south_korea_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/south_sudan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/spain_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/sri_lanka_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/st._martin_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/sudan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/suriname_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/sweden_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/switzerland_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/syria_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/taipei_and_environs_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/taiwan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/tanzania_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/thailand_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/the_bahamas_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/the_gambia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/timor-leste_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/togo_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/trinidad_and_tobago_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/tunisia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/turkey_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/uganda_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/uk_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/ukraine_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/united_arab_emirates_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/united_kingdom_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/uruguay_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/us_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/uzbekistan_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/vatican_city_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/venezuela_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/viet_nam_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/vietnam_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/west_bank_and_gaza_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/western_sahara_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/zambia_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bar_graphs/zimbabwe_plot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/intractableObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/intractableObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/platformer/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/platformer/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json/resume-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/resume-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/afghanistan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/afghanistan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/albania_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/albania_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/algeria_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/algeria_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/andorra_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/andorra_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/angola_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/angola_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/antigua_and_barbuda_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/antigua_and_barbuda_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/argentina_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/argentina_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/armenia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/armenia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/aruba_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/aruba_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/australia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/australia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/austria_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/austria_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/azerbaijan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/azerbaijan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/bahamas,_the_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/bahamas,_the_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/bahamas_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/bahamas_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/bahrain_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/bahrain_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/bangladesh_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/bangladesh_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/barbados_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/barbados_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/belarus_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/belarus_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/belgium_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/belgium_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/belize_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/belize_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/benin_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/benin_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/bhutan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/bhutan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/bolivia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/bolivia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/bosnia_and_herzegovina_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/bosnia_and_herzegovina_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/botswana_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/botswana_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/brazil_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/brazil_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/brunei_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/brunei_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/bulgaria_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/bulgaria_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/burkina_faso_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/burkina_faso_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/burma_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/burma_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/burundi_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/burundi_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cabo_verde_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cabo_verde_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cambodia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cambodia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cameroon_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cameroon_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/canada_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/canada_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cape_verde_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cape_verde_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cayman_islands_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cayman_islands_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/central_african_republic_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/central_african_republic_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/chad_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/chad_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/channel_islands_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/channel_islands_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/chile_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/chile_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/china_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/china_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/colombia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/colombia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/congo_(brazzaville)_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/congo_(brazzaville)_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/congo_(kinshasa)_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/congo_(kinshasa)_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/costa_rica_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/costa_rica_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cote_d'ivoire_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cote_d'ivoire_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/croatia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/croatia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cruise_ship_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cruise_ship_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cuba_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cuba_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/curacao_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/curacao_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/cyprus_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/cyprus_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/czech_republic_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/czech_republic_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/czechia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/czechia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/denmark_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/denmark_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/diamond_princess_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/diamond_princess_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/djibouti_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/djibouti_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/dominica_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/dominica_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/dominican_republic_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/dominican_republic_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/east_timor_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/east_timor_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/ecuador_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/ecuador_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/egypt_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/egypt_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/el_salvador_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/el_salvador_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/equatorial_guinea_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/equatorial_guinea_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/eritrea_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/eritrea_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/estonia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/estonia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/eswatini_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/eswatini_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/ethiopia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/ethiopia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/faroe_islands_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/faroe_islands_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/fiji_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/fiji_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/finland_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/finland_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/france_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/france_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/french_guiana_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/french_guiana_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/gabon_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/gabon_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/gambia,_the_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/gambia,_the_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/gambia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/gambia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/georgia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/georgia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/germany_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/germany_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/ghana_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/ghana_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/gibraltar_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/gibraltar_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/greece_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/greece_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/greenland_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/greenland_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/grenada_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/grenada_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/guadeloupe_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/guadeloupe_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/guam_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/guam_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/guatemala_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/guatemala_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/guernsey_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/guernsey_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/guinea-bissau_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/guinea-bissau_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/guinea_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/guinea_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/guyana_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/guyana_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/haiti_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/haiti_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/holy_see_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/holy_see_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/honduras_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/honduras_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/hong_kong_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/hong_kong_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/hong_kong_sar_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/hong_kong_sar_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/hungary_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/hungary_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/iceland_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/iceland_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/india_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/india_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/indonesia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/indonesia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/iran_(islamic_republic_of)_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/iran_(islamic_republic_of)_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/iran_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/iran_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/iraq_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/iraq_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/ireland_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/ireland_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/israel_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/israel_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/italy_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/italy_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/jamaica_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/jamaica_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/japan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/japan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/jersey_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/jersey_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/jordan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/jordan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/kazakhstan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/kazakhstan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/kenya_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/kenya_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/korea,_south_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/korea,_south_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/kosovo_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/kosovo_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/kuwait_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/kuwait_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/kyrgyzstan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/kyrgyzstan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/laos_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/laos_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/latvia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/latvia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/lebanon_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/lebanon_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/liberia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/liberia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/libya_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/libya_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/liechtenstein_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/liechtenstein_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/lithuania_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/lithuania_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/luxembourg_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/luxembourg_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/macao_sar_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/macao_sar_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/macau_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/macau_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/madagascar_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/madagascar_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/mainland_china_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/mainland_china_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/malawi_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/malawi_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/malaysia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/malaysia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/maldives_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/maldives_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/mali_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/mali_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/malta_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/malta_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/martinique_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/martinique_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/mauritania_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/mauritania_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/mauritius_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/mauritius_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/mayotte_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/mayotte_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/mexico_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/mexico_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/moldova_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/moldova_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/monaco_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/monaco_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/mongolia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/mongolia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/montenegro_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/montenegro_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/morocco_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/morocco_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/mozambique_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/mozambique_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/ms_zaandam_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/ms_zaandam_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/namibia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/namibia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/nepal_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/nepal_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/netherlands_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/netherlands_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/new_zealand_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/new_zealand_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/nicaragua_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/nicaragua_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/niger_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/niger_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/nigeria_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/nigeria_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/north_macedonia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/north_macedonia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/norway_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/norway_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/occupied_palestinian_territory_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/occupied_palestinian_territory_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/oman_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/oman_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/others_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/others_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/pakistan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/pakistan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/palestine_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/palestine_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/panama_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/panama_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/papua_new_guinea_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/papua_new_guinea_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/paraguay_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/paraguay_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/peru_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/peru_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/philippines_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/philippines_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/poland_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/poland_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/portugal_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/portugal_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/puerto_rico_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/puerto_rico_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/qatar_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/qatar_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/republic_of_ireland_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/republic_of_ireland_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/republic_of_korea_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/republic_of_korea_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/republic_of_moldova_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/republic_of_moldova_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/republic_of_the_congo_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/republic_of_the_congo_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/reunion_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/reunion_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/romania_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/romania_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/russia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/russia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/russian_federation_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/russian_federation_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/rwanda_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/rwanda_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/saint_barthelemy_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/saint_barthelemy_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/saint_kitts_and_nevis_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/saint_kitts_and_nevis_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/saint_lucia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/saint_lucia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/saint_martin_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/saint_martin_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/saint_vincent_and_the_grenadines_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/saint_vincent_and_the_grenadines_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/san_marino_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/san_marino_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/sao_tome_and_principe_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/sao_tome_and_principe_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/saudi_arabia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/saudi_arabia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/senegal_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/senegal_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/serbia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/serbia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/seychelles_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/seychelles_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/sierra_leone_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/sierra_leone_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/singapore_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/singapore_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/slovakia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/slovakia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/slovenia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/slovenia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/somalia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/somalia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/south_africa_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/south_africa_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/south_korea_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/south_korea_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/south_sudan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/south_sudan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/spain_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/spain_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/sri_lanka_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/sri_lanka_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/st._martin_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/st._martin_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/sudan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/sudan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/suriname_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/suriname_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/sweden_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/sweden_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/switzerland_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/switzerland_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/syria_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/syria_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/taipei_and_environs_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/taipei_and_environs_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/taiwan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/taiwan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/tanzania_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/tanzania_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/thailand_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/thailand_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/the_bahamas_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/the_bahamas_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/the_gambia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/the_gambia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/timor-leste_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/timor-leste_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/togo_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/togo_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/trinidad_and_tobago_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/trinidad_and_tobago_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/tunisia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/tunisia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/turkey_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/turkey_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/uganda_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/uganda_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/uk_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/uk_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/ukraine_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/ukraine_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/united_arab_emirates_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/united_arab_emirates_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/united_kingdom_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/united_kingdom_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/uruguay_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/uruguay_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/us_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/us_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/uzbekistan_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/uzbekistan_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/vatican_city_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/vatican_city_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/venezuela_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/venezuela_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/viet_nam_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/viet_nam_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/vietnam_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/vietnam_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/west_bank_and_gaza_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/west_bank_and_gaza_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/western_sahara_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/western_sahara_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/zambia_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/zambia_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svgs/zimbabwe_plot.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/polar_graphs/zimbabwe_plot.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/covid_19_map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/covid_19_map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,12 +489,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZVRDfoCY0pOrKrE2RLsN4zXIBR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -295,7 +524,7 @@
       <recent name="C:\Users\killa\Documents\GitHub\killascheuring.github.io" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+  <component name="RunManager" selected="JavaScript Debug.covid_19_map.html">
     <configuration name="covid_19_map.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/killascheuring.github.io/examples/covid_19_map.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -313,9 +542,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.covid_19_map.html" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="Node.js.index.js" />
-        <item itemvalue="JavaScript Debug.covid_19_map.html" />
         <item itemvalue="JavaScript Debug.war_example.html" />
         <item itemvalue="JavaScript Debug.resume.html" />
       </list>
@@ -371,14 +600,7 @@
       <workItem from="1585180703889" duration="21000" />
       <workItem from="1585257619014" duration="633000" />
       <workItem from="1585678398905" duration="97672000" />
-      <workItem from="1586232721581" duration="19303000" />
-    </task>
-    <task id="LOCAL-00019" summary="fixed stylesheet">
-      <created>1583299002779</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1583299002779</updated>
+      <workItem from="1586232721581" duration="26332000" />
     </task>
     <task id="LOCAL-00020" summary="fixed icon rel">
       <created>1583299129443</created>
@@ -716,14 +938,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586143109795</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Added covid-19 map">
+      <created>1586391952281</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1586391952282</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="got jump bonus working" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="got jump bonus stacking working" />
     <MESSAGE value="all bonuses working and added win screen" />
     <MESSAGE value="added damage animation and second level with different colors" />
@@ -748,7 +977,8 @@
     <MESSAGE value="updated portfolio, resume, and palette" />
     <MESSAGE value="updated nav bar" />
     <MESSAGE value="added rotating platforms and more levels" />
-    <option name="LAST_COMMIT_MESSAGE" value="added rotating platforms and more levels" />
+    <MESSAGE value="Added covid-19 map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added covid-19 map" />
   </component>
   <component name="WindowStateProjectService">
     <state x="501" y="283" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585940491014">
@@ -759,10 +989,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1585860120949" />
-    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1586391279043">
+    <state x="372" y="73" key="CommitChangelistDialog2" timestamp="1586391947264">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586391279043" />
+    <state x="372" y="73" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1586391947264" />
     <state width="1480" height="256" key="GridCell.Tab.0.bottom" timestamp="1586391759701">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -827,10 +1057,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="727" height="315" key="GridCell.Tab.3.right/0.0.1500.960@0.0.1500.960" timestamp="1586382790935" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1586143115049">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1586391956196">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1586143115049" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1586391956196" />
     <state x="886" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585864631584">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
