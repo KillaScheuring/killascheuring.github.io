@@ -403,41 +403,47 @@ let countries = ['China',
     'Western Sahara',
     'Sao Tome and Principe'];
 
+let infoWindow;
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: new google.maps.LatLng(0, 0),
         zoom: 2
     });
 
-    for (let country of countries) {
-        console.log("country:", country);
-        if (Object.keys(countries_lat_lon).includes(country)) {
+    infoWindow = new google.maps.InfoWindow();
+
+    for (let countryIndex = 0; countryIndex < countries.length; countryIndex++) {
+        console.log("country:", countries[countryIndex]);
+        if (Object.keys(countries_lat_lon).includes(countries[countryIndex])) {
             let icon = {
-                url: `../images/polar_graphs/${country.toLowerCase().replace(/ /g, "_")}_plot.svg`,
+                url: `../images/polar_graphs/${countries[countryIndex].toLowerCase().replace(/ /g, "_")}_plot.svg`,
                 anchor: new google.maps.Point(50, 25),
                 scaledSize: new google.maps.Size(100, 100)
             };
 
             let marker = new google.maps.Marker({
-                position: new google.maps.LatLng(countries_lat_lon[country]["lat"], countries_lat_lon[country]["lon"]),
+                position: new google.maps.LatLng(countries_lat_lon[countries[countryIndex]]["lat"], countries_lat_lon[countries[countryIndex]]["lon"]),
                 map: map,
                 draggable: false,
                 icon: icon,
                 zIndex: 0,
-                title: country
+                title: countries[countryIndex]
             });
-
-            let message = `
-    <img src="../images/bar_graphs/${country.toLowerCase().replace(/ /g, "_")}_plot.png" alt="${country} daily bar graph" width="320" height="240"/>
-    `;
-
-            let infoWindow = new google.maps.InfoWindow({
-                content: message
-            });
-
-            marker.addListener('click', function() {
-                infoWindow.open(map, marker);
+            marker.addListener('click', function () {
+                let id = countries[countryIndex].toLowerCase().replace(' ', '-').replace(`'`, '');
+                let src = `../images/bar_graphs/${countries[countryIndex].toLowerCase().replace(/ /g, "_")}_plot.png`;
+                let message = `<img id="${id}" src="${src}" onclick="imageClicked('${id}')" alt="${countries[countryIndex]} daily bar graph" width="320" height="240"/>`;
+                infoWindow.setContent(message);
+                infoWindow.open(map, this);
             });
         }
     }
 }
+
+function imageClicked(id) {
+    let image = document.getElementById(id);
+    image.width = image.width === 640 ? "320" : "640";
+    image.height = image.height === 480 ? "240" : "480";
+}
+
