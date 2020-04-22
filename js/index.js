@@ -64,6 +64,7 @@ jQuery(function ($) {
                 </button>
             </div>
             <div class="modal-body">
+            <img class="img-responsive" src="${project['img']}" alt="${project['id'].replace(/-/g, '')}" width="100" height="100">
             <a href="${project['url']}">link to project</a>
                 <p>${project["description"]}</p>
             </div>
