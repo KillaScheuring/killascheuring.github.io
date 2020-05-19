@@ -77,3 +77,12 @@ jQuery(function ($) {
         });
     });
 });
+
+//    {
+//      "id": "squirrels-game",
+//      "url": "examples/squirrels_game.html",
+//      "title": "Squirrels! with p5.js",
+//      "img": "images/squirrels.png",
+//      "phoneFriendly": false,
+//      "description": "Simple game where the player clicks 'squirrels' to keep them from reaching a 'car'. Animated using the drawing library p5.js"
+//    },

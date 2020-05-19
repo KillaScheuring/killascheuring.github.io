@@ -224,7 +224,7 @@ let infoWindow;
 
 let graphIndex;
 
-let places = ["all_cases", "marker", "death_recover_rate", "active_cases", "active_rate"];
+let places = ["confirmed_cases", "all_cases", "death_recover_rate", "active_cases", "active_rate", "marker"];
 
 let image;
 
@@ -251,16 +251,16 @@ function initMap() {
             zIndex: 0,
             title: state
         });
+        graphIndex = 0;
 
         marker.addListener('click', function () {
-            graphIndex = 0;
             let id = state.toLowerCase().replace(' ', '-').replace(`'`, '');
             let stateName = state.toLowerCase().replace(/ /g, "_");
             let src = `../images/us/${places[graphIndex]}/${stateName}_plot.png`;
             let message = `
-<a href="#" class="next-prev" onclick="changePlot(-1, '${id}', '${stateName}')">&#8249;</a>
+<a href="#" class="next-prev" onclick="changePlot('-1', '${id}', '${stateName}')">&#8249;</a>
 <img id="${id}" src="${src}" onclick="imageClicked('${id}')" alt="${state} daily bar graph" width="320" height="240"/>
-<a href="#" class="next-prev" onclick="changePlot(1, '${id}', '${stateName}')">&#8250;</a>
+<a href="#" class="next-prev" onclick="changePlot('1', '${id}', '${stateName}')">&#8250;</a>
             `;
             infoWindow.setContent(message);
             infoWindow.open(map, this);
@@ -275,15 +275,17 @@ function imageClicked(id) {
 }
 
 function changePlot(direction, id, state) {
-    if (direction > 0) {
-        graphIndex++;
-        if (graphIndex === places.length) {
+    if (Number(direction) > 0) {
+        if (graphIndex === places.length-1) {
             graphIndex = 0;
+        } else {
+            graphIndex++;
         }
     } else {
-        graphIndex--;
         if (graphIndex === 0) {
             graphIndex = places.length - 1;
+        } else {
+            graphIndex--;
         }
     }
 

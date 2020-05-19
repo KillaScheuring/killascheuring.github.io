@@ -115,14 +115,6 @@
       "description": "Platforming game built using the drawing library p5.js and the physics library matter.js"
     },
     {
-      "id": "squirrels-game",
-      "url": "examples/squirrels_game.html",
-      "title": "Squirrels! with p5.js",
-      "img": "images/squirrels.png",
-      "phoneFriendly": false,
-      "description": "Simple game where the player clicks 'squirrels' to keep them from reaching a 'car'. Animated using the drawing library p5.js"
-    },
-    {
       "id": "star-wars-quiz",
       "url": "https://star-wars-quiz.stackblitz.io/",
       "title": "Star Wars Trivia Quiz",

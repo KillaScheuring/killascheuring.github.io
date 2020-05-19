@@ -240,15 +240,17 @@ function imageClicked(id) {
 }
 
 function changePlot(direction, id, country) {
-    if(direction > 0){
-        graphIndex ++;
-        if(graphIndex === places.length){
+    if (Number(direction) > 0) {
+        if (graphIndex === places.length-1) {
             graphIndex = 0;
+        } else {
+            graphIndex++;
         }
     } else {
-        graphIndex --;
-        if(graphIndex === 0){
-            graphIndex = places.length-1;
+        if (graphIndex === 0) {
+            graphIndex = places.length - 1;
+        } else {
+            graphIndex--;
         }
     }
 
